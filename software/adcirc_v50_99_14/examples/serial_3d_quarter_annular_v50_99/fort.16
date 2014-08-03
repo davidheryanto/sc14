@@ -1,0 +1,768 @@
+INFO: openFileForRead: Searching for file to open on unit    14...
+INFO: openFileForRead: The file './fort.14' was found. The file will be opened.
+INFO: openFileForRead: The file './fort.14' was opened successfully.
+INFO: openFileForRead: Searching for file to open on unit    15...
+INFO: openFileForRead: The file './fort.15' was found. The file will be opened.
+INFO: openFileForRead: The file './fort.15' was opened successfully.
+
+ _______________________________________________________________________________
+
+ _______________________________________________________________________________
+
+
+                   PROGRAM ADCIRC   VERSION 50.99.14
+
+     AN ADVANCED CIRCULATION MODEL FOR SHELVES, COASTAL SEAS AND ESTUARIES
+
+
+       -  DEVELOPED BY
+
+          R.A. LUETTICH, JR
+            UNIVERSITY OF NORTH CAROLINA AT CHAPEL HILL
+            INSTITUTE OF MARINE SCIENCES
+
+          J.J. WESTERINK 
+            DEPARTMENT OF CIVIL ENGINEERING AND GEOLOGICAL SCIENCES
+            UNIVERSITY OF NOTRE DAME
+
+
+       -  THE ADCIRC SOURCE CODE IS COPYRIGHTED BY
+
+          R.A. LUETTICH, JR. AND J.J. WESTERINK, 1994-2006
+
+       NO PART OF THIS CODE MAY BE REPRODUCED OR REDISTRIBUTED
+          WITHOUT THE WRITTEN PERMISSION OF THE AUTHORS
+
+
+
+ _______________________________________________________________________________
+
+
+ THE ADCIRC SOURCE CODE HAS BEEN CONFIGURED BY THE PREPROCESSOR AS FOLLOWS:
+
+       - CODE SETUP TO RUN WITH 8 byte REALS
+       - CODE OPTIMIZED FOR A SCALAR COMPUTER
+       - CODE WILL USE JCG ITERATIVE GWCE SOLVER
+
+ _______________________________________________________________________________
+INFO: openFileForRead: Searching for file to open on unit    15...
+INFO: openFileForRead: The file './fort.15' was found. The file will be opened.
+INFO: openFileForRead: The file './fort.15' was opened successfully.
+ECHO: read_input:  WindDragLimit=   3.5000000000000001E-003  DragLawString=default   rhoAir=   1.1499999999999999
+
+
+ RUN DESCRIPTION :  QUARTER ANNULUS 3D V20060126        ! 32 CHARACTER ALPHANUMERIC RUN DESCRIPTION
+
+ RUN IDENTIFICATION :  ADCIRC V45.12                       ! 24 CHARACTER ALPANUMERIC RUN IDENTIFICATI
+
+ _______________________________________________________________________________
+
+
+ GENERAL RUN INFORMATION
+
+
+     NFOVER =   0
+         NON-FATAL INPUT ERRORS WILL STOP EXECUTION 
+
+
+     NABOUT =   0
+         DETAILED OUTPUT WILL BE PROVIDED TO UNIT 16
+         UNIT 14, 15, 21, 22 INPUT DATA WILL BE ECHO PRINTED
+
+     NSCREEN =      1
+         SCREEN OUTPUT WILL BE PROVIDED TO UNIT 6
+         EVERY NSCREEN TIME STEPS.
+
+ECHO: read_input: IHOT=  0.
+INFO: read_input: ADCIRC will be cold started.
+
+     ICS =  1
+         Governing equations are in Cartesian coordinates
+  
+     IM =            1
+  
+     ADCIRC is configured for a Barotropic 3D run using: New GWCE and velocity based Momentum Eqs.
+  
+      The ADCIRC logical variables are set to:
+          C2DDI            =  F
+          C3D              =  T
+          C3DDSS           =  F
+          C3DVS            =  T
+          C2D_BTrans       =  F
+          C2D_PTrans       =  F
+          C3D_PTrans       =  F
+          CBaroclinic      =  F
+          CGWCE_Lump       =  F
+          CGWCE_LS_KGQ     =  T
+          CGWCE_LS_2PartQ  =  F
+          CGWCE_LS_2PartV  =  F
+          CGWCE_LS_2PartSQ =  F
+          CGWCE_LS_2PartSV =  F
+          CGWCE_Advec_NC   =  T
+          CGWCE_Advec_C1   =  F
+          CGWCE_Advec_C2   =  F
+          CME_Orig         =  F
+          CME_New_NC       =  T
+          CME_New_C1       =  F
+          CME_New_C2       =  F
+          CME_LS_IBPQ      =  F
+          CME_LS_IBPV      =  T
+          CME_LS_IBPSQ     =  F
+          CME_LS_IBPSV     =  F
+          CME_LS_2PartQ    =  F
+          CME_LS_2PartV    =  F
+          CME_AreaInt_Orig =  F
+          CME_AreaInt_Corr =  T
+          CTIP             =  F
+          CHARMV           =  F
+
+     NOLIBF =   1
+         THE MODEL WILL USE NONLINEAR BOTTOM FRICTION
+
+     NOLIFA =   1
+         THE MODEL WILL USE FINITE AMPLITUDE TERMS BUT NO WETTING AND DRYING
+
+     NOLICA =   1
+         THE MODEL WILL USE SPATIAL DERIVATIVE COMPONENTS OF THE ADVECTIVE TERMS
+
+     NOLICAT =   1
+         THE MODEL WILL USE TIME DERIVATIVE COMPONENTS 
+         OF THE ADVECTIVE TERMS IN THE GWCE
+
+     NWP =  0
+         A Nodal Attributes File (unit 13)
+         will not be used.
+
+     NCOR =  0
+         A CONSTANT VALUE OF THE CORIOLIS PARAMETER WILL BE 
+         USED THROUGHOUT THE DOMAIN
+
+     NTIP =  0
+         TIDAL POTENTIAL FORCING IS NOT USED IN THE COMPUTATION
+
+     NWS =   0
+         WIND STRESS OR SURFACE PRESSURE ARE NOT USED TO FORCETHE COMPUTATION
+
+     NRS =   0
+         WAVE RADIATION STRESS IS NOT USED TO FORCE THE COMPUTATION
+
+     NCICE =  0
+         ICE CONCENTRATION FIELDS ARE NOT USED TO ADJUST WIND STRESS COMPUTATIONS
+
+     NDDT =  0
+         A TIME VARYING BATHYMETRY IS NOT USED DURING THE COMPUTATION
+
+     NRAMP =  1
+         HYPERBOLIC TANGENT RAMP(S) WILL BE APPLIED TO THE FORCING FUNCTIONS
+
+
+
+     GRAVITATIONAL CONSTANT G =   9.81000
+
+
+ _______________________________________________________________________________
+
+
+ TIME INTEGRATION INFORMATION
+
+
+  ADCIRC is configured for a 2DDI run 
+  without the predictor-corrector algorithm and
+  the ADCIRC logical variable is set to:  
+          CPRECOR           =  F
+     TIME STEP =  174.656000     SECONDS
+
+     STARTING TIME FOR SIMULATION =       0.000000 DAYS
+
+     Harmonic REFERENCE TIME =       0.000000 DAYS
+
+     TOTAL LENGTH OF NUMERICAL SIMULATION =      5.0000     DAYS
+
+     NUMBER OF TIME STEPS  =    2473
+
+
+     VALUE FOR DRAMP USED IN RAMP EVALUATION =      2.0000     DAYS
+
+            DAYS OF SIMULATION   TIME          RAMP VALUE
+
+                   0.00          0.00        0.0000000
+                   0.50          0.50        0.4621172
+                   1.00          1.00        0.7615942
+                   1.50          1.50        0.9051483
+                   2.00          2.00        0.9640276
+
+
+     TIME WEIGHTING FACTORS IN THE WAVE EQUATION :
+
+         AT TIME LEVEL K+1 :  0.35000
+         AT TIME LEVEL K   :  0.30000
+         AT TIME LEVEL K-1 :  0.35000
+
+
+
+     THE BATHYMETRIC DEPTH AT ALL NODES WILL BE INCREASED TO H0=       1.0000 IF NECESSARY
+
+
+ _______________________________________________________________________________
+
+
+ GRID INFORMATION
+
+
+
+ THE NEIGHBOR TABLE IS BEING COMPUTED 
+
+ THE NEIGHBOR TABLE IS COMPLETED 
+     THE MINIMUM NUMBER OF NEIGHBORS FOR ANY NODE =   3
+     1+THE MAXIMUM NUMBER OF NEIGHBORS FOR ANY NODE =   9
+     THE PARAMETER MNEI CAN BE SET AS SMALL AS   9
+
+
+ _______________________________________________________________________________
+
+
+ BOTTOM FRICTION INFORMATION
+
+
+     NONLINEAR FRICTION COEFFICIENT CF =  0.00250000
+
+
+     GRID IDENTIFICATION :  Quarter Annular Grid - Example 1           ! ALPHANUMERIC DESCRIPTOR FOR GRID F
+
+     TOTAL NUMBER OF NODES =      63
+
+     TOTAL NUMBER OF ELEMENTS =      96
+
+
+ NODAL COORDINATES AND BATHYMETRY :
+
+          NODE NO.          X                    Y               DP
+
+          1              60960.00                  0.00          3.05
+          2              76200.00                  0.00          4.76
+          3              91440.00                  0.00          6.86
+          4             106680.00                  0.00          9.33
+          5             121920.00                  0.00         12.19
+          6             137160.00                  0.00         15.43
+          7             152400.00                  0.00         19.05
+          8              59788.70              11892.70          3.05
+          9              74735.70              14866.00          4.76
+         10              89683.10              17839.00          6.86
+         11             104630.20              20812.40          9.33
+         12             119577.30              23785.40         12.19
+         13             134524.40              26758.70         15.43
+         14             149471.80              29731.70         19.05
+         15              56319.70              23328.50          3.05
+         16              70399.70              29160.50          4.76
+         17              84479.60              34992.60          6.86
+         18              98559.50              40824.60          9.33
+         19             112639.50              46656.70         12.19
+         20             126719.40              52489.00         15.43
+         21             140799.30              58321.00         19.05
+         22              50686.40              33867.50          3.05
+         23              63357.90              42334.60          4.76
+         24              76029.60              50801.30          6.86
+         25              88701.10              59268.40          9.33
+         26             101372.80              67735.10         12.19
+         27             114044.30              76202.10         15.43
+         28             126716.00              84668.90         19.05
+         29              43105.10              43105.10          3.05
+         30              53881.60              53881.60          4.76
+         31              64657.80              64657.80          6.86
+         32              75434.00              75434.00          9.33
+         33              86210.50              86210.50         12.19
+         34              96986.70              96986.70         15.43
+         35             107763.00             107763.00         19.05
+         36              33867.50              50686.40          3.05
+         37              42334.60              63357.90          4.76
+         38              50801.30              76029.60          6.86
+         39              59268.40              88701.10          9.33
+         40              67735.10             101372.80         12.19
+         41              76202.10             114044.30         15.43
+         42              84668.90             126716.00         19.05
+         43              23328.50              56319.70          3.05
+         44              29160.50              70399.70          4.76
+         45              34992.60              84479.60          6.86
+         46              40824.60              98559.50          9.33
+         47              46656.70             112639.50         12.19
+         48              52489.00             126719.40         15.43
+         49              58321.00             140799.30         19.05
+         50              11892.70              59788.70          3.05
+         51              14866.00              74735.70          4.76
+         52              17839.00              89683.10          6.86
+         53              20812.40             104630.20          9.33
+         54              23785.40             119577.30         12.19
+         55              26758.70             134524.40         15.43
+         56              29731.70             149471.80         19.05
+         57                  0.00              60960.00          3.05
+         58                  0.00              76200.00          4.76
+         59                  0.00              91440.00          6.86
+         60                  0.00             106680.00          9.33
+         61                  0.00             121920.00         12.19
+         62                  0.00             137160.00         15.43
+         63                  0.00             152400.00         19.05
+
+
+     GLOBAL NODE NUMBERS FOR EACH ELEMENT :
+
+         ELEMENT        N1         N2          N3
+
+              1          1          2          8
+              2          8          2          9
+              3          9          2         10
+              4          2          3         10
+              5         10          3          4
+              6         10          4         11
+              7         11          4         12
+              8          4          5         12
+              9          5          6         12
+             10          6         13         12
+             11         13          6         14
+             12          6          7         14
+             13         15          8         16
+             14          8          9         16
+             15         16          9         10
+             16         16         10         17
+             17         17         10         18
+             18         10         11         18
+             19         18         11         12
+             20         18         12         19
+             21         19         12         20
+             22         12         13         20
+             23         20         13         14
+             24         20         14         21
+             25         22         15         16
+             26         22         16         23
+             27         23         16         24
+             28         16         17         24
+             29         24         17         18
+             30         24         18         25
+             31         25         18         26
+             32         18         19         26
+             33         26         19         20
+             34         26         20         27
+             35         27         20         28
+             36         20         21         28
+             37         29         22         30
+             38         22         23         30
+             39         30         23         24
+             40         30         24         31
+             41         31         24         32
+             42         24         25         32
+             43         32         25         26
+             44         32         26         33
+             45         33         26         34
+             46         26         27         34
+             47         34         27         28
+             48         34         28         35
+             49         36         29         30
+             50         36         30         37
+             51         37         30         38
+             52         30         31         38
+             53         38         31         32
+             54         38         32         39
+             55         39         32         40
+             56         32         33         40
+             57         33         34         40
+             58         40         34         41
+             59         41         34         42
+             60         34         35         42
+             61         43         36         44
+             62         36         37         44
+             63         44         37         38
+             64         44         38         45
+             65         45         38         46
+             66         38         39         46
+             67         39         40         46
+             68         46         40         47
+             69         47         40         48
+             70         40         41         48
+             71         41         42         48
+             72         48         42         49
+             73         50         43         44
+             74         50         44         51
+             75         51         44         52
+             76         44         45         52
+             77         45         46         52
+             78         52         46         53
+             79         53         46         54
+             80         46         47         54
+             81         54         47         48
+             82         54         48         55
+             83         55         48         56
+             84         48         49         56
+             85         57         50         58
+             86         50         51         58
+             87         58         51         52
+             88         58         52         59
+             89         59         52         60
+             90         52         53         60
+             91         60         53         54
+             92         60         54         61
+             93         61         54         62
+             94         54         55         62
+             95         62         55         56
+             96         62         56         63
+     Constant lateral stress coefficient = 0.00000000E+00
+
+
+
+ _______________________________________________________________________________
+
+
+ CORIOLIS INFORMATION 
+
+
+     CONSTANT CORIOLIS COEFFICIENT = 0.00000000E+00     1/SEC
+
+
+ _______________________________________________________________________________
+
+
+ TIDAL POTENTIAL FORCING INFORMATION 
+
+
+
+ TIDAL POTENTIAL IS FORCED FOR     0 CONSTITUENT(S) 
+
+ _______________________________________________________________________________
+
+
+ ELEVATION SPECIFIED BOUNDARY FORCING INFORMATION 
+
+
+
+     NUMBER OF PERIODIC, ELEVATION SPECIFIED CONSTITUENTS =    1
+
+       CONSTITUENT #    FREQUENCY    NODAL FACTOR   EQU.ARG (DEG)  CONSTITUENT
+
+             1        0.000140525700   1.0000000       0.000           M2  
+
+
+
+     TOTAL NUMBER OF ELEVATION BOUNDARY FORCING SEGMENTS  =     1
+
+     TOTAL NUMBER OF ELEVATION SPECIFIED BOUNDARY NODES =     9
+
+
+     TOTAL NUMBER OF NODES ON ELEVATION SPECIFIED BOUNDARY SEGMENT    1  =     9
+
+             7
+            14
+            21
+            28
+            35
+            42
+            49
+            56
+            63
+
+
+
+
+     ELEVATION BOUNDARY TIDAL FORCING FOR CONSTITUENT NUMBER   1 DESIGNATED :  M2  
+         VERIFICATION OF CONSTITUENT :   M2      
+
+              NODE           AMPL.         PHASE(DEG)
+
+                 7           0.30480           0.000
+                14           0.30480           0.000
+                21           0.30480           0.000
+                28           0.30480           0.000
+                35           0.30480           0.000
+                42           0.30480           0.000
+                49           0.30480           0.000
+                56           0.30480           0.000
+                63           0.30480           0.000
+
+ _______________________________________________________________________________
+
+
+     ANGINN =   110.00 DEGREES
+     ALL FLOW BOUNDARY NODES WITH NORMAL FLOW AS AN ESSENTIAL B.C. AND 
+         INNER ANGLES LESS THAN ANGINN WILL HAVE BOTH NORMAL 
+         AND TANGENTIAL VELOCITY COMPONENTS ZEROED
+
+
+ _______________________________________________________________________________
+
+
+ FLOW BOUNDARY INFORMATION 
+
+
+
+     THE TOTAL NUMBER OF FLOW BOUNDARY SEGMENTS =     1
+
+     THE TOTAL NUMBER OF FLOW BOUNDARY NODES =       21
+
+
+
+     TOTAL NUMBER OF NODES FOR FLOW BOUNDARY SEGMENT     1  =     21
+     THIS SEGMENT IS AN EXTERNAL BOUNDARY WITH:
+       NO NORMAL FLOW AS AN ESSENTIAL B.C.
+       AND FREE TANGENTIAL SLIP
+
+    JGW    JME    ME2GW   NODE #  BNDRY CODE   INNER ANGLE       COS             SIN         0.667*BNDRY LEN
+
+      1      1      1         63      0         -0.1000E+08   -0.10000000E+01   0.00000000E+00    0.10160000E+05
+      2      2      2         62      0          0.1800E+03   -0.10000000E+01   0.00000000E+00    0.10160000E+05
+      3      3      3         61      0          0.1800E+03   -0.10000000E+01   0.00000000E+00    0.10160000E+05
+      4      4      4         60      0          0.1800E+03   -0.10000000E+01   0.00000000E+00    0.10160000E+05
+      5      5      5         59      0          0.1800E+03   -0.10000000E+01   0.00000000E+00    0.10160000E+05
+      6      6      6         58      0          0.1800E+03   -0.10000000E+01   0.00000000E+00    0.10160000E+05
+       57    THE INNER ANGLE =    95.62 TANGENTIAL SLIP WILL BE ZEROED
+      7      7      7         57     10          0.9562E+02   -0.80973921E+00  -0.58678992E+00    0.79668273E+04
+      8      8      8         50      0          0.1913E+03   -0.19508922E+00  -0.98078550E+00    0.79669172E+04
+      9      9      9         43      0          0.1913E+03   -0.38268486E+00  -0.92387894E+00    0.79667250E+04
+     10     10     10         36      0          0.1913E+03   -0.55557890E+00  -0.83146382E+00    0.79668581E+04
+     11     11     11         29      0          0.1912E+03   -0.70710678E+00  -0.70710678E+00    0.79668581E+04
+     12     12     12         22      0          0.1913E+03   -0.83146382E+00  -0.55557890E+00    0.79667250E+04
+     13     13     13         15      0          0.1913E+03   -0.92387894E+00  -0.38268486E+00    0.79669172E+04
+     14     14     14          8      0          0.1913E+03   -0.98078550E+00  -0.19508922E+00    0.79668273E+04
+        1    THE INNER ANGLE =    95.62 TANGENTIAL SLIP WILL BE ZEROED
+     15     15     15          1     10          0.9562E+02   -0.58678992E+00  -0.80973921E+00    0.10160000E+05
+     16     16     16          2      0          0.1800E+03    0.00000000E+00  -0.10000000E+01    0.10160000E+05
+     17     17     17          3      0          0.1800E+03    0.00000000E+00  -0.10000000E+01    0.10160000E+05
+     18     18     18          4      0          0.1800E+03    0.00000000E+00  -0.10000000E+01    0.10160000E+05
+     19     19     19          5      0          0.1800E+03    0.00000000E+00  -0.10000000E+01    0.10160000E+05
+     20     20     20          6      0          0.1800E+03    0.00000000E+00  -0.10000000E+01    0.10160000E+05
+     21     21     21          7      0         -0.1000E+08    0.00000000E+00  -0.10000000E+01    0.00000000E+00
+
+ _______________________________________________________________________________
+
+
+ OUTPUT INFORMATION WILL BE PROVIDED AS FOLLOWS :
+
+
+
+ ELEVATION RECORDING STATION OUTPUT : 
+
+     NOUTE =  1
+INFO: read_input: UNIT 61 FORMAT WILL BE ASCII.
+
+     DATA RECORDS WILL START AFTER TOUTSE =   0.000 DAY(S) RELATIVE
+         TO THE STARTING TIME OR        0 TIME STEPS INTO THE SIMULATION
+
+     DATA RECORDS WILL STOP AFTER TOUTFE =   5.000 DAY(S) RELATIVE
+         TO THE STARTING TIME OR     2473 TIME STEPS INTO THE SIMULATION
+
+     INFORMATION WILL BE SPOOLED TO UNIT 61 EVERY NSPOOLE =       3 TIME STEPS
+
+
+
+     NUMBER OF INPUT ELEVATION RECORDING STATIONS =     3
+
+       STATION #   ELEMENT         X             Y
+
+          1            3        80668.40        80668.40
+          2            9       126205.20       126205.20
+          3           66        51131.10        51131.10
+
+
+
+
+ VELOCITY RECORDING STATION OUTPUT : 
+
+     NOUTV =  1
+INFO: read_input: UNIT 62 FORMAT WILL BE ASCII.
+
+     DATA RECORDS WILL START AFTER TOUTSV =   0.000 DAY(S) RELATIVE
+         TO THE STARTING TIME OR        0 TIME STEPS INTO THE SIMULATION
+
+     DATA RECORDS WILL STOP AFTER TOUTFV =   5.000 DAY(S) RELATIVE
+         TO THE STARTING TIME OR     2473 TIME STEPS INTO THE SIMULATION
+
+     INFORMATION WILL BE SPOOLED TO UNIT 62 EVERY  NSPOOLV =       3 TIME STEPS
+
+
+
+
+     NUMBER OF INPUT VELOCITY RECORDING STATIONS =     3
+
+       STATION #   ELEMENT         X             Y
+
+          1            3        80668.40        80668.40
+          2            9       126205.20       126205.20
+          3           66        51131.10        51131.10
+
+
+
+
+ GLOBAL NODAL ELEVATION INFORMATION OUTPUT: 
+
+     NOUTGE =  1
+INFO: read_input: UNIT 63 FORMAT WILL BE ASCII.
+
+     DATA RECORDS WILL START AFTER TOUTSGE =   0.000 DAY(S) RELATIVE
+         TO THE STARTING TIME OR        0 TIME STEPS INTO THE SIMULATION
+
+     DATA RECORDS WILL STOP AFTER TOUTFGE =   5.000 DAY(S) RELATIVE
+         TO THE STARTING TIME OR     2473 TIME STEPS INTO THE SIMULATION
+
+     INFORMATION WILL BE SPOOLED TO UNIT 63 EVERY NSPOOLGE =       3 TIME STEPS
+
+
+
+
+ GLOBAL NODAL VELOCITY INFORMATION OUTPUT : 
+
+     NOUTGV =  1
+INFO: read_input: UNIT 64 FORMAT WILL BE ASCII.
+
+     DATA RECORDS WILL START AFTER TOUTSGV =   0.000 DAY(S) RELATIVE
+         TO THE STARTING TIME OR        0 TIME STEPS INTO THE SIMULATION
+
+     DATA RECORDS WILL STOP AFTER TOUTFGV =   5.000 DAY(S) RELATIVE
+         TO THE STARTING TIME OR     2473 TIME STEPS INTO THE SIMULATION
+
+     INFORMATION WILL BE SPOOLED TO UNIT 64 EVERY NSPOOLGV =       3 TIME STEPS
+
+
+
+
+ HARMONIC ANALYSIS INFORMATION OUTPUT : 
+
+     HARMONIC ANALYSIS PERFORMED FOR    1 CONSTITUENTS
+
+
+       FREQUENCY    NODAL FACTOR      EQU.ARG(DEG) CONSTITUENT
+
+     0.000140525700   1.0000000          0.000        M2       
+
+     HARMONIC ANALYSIS WILL START AFTER THAS =   4.001 DAY(S) RELATIVE
+         TO THE STARTING TIME OR     1979 TIME STEPS INTO THE SIMULATION
+
+     HARMONIC ANALYSIS WILL STOP AFTER THAF =   4.999 DAY(S) RELATIVE
+         TO THE STARTING TIME OR     2473 TIME STEPS INTO THE SIMULATION
+
+     INFORMATION WILL BE ANALYZED EVERY NHAINC =       1 TIME STEPS.
+
+     MEANS AND VARIANCES WILL BE COMPUTED FOR THE FINAL    0.00000 %
+         OF THE HARMONIC ANALYSIS PERIOD OR AFTER      2473 TIME STEPS INTO THE SIMULATION.
+          RESULTS ARE WRITTEN TO UNIT 55.
+ECHO: read_input: NHASE=1 NHASV=1 NHAGE=1 NHAGV=1.
+INFO: checkHarmonicParameters: STATION ELEVATION HARMONIC ANALYSIS WILL BE WRITTEN TO UNIT 51 IN ASCII FORMAT.
+INFO: checkHarmonicParameters: STATION VELOCITY HARMONIC ANALYSIS WILL BE WRITTEN TO UNIT 52 IN ASCII FORMAT.
+INFO: checkHarmonicParameters: FULL DOMAIN ELEVATION HARMONIC ANALYSIS WILL BE WRITTEN TO UNIT 53 IN ASCII FORMAT.
+INFO: checkHarmonicParameters: FULL DOMAIN VELOCITY HARMONIC ANALYSIS WILL BE WRITTEN TO UNIT 54 ASCII FORMAT.
+INFO: read_input: HOT START OUTPUT INFORMATION :
+ECHO: read_input: NHSTAR=  1 NHSINC=    1236.
+INFO: read_input: HOT START OUTPUT WILL BE GENERATED IN NON-PORTABLE BINARY FORMAT.
+
+     HOT START OUTPUT WILL BE WRITTEN TO UNIT 67 OR 68 EVERY       1236 TIME STEPS
+
+
+ SOLVER INFORMATION OUTPUT : 
+
+
+ 3D SOLUTION INFORMATION
+
+
+     IDen =   0
+
+     ISlip =   1 KP =  0.10000E-01
+
+     Z0S =  0.10000E-01 Z0B =  0.10000E+00
+
+     3D TIME STEPPING COEFFS Alp1 =  0.50E+00 Alp2 =  0.50E+00 Alp3 =  0.50E+00
+
+     Vertical grid code IGC =   1  Number of vertical nodes (NFEN) =    21
+
+
+     Vertical Grid Information
+
+     V. Node #     V. Position
+
+           1  -1.0000000000000000     
+           2 -0.90000000000000002     
+           3 -0.80000000000000004     
+           4 -0.69999999999999996     
+           5 -0.59999999999999998     
+           6 -0.50000000000000000     
+           7 -0.39999999999999991     
+           8 -0.29999999999999993     
+           9 -0.19999999999999996     
+          10  -9.9999999999999978E-002
+          11   0.0000000000000000     
+          12  0.10000000000000009     
+          13  0.20000000000000018     
+          14  0.30000000000000004     
+          15  0.40000000000000013     
+          16  0.50000000000000000     
+          17  0.60000000000000009     
+          18  0.70000000000000018     
+          19  0.80000000000000004     
+          20  0.90000000000000013     
+          21   1.0000000000000000     
+
+     IEVC =   1  EVMin =  0.10000000E-05  EVCon =  0.50000000E-01
+ECHO: checkAndFillIOParameters: 3D density station output specifier =  0
+INFO: checkAndFillIOParameters: OUTPUT WILL NOT BE SPOOLED FOR THIS FILE TYPE.
+ECHO: checkAndFillIOParameters: 3D velocity station output specifier =  1
+INFO: checkAndFillIOParameters: OUTPUT FORMAT WILL BE ASCII.
+INFO: read_input_3D:      3D velocity station                                                              data output will start        3 timesteps after day =     0.000         This =     0.006 days =         3 timesteps relative to the simulation Start Time.         Output will stop     5.000 days =      2473 timesteps relative to the simulation Start Time.         Data will be written every       3 time steps at total of     824 times.
+
+      Output will be written at       3 stations.
+          1            3        80668.40        80668.40
+          2            9       126205.20       126205.20
+          3           66        51131.10        51131.10
+ECHO: checkAndFillIOParameters: 3D turbulence station output specifier =  1
+INFO: checkAndFillIOParameters: OUTPUT FORMAT WILL BE ASCII.
+INFO: read_input_3D:      3D turbulence station                                                            data output will start        3 timesteps after day =     0.000         This =     0.006 days =         3 timesteps relative to the simulation Start Time.         Output will stop     5.000 days =      2473 timesteps relative to the simulation Start Time.         Data will be written every       3 time steps at total of     824 times.
+
+     Output will be written at       3 stations
+          1            3        80668.40        80668.40
+          2            9       126205.20       126205.20
+          3           66        51131.10        51131.10
+ECHO: checkAndFillIOParameters: 3D fulldomain density output specifier =  0
+INFO: checkAndFillIOParameters: OUTPUT WILL NOT BE SPOOLED FOR THIS FILE TYPE.
+ECHO: checkAndFillIOParameters: 3D fulldomain velocity output specifier =  1
+INFO: checkAndFillIOParameters: OUTPUT FORMAT WILL BE ASCII.
+INFO: read_input_3D:      3D fulldomain velocity                                                           data output will start        3 timesteps after day =     0.000         This =     0.006 days =         3 timesteps relative to the simulation Start Time.         Output will stop     5.000 days =      2473 timesteps relative to the simulation Start Time.         Data will be written every       3 time steps at total of     824 times.
+ECHO: checkAndFillIOParameters: 3D fulldomain turbulence output specifier =  1
+INFO: checkAndFillIOParameters: OUTPUT FORMAT WILL BE ASCII.
+INFO: read_input_3D:      3D fulldomain turbulence                                                         data output will start        3 timesteps after day =     0.000         This =     0.006 days =         3 timesteps relative to the simulation Start Time.         Output will stop     5.000 days =      2473 timesteps relative to the simulation Start Time.         Data will be written every       3 time steps at total of     824 times.
+
+     A SPATIALLY CONSTANT WEIGHTING COEFFICIENT (Tau0)
+      WILL BE USED IN THE GENERALIZED WAVE CONTINUITY EQUATION.
+     Tau0 =  0.50000000E-02  1/sec
+
+ *****************************************************
+ *   Based on information extracted from the ADCIRC  *
+ *   UNIT 14 and 15 (grid and horiz run info) files  *
+ *   the following paramter values will be set:      *
+ *                                                   *
+ *       MNPROC =     1     MWPROC =     0         *
+ *       MNE =       96      MNP  =       63         *
+ *       MNEI =      10                              *
+ *       MNOPE =      1      MNETA =      9          *
+ *       MNBOU =      1      MNVEL =     42          *
+ *       MNTIF =      1      MNBFR =      1          *
+ *       MNSTAE =     3      MNSTAV =     3          *
+ *       MNSTAC =     0      MNSTAM =     0          *
+ *       MNWLAT =     0      MNWLON =     0          *
+ *       MNHARF =     1      MNFFR =      0          *
+ *                                                   *
+ *   Also, NO wind forcing will be used,             *
+ *   means and variance calculation will NOT be made,*
+ *   the GWCE matrix will be left in consistent form *
+ *   the model will be set up for a 3D-VS run,       *
+ *   and an iterative solver will be used            *
+ *****************************************************
+
+     UNIT 42 FORMAT WILL BE ASCII
+     UNIT 43 FORMAT WILL BE ASCII
+     UNIT 45 FORMAT WILL BE ASCII
+     UNIT 46 FORMAT WILL BE ASCII
+
+ _______________________________________________________________________________
+
+
+ LIMITED RUNTIME INFORMATION SECTION 
+
+
+INFO: ADCIRC_Run: Begin timestepping.
+INFO: writeHotstart: Writing 3D hotstart information.
+INFO: writeHotstart:  HOT START OUTPUT WRITTEN TO UNIT 67 AT TIME STEP =      1236 TIME =  0.21587482E+06
+INFO: writeHotstart: Writing 3D hotstart information.
+INFO: writeHotstart:  HOT START OUTPUT WRITTEN TO UNIT 68 AT TIME STEP =      2472 TIME =  0.43174963E+06
