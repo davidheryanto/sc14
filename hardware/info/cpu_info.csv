@@ -1,4 +1,4 @@
-Model,Launch,Cores,Threads,Freq (MHz),TDP (Watt),DP FLOPs/cycle,DB GFLOPS (No Turbo),DB GFLOPS/Watt,Core name,Tech (micron),Socket,Turbo (MHz),FSB (MHz),L2 Cache (KB),L3 Cache (KB)
+Model,Launch,Cores,Threads,Freq (MHz),TDP (Watt),DP FLOPs/cycle,DP GFLOPS (No Turbo),DP GFLOPS/Watt (No Turbo),Core name,Tech (micron),Socket,Turbo (MHz),FSB (MHz),L2 Cache (KB),L3 Cache (KB)
  E3-1240L v3 , May 2014 ,4,8,2000,25,16,128,5.120, Haswell LGA1150 ,0.022, Socket 1150 ,3000,,1024,8192
  E3-1230L v3 , Jun 2013 ,4,8,1800,25,16,115,4.608, Haswell LGA1150 ,0.022, Socket 1150 ,2800,,1024,8192
  E3-1275L v3 , Jun 2014 ,4,8,2700,45,16,173,3.840, Haswell LGA1150 ,0.022, Socket 1150 ,3900,,1024,8192
