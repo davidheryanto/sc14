@@ -1,9 +1,0 @@
-module NamdDummyLB {
-
-extern module CentralLB;
-
-group NamdDummyLB : CentralLB {
-  entry void NamdDummyLB(void);  
-};
-
-};
