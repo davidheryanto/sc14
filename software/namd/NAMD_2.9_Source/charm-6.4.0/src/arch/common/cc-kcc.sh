@@ -1,0 +1,5 @@
+CMK_CXX='KCC '
+CMK_CXXPP='KCC -E '
+CMK_LD='gcc'
+CMK_LDXX='KCC -static'
+CMK_XIOPTS='-ansi'
