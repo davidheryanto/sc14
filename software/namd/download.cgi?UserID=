@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><title>Software Downloads</title>
+<link rev="made" href="mailto:CGI" />
+</head><body>
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+ 
+
+ 
+
+  <title> 
+Software Downloads
+ </title> 
+ 
+
+
+
+<style type="text/css">
+<!--
+@import url("/include/home.css");
+@import url("/include/level2b.css");
+@import url("/include/tcb.css");
+@import url("/include/dropdownstyles.css");
+-->
+</style>
+
+<script type="text/javascript" src="/include/jquery-latest.js"></script>
+<script type="text/javascript" src="/include/scrollingbackground.js"></script>
+<script type="text/javascript" src="/include/jScrollPane.js"></script>
+
+<script type="text/javascript">
+ var blank = new Image();
+ blank.src = '/include/images/template_images_2010/blank.gif';
+ 
+ $(document).ready(function() {
+   var badBrowser = (/MSIE ((5\.5)|6)/.test(navigator.userAgent) && navigator.platform == "Win32");
+   if (badBrowser) {
+     // get all pngs on page
+     $('img[src$=.png]').each(function() {
+       if (!this.complete) {
+         this.onload = function() { fixPng(this) };
+       } else {
+         fixPng(this);
+       }
+     });
+   }
+ });
+ 
+ function fixPng(png) {
+   // get src
+   var src = png.src;
+   // set width and height
+   if (!png.style.width) { png.style.width = $(png).width(); }
+   if (!png.style.height) { png.style.height = $(png).height(); }
+   // replace by blank image
+   png.onload = function() { };
+   png.src = blank.src;
+   // set filter (display original image)
+   png.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + src + "',sizingMethod='scale')";
+ }
+ 
+ 
+	jQuery(function()
+	{ 
+	jQuery('#scrollpane').jScrollPane({showArrows:true, dragMinHeight:7,dragMaxHeight:7,scrollbarWidth:17});
+	});
+
+
+
+ </script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-40575643-1', 'uiuc.edu');  
+  ga('send', 'pageview');
+</script>
+
+</head>
+<body>
+
+<div id="container"
+>
+  <div id="header">
+  
+  
+  
+  
+  
+  
+
+  
+  <div id="nihuiuc">
+  
+   <nobr>
+  <table cellpadding="0" cellspacing="0" width="100%">
+  <tr valign="middle"><td>
+  <a
+  href="http://www.nigms.nih.gov/About/Overview/BBCB/BiomedicalTechnology/BiomedicalTechnologyResearchCenters.htm" class="nih">NIH Center for Macromolecular Modeling &amp; Bioinformatics</a>
+  <a href="http://illinois.edu/" class="uiuc">University of Illinois at Urbana-Champaign</a>
+  </td>
+  
+  <td>
+
+<!-- Search Google -->
+<div id="searchform">
+  <FORM method=GET action="http://www.google.com/search">
+      
+
+     <input type=hidden name=sitesearch value="www.ks.uiuc.edu" />
+      
+
+
+     <INPUT TYPE=text class="btninput" name=q maxlength=255 
+                   value="Type Keywords" onfocus="this.value=''" />
+     <INPUT class="btnG" type=submit name=btnG VALUE="" />
+  </FORM>
+</div>
+<!-- End Google Search -->
+
+  </td>
+  
+  </tr>
+  </table>
+    </nobr>
+
+  </div>
+  
+
+  
+    <div id="logo">
+   <a title="Theoretical Biophysics Group" class='clear' href="/"><img style="margin-top: 18px; margin-left: 20px;" src="/include/images/template_images_2010/logo.png" border="0" alt="Theoretical and Computational Biophysics Group" /></a>
+    </div>
+  </div>
+
+
+
+    
+
+
+
+
+
+
+
+
+<ul class="pureCssMenu pureCssMenum">
+<!-- Home -->
+  <li><a href="/" class="menulink">Home</a></li>
+
+<!-- Research ########################################################## -->
+  <li><a href="/Research/Categories/" class="menulink">Research<![if gt IE 6]></a><![endif]><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+      <li><a href="/Highlights/">Highlights</a></li>
+      <li><a href="/Research/Categories/Membrane/">Membrane&nbsp;Biology</a></li>
+      <li><a href="/Research/Categories/MechBio/">Mechanobiology</a></li>
+      <li><a href="/Research/Categories/Nano/">Nanoengineering</a></li>
+      <li><a href="/Research/Categories/Bioenergy/">Bioenergetics</a></li>
+      <li><a href="/Research/Categories/IMD/">Steered/Interactive MD</a></li>
+      <li><a href="/Research/Categories/Quantum/">Quantum&nbsp;Biology</a></li>
+      <li><a href="/Research/Categories/NeuroBio/">Neurobiology</a></li>
+      <li><a href="/Research/mdff/">Flexible Fitting</a></li>
+      <li><a href="/Research/dbps/">Driving Projects</a></li>
+      <li><a href="/Research/Collaborations/">Collaborations</a></li>
+      <li><a href="/Research/Categories/Other/">Other</a></li>
+    </ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+<!-- Publications ###################################################### -->
+  <li><a href="/Publications/" class="menulink">Publications<![if gt IE 6]></a><![endif]><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+      <li><a href="/Publications/Papers/">Papers</a></li>
+      <li><a href="/Publications/HighlyCited/">Highly&nbsp;Cited</a></li>
+      <li><a href="/Publications/Papers/representative/">Representative</a></li>
+      <li><a href="/Publications/Covers/">Covers</a></li>
+    </ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+  <!-- Software ########################################################### -->
+  <li><a href="/Development/" class="menulink">Software<![if gt IE 6]></a><![endif]><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+      <li><a href="/Research/namd/">NAMD<![if gt IE 6]></a><![endif]><!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul>
+          <li><a href="/Development/Download/download.cgi?PackageName=NAMD">Download</a></li>
+          <li><a href="/Research/namd/current/ug/">User's&nbsp;Guide</a></li>
+          <li><a href="/Research/namd/mailing_list/">Mailing&nbsp;List</a></li>
+        </ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
+      </li>
+      <li><a href="/Research/vmd/">VMD<![if gt IE 6]></a><![endif]><!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul>
+          <li><a href="/Development/Download/download.cgi?PackageName=VMD">Download</a></li>
+          <li><a href="/Research/vmd/plugins/">Plugins</a></li>
+          <li><a href="/Research/vmd/current/ug/">User's&nbsp;Guide</a></li>
+          <li><a href="/Research/vmd/mailing_list/vmd-l/">Mailing&nbsp;List</a></li>
+        </ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
+      </li>
+      <li><a href="/Research/gpu/">GPU&nbsp;Computing</a></li>
+      <li><a href="/Research/biocore/">BioCoRE</a></li>
+      <li><a href="/Research/mdff/">MDFF</a></li>
+      <li><a href="/Development/OtherSoft/">Other</a></li>
+    </ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+<!-- Instruction ##################################################### -->
+  <li><a href="/Outreach/" class="menulink">Instruction<![if gt IE 6]></a><![endif]><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+      <li><a href="/Training/">Training</a></li>  
+      <li><a href="/Training/Workshop/">Workshops</a></li>
+      <li><a href="/Training/Tutorials/">Tutorials</a></li>
+      <li><a href="/Training/CaseStudies/">Case&nbsp;Studies</a></li>
+      <li><a href="/Training/multimedia/">Multimedia&nbsp;Lectures</a></li>
+      <li><a href="/Gallery/Brochure/">Brochures</a></li>   
+      <li><a href="/Services/Class/">Classes</a></li>
+    </ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+<!-- News ############################################################# -->  
+  <li><a href="/Publications/stories.cgi" class="menulink">News</a></li>
+<!-- Media ############################################################# -->
+  <li><a href="/Gallery/" class="menulink">Galleries<![if gt IE 6]></a><![endif]><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+      <li><a href="/Gallery/Science/">Images</a></li>
+      <li><a href="/Gallery/Movies/">Movies</a></li>
+      <li><a href="/Gallery/Posters/">Posters</a></li>
+      <li><a href="/Gallery/Brochure/">Brochures</a></li>
+      <li><a href="/Gallery/Photos/">Photos</a></li>
+    </ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+<!-- Facilities ###################################################### -->
+  <li><a href="/Development/Computers/spotlight.cgi" class="menulink">Facilities<![if gt IE 6]></a><![endif]><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+      <li><a href="/Development/Computers/">Computational</a></li>
+      <li><a href="/Outreach/VisitorFacilities/">Visitor</a></li>
+    </ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+<!-- About Us ####################################################### -->
+  <li><a href="/" class="menulink">About&nbsp;Us<![if gt IE 6]></a><![endif]><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+      <li><a href="/Overview/People/">Group&nbsp;Members</a></li>
+      <li><a href="/Overview/">Mission</a></li>
+      <li><a href="/Gallery/Brochure/">Brochures</a></li>
+      <li><a href="/Overview/reach.html">Contact&nbsp;Us</a></li>
+      <li><a href="/Overview/acknowledge.html">Acknowledge&nbsp;Us</a></li>
+    </ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+  <div class="clear"></div>
+</ul>
+<!-- End Drop Down Menu ************************************************* -->
+
+
+  <div class="clear"></div>
+
+
+
+
+
+  <div id="main">
+ 
+    
+ <div id="sidenav">
+
+  
+
+    
+<ul>
+  <li> <h2><a href="/">Home</a></h2></li>
+  <li> <h2><a href="/Overview/">Overview</a></h2></li>
+  <li> <h2><a href="/Publications/">Publications</a></h2></li>
+  <li > <h2><a href="/Research/Categories/" >Research</a></h2></li>
+<!--
+  <li> <h3><a href="/Research/Categories/Ongoing/">Ongoing Projects</a></h3></li>
+  <li> <h3><a href="/Research/Categories/All/" 
+       		   >All Research Projects</a></h3></li>
+-->
+  <li id="active"> <h2><a href="/Development/">Software</a></h2></li>
+  <li> <h3><a href="/Research/namd/"
+			   >NAMD</a></h3></li>
+  <li> <h3><a href="/Research/vmd/"
+			   >VMD</a></h3></li>
+  <li> <h3><a href="/Research/gpu/"
+			   >GPU Computing</a></h3></li>
+  <li> <h3><a href="/Research/biocore/"
+			   >BioCoRE</a></h3></li>
+  <li> <h3><a href="/Research/mdff/"
+			   >MDFF</a></h3></li>
+  <li> <h3><a href="/Development/OtherSoft/"
+			   >Other</a></h3></li>
+
+  <li> <h2><a href="/Outreach/">Outreach</a></h2></li>
+</ul>
+
+  
+
+
+  <div id="sidetext">
+   
+
+   
+
+  </div>
+
+  <div id="sidenav">
+   
+
+  </div>
+
+ </div>
+
+    <div id="text">
+      <h2 class='navinfo'>
+Software Downloads
+</h2>
+    
+
+
+
+      <!-- End Headers --><form method="post" action="/Development/Download/download.cgi?UserID=" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="UserID" value="" /><input type="hidden" name="AccessCode" value="" /><table border=0><tr valign="baseline"><td><strong>Go to:</strong> <td><input type="submit" name="PackageName" value="NAMD" /> <td><input type="submit" name="PackageName" value="VMD" /> <td><input type="submit" name="PackageName" value="JMV" /> <td><input type="submit" name="PackageName" value="BioCoRE" /> <td><input type="submit" name="PackageName" value="Usagemon" /> <td><input type="submit" name="PackageName" value="MDTools" /> <td><div></div></form></tr></table>   </div>
+   
+   
+
+   <div class="clear"></div></div>
+   
+   
+
+   
+   <div class="clear"></div>
+
+  	 
+
+  	
+  	<div id="footercontainer">
+  	
+  	<div id="footerlogos">
+  		<a href="/Research/nihresources/">
+      <DIV>Funded by a grant from<BR>
+      the National Institute of <BR>
+      General Medical Sciences <BR>
+      of the National Institutes<BR>
+      of Health</DIV></a>
+  		<a href="http://www.nsf.gov"><img src="/include/images/template_images_2010/nsf.gif" alt="" /></a>
+  		<a href="http://www.cplc.illinois.edu/"><img src="/include/images/template_images_2010/centerphysicslivingcells.jpg" alt="" /></a>
+  	</div>
+
+  	<div id="footerlogos2">
+  	<a href="http://illinois.edu/"><img src="/include/images/template_images_2010/uclogo_horz_bold.gif" alt="" /></a>
+  	</div>
+  	
+    <div id="footer">
+      <a href="http://www.beckman.uiuc.edu/">Beckman Institute for Advanced 
+	Science and Technology</a> 
+      // <a href="http://www.nih.gov/">National Institutes of Health</a>
+      // <a href="http://www.nsf.gov/">National Science Foundation</a>
+      // <a href="http://www.physics.uiuc.edu/">Physics</a>, 
+         <a href="http://www.cs.uiuc.edu/">Computer Science</a>, and
+         <a href="http://www.life.uiuc.edu/biophysics/">Biophysics</a>
+	  at <a href="http://illinois.edu/">University of Illinois at Urbana-Champaign</a> 
+	  
+	  <div class="morepadding">
+      <a href="/Overview/reach.html">Contact Us</a> //
+      Material on this page is <a href="/copyright.html">copyrighted</a>;
+       contact <a href="mailto:webserver@ks.uiuc.edu">Webmaster</a> for more 
+       information. //
+      Document last modified on 
+Mon Mar 19 17:57:26 2012
+ //
+      
+7065229 accesses since 20 Mar 2006
+.
+      </div>
+    </div>
+    
+    <div class="clear"></div>
+    
+  </div>
+  
+</div>
+</div>
+
+</body></html>
+
+</body></html>
