@@ -1,5 +1,14 @@
 .idea/
 
+# Namd result
+.psf
+
+# adcirc result
+fort.46
+fort.45
+fort.54
+fort.53
+
 # Compiled Object files
 *.slo
 *.lo
