@@ -2107,3 +2107,94 @@ The last velocity output (seq=-2) takes 0.020 seconds, 2861.913 MB of memory in 
 
 WallClock: 5136.424316  CPUTime: 5129.124023  Memory: 2861.913010 MB
 Program finished.
+Info: Benchmark time: 1 CPUs 10.3412 s/step 119.689 days/ns 3018.26 MB memory
+TIMING: 500  CPU: 5197.95, 10.224/step  Wall: 5204.85, 10.2361/step, 0 hours remaining, 3018.264328 MB of memory in use.
+ENERGY:     500    357968.9243    279215.7258     82062.5912      5126.6749       -4506189.2323    383491.8273         0.0000         0.0000    947386.1923       -2450937.2964       297.9773  -3398323.4887  -2442240.4487       298.1302           1354.4093        91.4828  10192623.9031        -5.3932        -5.8754
+
+WRITING EXTENDED SYSTEM TO OUTPUT FILE AT STEP 500
+WRITING COORDINATES TO OUTPUT FILE AT STEP 500
+The last position output (seq=-2) takes 0.022 seconds, 2865.982 MB of memory in use
+WRITING VELOCITIES TO OUTPUT FILE AT STEP 500
+The last velocity output (seq=-2) takes 0.020 seconds, 2861.913 MB of memory in use
+====================================================
+
+WallClock: 5215.074707  CPUTime: 5207.858398  Memory: 2861.913010 MB
+Program finished.
+Info: Benchmark time: 1 CPUs 10.3542 s/step 119.841 days/ns 3018.26 MB memory
+TIMING: 500  CPU: 5210.39, 10.163/step  Wall: 5217.19, 10.1747/step, 0 hours remaining, 3018.264328 MB of memory in use.
+ENERGY:     500    357968.9076    279215.7101     82062.5930      5126.6762       -4506189.3024    383491.8039         0.0000         0.0000    947386.2879       -2450937.3237       297.9773  -3398323.6116  -2442240.4735       298.1302           1354.4110        91.4832  10192623.7775        -5.3936        -5.8759
+
+Info: Benchmark time: 1 CPUs 10.4167 s/step 120.563 days/ns 3018.26 MB memory
+TIMING: 500  CPU: 5249.23, 10.2381/step  Wall: 5256.14, 10.25/step, 0 hours remaining, 3018.264328 MB of memory in use.
+ENERGY:     500    357968.9243    279215.7258     82062.5912      5126.6749       -4506189.2323    383491.8273         0.0000         0.0000    947386.1923       -2450937.2964       297.9773  -3398323.4887  -2442240.4487       298.1302           1354.4093        91.4828  10192623.9031        -5.3932        -5.8754
+
+WRITING EXTENDED SYSTEM TO OUTPUT FILE AT STEP 500
+WRITING COORDINATES TO OUTPUT FILE AT STEP 500
+The last position output (seq=-2) takes 0.021 seconds, 2865.982 MB of memory in use
+WRITING VELOCITIES TO OUTPUT FILE AT STEP 500
+WRITING EXTENDED SYSTEM TO OUTPUT FILE AT STEP 500
+WRITING COORDINATES TO OUTPUT FILE AT STEP 500
+The last velocity output (seq=-2) takes 0.022 seconds, 2861.913 MB of memory in use
+====================================================
+
+WallClock: 5266.271973  CPUTime: 5259.116699  Memory: 2861.913010 MB
+Program finished.
+The last position output (seq=-2) takes 0.034 seconds, 2865.982 MB of memory in use
+WRITING VELOCITIES TO OUTPUT FILE AT STEP 500
+The last velocity output (seq=-2) takes 0.032 seconds, 2861.913 MB of memory in use
+====================================================
+
+WallClock: 5266.354980  CPUTime: 5259.137695  Memory: 2861.913010 MB
+Program finished.
+Info: Benchmark time: 1 CPUs 10.451 s/step 120.961 days/ns 3018.26 MB memory
+TIMING: 500  CPU: 5255.68, 10.2817/step  Wall: 5262.69, 10.2939/step, 0 hours remaining, 3018.264328 MB of memory in use.
+ENERGY:     500    357968.9243    279215.7258     82062.5912      5126.6749       -4506189.2323    383491.8273         0.0000         0.0000    947386.1923       -2450937.2964       297.9773  -3398323.4887  -2442240.4487       298.1302           1354.4093        91.4828  10192623.9031        -5.3932        -5.8754
+
+WRITING EXTENDED SYSTEM TO OUTPUT FILE AT STEP 500
+WRITING COORDINATES TO OUTPUT FILE AT STEP 500
+The last position output (seq=-2) takes 0.035 seconds, 2865.982 MB of memory in use
+WRITING VELOCITIES TO OUTPUT FILE AT STEP 500
+The last velocity output (seq=-2) takes 0.032 seconds, 2861.913 MB of memory in use
+====================================================
+
+WallClock: 5273.016113  CPUTime: 5265.686523  Memory: 2861.913010 MB
+Program finished.
+Info: Benchmark time: 1 CPUs 10.3626 s/step 119.938 days/ns 3018.26 MB memory
+TIMING: 500  CPU: 5217.6, 10.1505/step  Wall: 5224.51, 10.1624/step, 0 hours remaining, 3018.264328 MB of memory in use.
+ENERGY:     500    357968.9147    279215.7148     82062.5919      5126.6750       -4506189.2677    383491.8114         0.0000         0.0000    947386.2561       -2450937.3037       297.9773  -3398323.5598  -2442240.4542       298.1302           1354.4097        91.4823  10192623.8659        -5.3932        -5.8755
+
+WRITING EXTENDED SYSTEM TO OUTPUT FILE AT STEP 500
+WRITING COORDINATES TO OUTPUT FILE AT STEP 500
+The last position output (seq=-2) takes 0.034 seconds, 2865.982 MB of memory in use
+WRITING VELOCITIES TO OUTPUT FILE AT STEP 500
+The last velocity output (seq=-2) takes 0.033 seconds, 2861.913 MB of memory in use
+====================================================
+
+WallClock: 5273.353516  CPUTime: 5266.080566  Memory: 2861.913010 MB
+Program finished.
+Info: Benchmark time: 1 CPUs 10.3962 s/step 120.326 days/ns 3018.26 MB memory
+TIMING: 500  CPU: 5256.98, 10.3069/step  Wall: 5263.95, 10.3189/step, 0 hours remaining, 3018.264328 MB of memory in use.
+ENERGY:     500    357968.9243    279215.7258     82062.5912      5126.6749       -4506189.2323    383491.8273         0.0000         0.0000    947386.1923       -2450937.2964       297.9773  -3398323.4887  -2442240.4487       298.1302           1354.4093        91.4828  10192623.9031        -5.3932        -5.8754
+
+WRITING EXTENDED SYSTEM TO OUTPUT FILE AT STEP 500
+WRITING COORDINATES TO OUTPUT FILE AT STEP 500
+The last position output (seq=-2) takes 0.032 seconds, 2865.982 MB of memory in use
+WRITING VELOCITIES TO OUTPUT FILE AT STEP 500
+The last velocity output (seq=-2) takes 0.029 seconds, 2861.913 MB of memory in use
+====================================================
+
+WallClock: 5274.224609  CPUTime: 5266.937500  Memory: 2861.913010 MB
+Program finished.
+Info: Benchmark time: 1 CPUs 10.4054 s/step 120.433 days/ns 3018.26 MB memory
+TIMING: 500  CPU: 5245.78, 10.1579/step  Wall: 5252.78, 10.1702/step, 0 hours remaining, 3018.264328 MB of memory in use.
+ENERGY:     500    357968.9076    279215.7101     82062.5930      5126.6762       -4506189.3024    383491.8039         0.0000         0.0000    947386.2879       -2450937.3237       297.9773  -3398323.6116  -2442240.4735       298.1302           1354.4110        91.4832  10192623.7775        -5.3936        -5.8759
+
+WRITING EXTENDED SYSTEM TO OUTPUT FILE AT STEP 500
+WRITING COORDINATES TO OUTPUT FILE AT STEP 500
+The last position output (seq=-2) takes 0.032 seconds, 2865.982 MB of memory in use
+WRITING VELOCITIES TO OUTPUT FILE AT STEP 500
+The last velocity output (seq=-2) takes 0.032 seconds, 2861.913 MB of memory in use
+====================================================
+
+WallClock: 5301.615723  CPUTime: 5294.255371  Memory: 2861.913010 MB
+Program finished.
