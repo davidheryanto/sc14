@@ -1,4 +1,4 @@
 for i in {1..24}
 do
-	./namd2 +idlepoll +p$i apoa1/apoa1.namd > apoa1/n_core-$i.out
+	./namd2 +idlepoll +p$i stmv/stmv.namd > stmv/result/n_core-`printf %02d $i`.txt
 done
