@@ -28,7 +28,7 @@ def process_result(folder_path):
 
 
 if __name__ == '__main__':
-    # parser = argparse.ArgumentParser()
+    # parser = argparse.ArgumentParser()http://stackoverflow.com/questions/1117134/padding-zeros-in-a-string
     # parser.add_argument('-i', '--input')
     # args = parser.parse_args()
 
