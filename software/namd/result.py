@@ -33,13 +33,12 @@ if __name__ == '__main__':
     # args = parser.parse_args()
 
     result_dirs = [
-        'NAMD_2.9_Linux-x86_64-TCP',
-        'NAMD_2.9_Linux-x86_64-multicore',
-        'NAMD_2.9_Linux-x86_64-multicore-CUDA'
+        'NAMD_2.9_Linux-x86_64-TCP'
+        # 'NAMD_2.9_Linux-x86_64-multicore-CUDA'
     ]
 
     for dir in result_dirs:
-        process_result(dir + "/apoa1/result")
+        process_result(dir + "/stmv/result")
 
     plt.title('CPU Time vs No of Cores 500 Steps')
     plt.legend(result_dirs, loc='center')
