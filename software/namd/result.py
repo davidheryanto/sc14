@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 def process_result(folder_path):
     f = {}
 
-    for file_path in glob.glob(folder_path + '/result/*'):
+    for file_path in glob.glob(folder_path + '/*'):
         n_core = int(re.findall(r'n_core-[\d]+', file_path)[0][7:])
 
         with open(file_path, 'r') as file:
@@ -33,13 +33,11 @@ if __name__ == '__main__':
     # args = parser.parse_args()
 
     result_dirs = [
-        'NAMD_2.9_Linux-x86_64-TCP',
-        'NAMD_2.9_Linux-x86_64-multicore',
-        'NAMD_2.9_Linux-x86_64-multicore-CUDA'
+       'NAMD_2.9_Linux-x86_64-multicore-CUDA'
     ]
 
     for dir in result_dirs:
-        process_result(dir + "/apoa1")
+        process_result(dir + "/stmv/result")
 
     plt.title('CPU Time vs No of Cores for apoa1 Input')
     plt.legend(result_dirs, loc='center')
