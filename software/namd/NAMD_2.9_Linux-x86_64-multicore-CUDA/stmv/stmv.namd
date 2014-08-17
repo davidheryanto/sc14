@@ -65,5 +65,5 @@ outputName          /usr/tmp/stmv-output
 outputEnergies      20
 outputTiming        20
 
-numsteps            10000
+numsteps            500
 
