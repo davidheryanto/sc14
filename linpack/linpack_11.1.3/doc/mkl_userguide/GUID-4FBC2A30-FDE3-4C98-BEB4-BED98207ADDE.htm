@@ -1,0 +1,112 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns:MSHelp="http://www.microsoft.com/MSHelp/" lang="en-us" xml:lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="DC.Type" content="topic">
+<meta name="DC.Title" content="Running Hybrid Offload Binaries">
+<meta name="DC.Relation" scheme="URI" content="GUID-6F7041FA-C376-4F01-8D73-118B45BEDF08.htm">
+<meta name="DC.Relation" scheme="URI" content="GUID-E231D5B2-0218-47BD-BDEF-0D3F164DF8A7.htm#GUID-E231D5B2-0218-47BD-BDEF-0D3F164DF8A7">
+<meta name="DC.Relation" scheme="URI" content="GUID-9BF8827C-AE14-41BE-8D0A-19525FBA55D3.htm#GUID-9BF8827C-AE14-41BE-8D0A-19525FBA55D3">
+<meta name="DC.Relation" scheme="URI" content="GUID-9CE68847-49F2-4A98-B324-FE803D2F35CF.htm#GUID-9CE68847-49F2-4A98-B324-FE803D2F35CF">
+<meta name="DC.Relation" scheme="URI" content="http://www.intel.com/software/products/softwaredocs_feedback">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="GUID-4FBC2A30-FDE3-4C98-BEB4-BED98207ADDE">
+<meta name="DC.Language" content="en-US">
+<link rel="stylesheet" type="text/css" href="intel_css_styles.css">
+<title>Running Hybrid Offload Binaries</title>
+<xml>
+<MSHelp:Attr Name="DocSet" Value="Intel"></MSHelp:Attr>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"></MSHelp:Attr>
+<MSHelp:Attr Name="TopicType" Value="kbReference"></MSHelp:Attr>
+</xml>
+</head>
+<body id="GUID-4FBC2A30-FDE3-4C98-BEB4-BED98207ADDE">
+ <!-- ==============(Start:NavScript)================= -->
+ <script src="NavScript.js" language="JavaScript1.2" type="text/javascript"></script>
+ <script language="JavaScript1.2" type="text/javascript">WriteNavLink(0);</script>
+ <!-- ==============(End:NavScript)================= -->
+<p id="header_text" style="margin-bottom : 20pt"><em>Intel&reg; Math Kernel Library 11.1 Update 3 User's Guide</em></p>
+
+
+ 
+  <h1 class="topictitle1">Running Hybrid Offload Binaries</h1>
+ 
+   
+  <div id="GUID-7F5E96E6-9067-4129-B32F-D072D84A40C3"> 
+    <p>Hybrid offload binaries of the Intel Optimized MP LINPACK Benchmark inform you how many Intel Xeon Phi coprocessors are detected during the run. The output early prints a line like this: 
+    </p>
+ 
+    <p><samp class="codeph">Number of Intel Xeon Phi coprocessors: 1</samp> 
+    </p>
+ 
+    <p> 
+      <div class="Note"><h3 class="NoteTipHead">Note</h3> 
+        <p>This number counts only one Intel Xeon Phi coprocessor per MPI process. 
+        </p>
+ 
+      </div> 
+    </p>
+ 
+    <p>If Intel Xeon Phi coprocessors are available on your cluster and you expect offloading to occur, but the number printed is zero, it is likely that the correct compiler environment was not loaded. 
+      Specifically, check whether the 
+        <span class="keyword">LD_LIBRARY_PATH</span> environment variable contains shared libraries 
+        <span class="filepath">libcoi_host.so.0</span> and 
+        <span class="filepath">libscif.so.0</span>, which are installed by the Intel&reg; Manycore Platform Software Stack (Intel&reg; MPSS). 
+    </p>
+ 
+    <p>When running the Intel Optimized MP LINPACK Benchmark, you can use the standard Intel MKL environment variables to adjust the behavior of your runs. However not all the environment variables are available for the hybrid offload binaries, which use a different set of environment variables. 
+    </p>
+ 
+    <p id="P_CF_12906882145142"><a name="P_CF_12906882145142"><!-- --></a> 
+	 
+<div class="tablenoborder"><a name="d20e18"><!-- --></a><table cellpadding="4" summary="" id="d20e18" frame="border" border="1" cellspacing="0" rules="all"> 
+		  <thead align="left"> 
+			 <tr> 
+				<th class="cellrowborder" align="left" valign="top" width="100%" id="d23044e76"> 
+				  <p id="d20e29"><a name="d20e29"><!-- --></a>Optimization Notice 
+				  </p>
+ 
+				</th>
+ 
+			 </tr>
+</thead>
+ 
+		  <tbody> 
+			 <tr> 
+				<td class="bgcolor(#f5f5f5)" bgcolor="#f5f5f5" valign="top" width="100%" headers="d23044e76 "> 
+				  <p>Intel's compilers may or may not optimize to the same degree for non-Intel microprocessors for optimizations that are not unique to Intel microprocessors. These optimizations include SSE2, SSE3, and SSSE3 instruction sets and other optimizations. Intel does not guarantee the availability, functionality, or effectiveness of any optimization on microprocessors not manufactured by Intel. Microprocessor-dependent optimizations in this product are intended for use with Intel microprocessors. Certain optimizations not specific to Intel microarchitecture are reserved for Intel microprocessors. Please refer to the applicable product User and Reference Guides for more information regarding the specific instruction sets covered by this notice. 
+				  </p>
+ 
+				  <p> Notice revision #20110804 
+				  </p>
+  
+
+				  </td>
+ 
+			 </tr>
+ 
+		  </tbody>
+ 
+		</table>
+</div>
+ 
+	 </p>
+ 
+  </div>
+ 
+  
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong>&nbsp;<a href="GUID-6F7041FA-C376-4F01-8D73-118B45BEDF08.htm">Running the Intel Optimized MP LINPACK Benchmark</a></div>
+</div>
+<div class="See Also"><h2>See Also</h2>
+<div class="linklist">
+<div><a href="GUID-E231D5B2-0218-47BD-BDEF-0D3F164DF8A7.htm#GUID-E231D5B2-0218-47BD-BDEF-0D3F164DF8A7">Usage Modes of Intel Optimized MP LINPACK Benchmark for Intel&reg; Xeon Phi&#8482; Coprocessors</a></div>
+<div><a href="GUID-9BF8827C-AE14-41BE-8D0A-19525FBA55D3.htm#GUID-9BF8827C-AE14-41BE-8D0A-19525FBA55D3">Running the Benchmark on One Node</a></div>
+<div><a href="GUID-9CE68847-49F2-4A98-B324-FE803D2F35CF.htm#GUID-9CE68847-49F2-4A98-B324-FE803D2F35CF">Expanding the Benchmark to Two or More Nodes</a></div></div><br clear="all">
+<div class="docfeedback">
+<div><a href="http://www.intel.com/software/products/softwaredocs_feedback" target="_blank">Submit feedback on this help topic 
+		  </a></div></div></div> 
+
+</body>
+</html>

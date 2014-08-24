@@ -1,0 +1,61 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns:MSHelp="http://www.microsoft.com/MSHelp/" lang="en-us" xml:lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="DC.Type" content="topic">
+<meta name="DC.Title" content="Using Automatic Offload and Compiler Assisted Offload in One Application">
+<meta name="DC.subject" content="offload techniques, interoperability, computations offload to Intel&reg; Xeon Phi&#8482; coprocessors, interoperability of offload techniques">
+<meta name="keywords" content="offload techniques, interoperability, computations offload to Intel&reg; Xeon Phi&#8482; coprocessors, interoperability of offload techniques">
+<meta name="DC.Relation" scheme="URI" content="GUID-108D4F3E-D299-4D35-BAED-ECC5B48DA57E.htm">
+<meta name="DC.Relation" scheme="URI" content="http://www.intel.com/software/products/softwaredocs_feedback">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="GUID-C76F5351-35EF-497B-86D0-44DC855B34B4">
+<meta name="DC.Language" content="en-US">
+<link rel="stylesheet" type="text/css" href="intel_css_styles.css">
+<title>Using Automatic Offload and Compiler Assisted Offload in One Application</title>
+<xml>
+<MSHelp:Attr Name="DocSet" Value="Intel"></MSHelp:Attr>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"></MSHelp:Attr>
+<MSHelp:Attr Name="TopicType" Value="kbReference"></MSHelp:Attr>
+</xml>
+</head>
+<body id="GUID-C76F5351-35EF-497B-86D0-44DC855B34B4">
+ <!-- ==============(Start:NavScript)================= -->
+ <script src="NavScript.js" language="JavaScript1.2" type="text/javascript"></script>
+ <script language="JavaScript1.2" type="text/javascript">WriteNavLink(0);</script>
+ <!-- ==============(End:NavScript)================= -->
+<p id="header_text" style="margin-bottom : 20pt"><em>Intel&reg; Math Kernel Library 11.1 Update 3 User's Guide</em></p>
+
+
+ 
+  <h1 class="topictitle1"> Using Automatic Offload and Compiler Assisted Offload in One Application</h1>
+ 
+   
+  <div id="GUID-ECA56574-131D-4ED4-A218-B788C3EC36A3"> 
+	 <p> You can use Automatic Offload and Compiler Assisted Offload in the same application. However, to avoid oversubscription of computational resources of the coprocessors, synchronize Intel MKL and Intel Compiler accesses to coprocessors using either of the these techniques: 
+	 </p>
+ 
+	 <ul id="GUID-F42E87A3-A37D-4840-B86D-9F8CC5148500"> 
+		<li>In your code, manually synchronize #pragma offload regions and calls of Intel MKL functions that support Automatic Offload. 
+		</li>
+ 
+		<li>Set the 
+		  <span class="keyword">OFFLOAD_ENABLE_ORSL</span> environment variable to 1 to enable automatic synchronization. 
+		</li>
+ 
+	 </ul>
+ 
+  </div>
+ 
+  
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong>&nbsp;<a href="GUID-108D4F3E-D299-4D35-BAED-ECC5B48DA57E.htm">Using Intel&reg; Math Kernel Library on Intel&reg; Xeon Phi&#8482; Coprocessors</a></div>
+</div>
+<div><br clear="all">
+<div class="docfeedback">
+<div><a href="http://www.intel.com/software/products/softwaredocs_feedback" target="_blank">Submit feedback on this help topic 
+		  </a></div></div></div> 
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns:MSHelp="http://www.microsoft.com/MSHelp/" lang="en-us" xml:lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="DC.Type" content="topic">
+<meta name="DC.Title" content="Usage Modes of Intel Optimized MP LINPACK Benchmark for Intel&reg; Xeon Phi&#8482; Coprocessors">
+<meta name="DC.subject" content="Intel&reg; Optimized MP LINPACK Benchmark for Clusters, usage modes for Intel&reg; Xeon Phi&#8482; coprocessors, Intel&reg; Many Integrated Core Architecture, usage of Intel&reg; Optimized MP LINPACK Benchmark for Clusters for, heterogeneous support, inter-node and intra-node heterogeneity, in Intel&reg; Optimized MP LINPACK Benchmark for Clusters">
+<meta name="keywords" content="Intel&reg; Optimized MP LINPACK Benchmark for Clusters, usage modes for Intel&reg; Xeon Phi&#8482; coprocessors, Intel&reg; Many Integrated Core Architecture, usage of Intel&reg; Optimized MP LINPACK Benchmark for Clusters for, heterogeneous support, inter-node and intra-node heterogeneity, in Intel&reg; Optimized MP LINPACK Benchmark for Clusters">
+<meta name="DC.Relation" scheme="URI" content="GUID-10DFCB17-3953-47C6-9971-8C455A925BFE.htm">
+<meta name="DC.Relation" scheme="URI" content="http://www.intel.com/software/products/softwaredocs_feedback">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="GUID-E231D5B2-0218-47BD-BDEF-0D3F164DF8A7">
+<meta name="DC.Language" content="en-US">
+<link rel="stylesheet" type="text/css" href="intel_css_styles.css">
+<title>Usage Modes of Intel Optimized MP LINPACK Benchmark for Intel&reg; Xeon Phi&#8482; Coprocessors</title>
+<xml>
+<MSHelp:Attr Name="DocSet" Value="Intel"></MSHelp:Attr>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"></MSHelp:Attr>
+<MSHelp:Attr Name="TopicType" Value="kbReference"></MSHelp:Attr>
+</xml>
+</head>
+<body id="GUID-E231D5B2-0218-47BD-BDEF-0D3F164DF8A7">
+ <!-- ==============(Start:NavScript)================= -->
+ <script src="NavScript.js" language="JavaScript1.2" type="text/javascript"></script>
+ <script language="JavaScript1.2" type="text/javascript">WriteNavLink(0);</script>
+ <!-- ==============(End:NavScript)================= -->
+<p id="header_text" style="margin-bottom : 20pt"><em>Intel&reg; Math Kernel Library 11.1 Update 3 User's Guide</em></p>
+
+
+ 
+  <h1 class="topictitle1">Usage Modes of Intel Optimized MP LINPACK Benchmark for Intel&reg; Xeon Phi&#8482; Coprocessors</h1>
+ 
+   
+  <div id="GUID-240BE772-FA10-4AD6-8FBD-ACED570702B6"> 
+    <p>Intel MKL supports Intel&reg; Xeon Phi&#8482; coprocessors in these modes: 
+    </p>
+ 
+    <ul id="GUID-E4D15634-9386-43E3-9B3F-6D3AD79CB468"> 
+      <li> 
+        <p>Native 
+        </p>
+ 
+      </li>
+ 
+      <li> 
+        <p>Hybrid Offload
+        </p>
+ 
+		  
+      </li>
+ 
+      
+    </ul>
+ 
+    <p>For details of the Native mode, see 
+      <a href="GUID-108D4F3E-D299-4D35-BAED-ECC5B48DA57E.htm">Using Intel&reg; Math Kernel Library on Intel&reg; Xeon Phi&#8482; Coprocessors</a>. 
+    </p>
+ 
+    <p>The Hybrid Offload mode combines use of different parallelization methods and offloading computations to coprocessors. In this mode, the host processor uses fewer cores for MPI than the total number of physical cores, also uses OpenMP* or 
+      POSIX threads, and offloads chunks of the problem to the Intel Xeon Phi coprocessor. 
+    </p>
+ 
+    <p>Native mode is required to run MPI processes directly on the Intel Xeon Phi coprocessors. If the MPI processes run solely on the Intel&reg; Xeon&reg; processors, the coprocessors are used in an offload mode.
+    </p>
+ 
+    <p>In many cases, the host Intel Xeon processor has more memory than the Intel Xeon Phi coprocessor. Therefore, the MPI processes have access to more memory when run on the host processors than on the coprocessors. 
+    </p>
+ 
+    <p>HPL code is homogeneous by nature: it requires that each MPI process runs in an environment with similar CPU and memory constraints. If for some reason, one node is twice as powerful as another node, in the past you could balance this only by running two MPI processes on the faster node. 
+    </p>
+ 
+    <p>Intel MKL now supports heterogeneous Intel Optimized MP LINPACK Benchmark. Heterogeneity means that Intel MKL supports a data distribution that can be balanced to the performance requirements of each node if there is enough memory on that node to support any additional work. The Intel Optimized MP LINPACK Benchmark supports: 
+    </p>
+ 
+    <ul id="GUID-91E07DB7-BED3-4805-AA80-0C93FDE98C11"> 
+      <li> 
+        <p>Intra-node heterogeneity, 
+        </p>
+ 
+        <p> where a node includes different processing units with different compute capabilities. To use intra-node heterogeneity, where work is shared between the Intel Xeon processors and Intel Xeon Phi coprocessors, use the hybrid offload techniques. 
+        </p>
+ 
+      </li>
+ 
+      <li> 
+        <p> Inter-node heterogeneity, 
+        </p>
+ 
+        <p>where the nodes themselves can differ. For information on how to configure Intel MKL to use the inter-node heterogeneity, see 
+          <a href="GUID-C25B14C6-67C8-457A-9228-FE32537ADBDB.htm">Heterogeneous Intel Optimized MP LINPACK Benchmark</a>. 
+        </p>
+ 
+      </li>
+ 
+    </ul>
+ 
+    <p>To maximize performance, increase the memory on the host processor or processors (64 GB per coprocessor is ideal) and run a large problem and large block-size. Such runs offload pieces of work to the coprocessors. Although this method increases the PCIe bus traffic, it is worthwhile for solving a problem that is large enough. 
+    </p>
+ 
+    <p>If the amount of memory on the host processor is small, you might get the best performance by running natively instead of offloading. 
+    </p>
+ 
+    <p id="P_CF_12894904934934"><a name="P_CF_12894904934934"><!-- --></a> 
+	 
+<div class="tablenoborder"><a name="d20e18"><!-- --></a><table cellpadding="4" summary="" id="d20e18" frame="border" border="1" cellspacing="0" rules="all"> 
+		  <thead align="left"> 
+			 <tr> 
+				<th class="cellrowborder" align="left" valign="top" width="100%" id="d80331e132"> 
+				  <p id="d20e29"><a name="d20e29"><!-- --></a>Optimization Notice 
+				  </p>
+ 
+				</th>
+ 
+			 </tr>
+</thead>
+ 
+		  <tbody> 
+			 <tr> 
+				<td class="bgcolor(#f5f5f5)" bgcolor="#f5f5f5" valign="top" width="100%" headers="d80331e132 "> 
+				  <p>Intel's compilers may or may not optimize to the same degree for non-Intel microprocessors for optimizations that are not unique to Intel microprocessors. These optimizations include SSE2, SSE3, and SSSE3 instruction sets and other optimizations. Intel does not guarantee the availability, functionality, or effectiveness of any optimization on microprocessors not manufactured by Intel. Microprocessor-dependent optimizations in this product are intended for use with Intel microprocessors. Certain optimizations not specific to Intel microarchitecture are reserved for Intel microprocessors. Please refer to the applicable product User and Reference Guides for more information regarding the specific instruction sets covered by this notice. 
+				  </p>
+ 
+				  <p> Notice revision #20110804 
+				  </p>
+  
+
+				  </td>
+ 
+			 </tr>
+ 
+		  </tbody>
+ 
+		</table>
+</div>
+ 
+	 </p>
+ 
+  </div>
+ 
+  
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong>&nbsp;<a href="GUID-10DFCB17-3953-47C6-9971-8C455A925BFE.htm">Intel&reg; Optimized MP LINPACK Benchmark for Clusters</a></div>
+</div>
+<div><br clear="all">
+<div class="docfeedback">
+<div><a href="http://www.intel.com/software/products/softwaredocs_feedback" target="_blank">Submit feedback on this help topic 
+		  </a></div></div></div> 
+
+</body>
+</html>

@@ -1,0 +1,869 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns:MSHelp="http://www.microsoft.com/MSHelp/" lang="en-us" xml:lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="DC.Type" content="topic">
+<meta name="DC.Title" content="Dynamic Libraries in the lib/ia32 Directory">
+<meta name="DC.Relation" scheme="URI" content="GUID-8F70A575-63CF-4631-9A66-BBCD6A4CF293.htm">
+<meta name="DC.Relation" scheme="URI" content="http://www.intel.com/software/products/softwaredocs_feedback">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="GUID-3442B560-FDF5-4B15-9DE3-043F955627ED">
+<meta name="DC.Language" content="en-US">
+<link rel="stylesheet" type="text/css" href="intel_css_styles.css">
+<title>Dynamic Libraries in the lib\ia32 Directory</title>
+<xml>
+<MSHelp:Attr Name="DocSet" Value="Intel"></MSHelp:Attr>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"></MSHelp:Attr>
+<MSHelp:Attr Name="TopicType" Value="kbReference"></MSHelp:Attr>
+</xml>
+</head>
+<body id="GUID-3442B560-FDF5-4B15-9DE3-043F955627ED">
+ <!-- ==============(Start:NavScript)================= -->
+ <script src="NavScript.js" language="JavaScript1.2" type="text/javascript"></script>
+ <script language="JavaScript1.2" type="text/javascript">WriteNavLink(0);</script>
+ <!-- ==============(End:NavScript)================= -->
+<p id="header_text" style="margin-bottom : 20pt"><em>Intel&reg; Math Kernel Library 11.1 Update 3 User's Guide</em></p>
+
+
+ 
+  <h1 class="topictitle1">Dynamic Libraries in the 
+	 <span class="filepath" id="GUID-94946BE6-87B6-4724-B21F-93B474AC8A06">lib</span><span class="filepath" id="GUID-F2669156-6542-42C2-81AB-968DCE15511C">/</span><span class="filepath" id="GUID-F6E94BFD-E9C0-49FA-94E4-5FEF344B2D37">ia32</span> Directory</h1>
+ 
+   
+   
+  <div id="GUID-677BB98F-98FB-4160-83FA-7D64B090D116"> 
+	 <p>Some of the libraries in this directory are optional. However, some optional libraries are installed by default, while the rest are not. To get those libraries that are not installed by default, explicitly select the specified optional component during installation. 
+	 </p>
+ 
+	 
+<div class="tablenoborder"><table cellpadding="4" summary="" id="GUID-22F39CE7-D95C-48FE-9E85-D709421D6EAA" width="100%" frame="hsides" border="1" rules="all"> 
+		   
+		   
+		  <thead align="left"> 
+			 <tr> 
+				<th class="cellrowborder" rowspan="2" valign="top" width="40%" id="d9532e59"> 
+				  <p>File 
+				  </p>
+ 
+				</th>
+ 
+				<th class="cellrowborder" rowspan="2" valign="top" width="25%" id="d9532e65"> 
+				  <p>Contents 
+				  </p>
+ 
+				</th>
+ 
+				<th class="row-nocellborder" colspan="2" valign="top" id="d9532e71"> 
+				  <p>Optional Component 
+				  </p>
+ 
+				</th>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<th class="cellrowborder" valign="top" width="20%" id="d9532e80"> 
+				  <p>Name 
+				  </p>
+ 
+				</th>
+ 
+				<th class="row-nocellborder" valign="top" width="15%" id="d9532e86"> 
+				  <p>Installed by Default 
+				  </p>
+ 
+				</th>
+ 
+			 </tr>
+ 
+		  </thead>
+ 
+		  <tbody> 
+			 <tr> 
+				<td class="cellrowborder" rowspan="1" colspan="1" valign="top" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_rt.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" rowspan="1" colspan="1" valign="top" headers="d9532e65 "> 
+				  <p>Single Dynamic Library 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <strong>Interface Layer</strong> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_intel.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>Interface library for the Intel compilers 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_gf.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>Interface library for the GNU Fortran compiler 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				  <p>GNU* Compiler Collection support 
+				  </p>
+ 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				  <p>Yes 
+				  </p>
+ 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <strong>Threading Layer</strong> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_intel_thread.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>Threading library for the Intel compilers 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_gnu_thread.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>Threading library for the GNU Fortran and C compilers 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				  <p>GNU* Compiler Collection support 
+				  </p>
+ 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				  <p>Yes 
+				  </p>
+ 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_pgi_thread.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>Threading library for the PGI* compiler 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				  <p>PGI* compiler support 
+				  </p>
+ 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_sequential.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>Sequential library 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <strong>Computational Layer</strong> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_core.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>Library dispatcher for dynamic load of processor-specific kernel library 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_p4.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>Pentium&reg; 4 processor kernel library 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_p4p.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>Kernel library for the Intel&reg; Pentium&reg; 4 processor with Intel&reg; Streaming SIMD Extensions 3 (Intel&reg; SSE3), including Intel&reg; Core&#8482; Duo and Intel&reg; Core&#8482; Solo processors. 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_p4m.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>Kernel library for processors based on the Intel&reg; Core&#8482; microarchitecture (except Intel&reg; Core&#8482; Duo and Intel&reg; Core&#8482; Solo processors) 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_p4m3.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>Kernel library for the Intel&reg; Core&#8482; i7 processors 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_avx.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>Kernel library for Intel&reg; Advanced Vector Extensions (Intel&reg; AVX) 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_avx2.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>Kernel library for Intel&reg; Advanced Vector Extensions 2 (Intel&reg; AVX2) 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_vml_p4.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>VML/VSL/DF part of Pentium&reg; 4 processor kernel 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_vml_p4m.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>VML/VSL/DF for processors based on the Intel&reg; Core&#8482; microarchitecture 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_vml_p4m2.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>VML/VSL/DF for 45nm Hi-k Intel&reg; Core&#8482;2 and Intel Xeon&reg; processor families 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_vml_p4m3.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>VML/VSL/DF for the Intel&reg; Core&#8482; i7 processors 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_vml_p4p.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>VML/VSL/DF for Pentium&reg; 4 processor with Intel SSE3 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_vml_avx.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>VML/VSL/DF optimized for Intel&reg; Advanced Vector Extensions (Intel&reg; AVX) 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_vml_avx2.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>VML/VSL/DF optimized for Intel&reg; Advanced Vector Extensions 2 (Intel&reg; AVX2) 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_vml_ia.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>VML/VSL/DF default kernel for newer Intel&reg; architecture processors 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p><span class="filepath"> libmkl_vml_cmpt.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>VML/VSL/DF library for conditional numerical reproducibility 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <strong>Cluster Libraries</strong> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_scalapack_core.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>ScaLAPACK routines 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				  <p>Cluster support 
+				  </p>
+ 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" rowspan="1" colspan="1" valign="top" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_cdft_core.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" rowspan="1" colspan="1" valign="top" headers="d9532e65 "> 
+				  <p>Cluster version of FFT functions 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				  <p>Cluster support 
+				  </p>
+ 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">libmkl_blacs_intelmpi.so</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>BLACS routines for Intel MPI and MPICH2 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				  <p>Cluster support 
+				  </p>
+ 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <strong>Message Catalogs</strong> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">locale/en_US/mkl_msg.cat</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>Catalog of Intel&reg; Math Kernel Library (Intel&reg; MKL) messages in English 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="40%" headers="d9532e59 "> 
+				  <p> 
+					 <span class="filepath">locale/ja_JP/mkl_msg.cat</span> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="25%" headers="d9532e65 "> 
+				  <p>Catalog of Intel MKL messages in Japanese. Available only if Intel MKL provides Japanese localization. Please see the Release Notes for this information. 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="20%" headers="d9532e71 d9532e80 "> 
+				</td>
+ 
+				<td class="row-nocellborder" valign="top" width="15%" headers="d9532e71 d9532e86 "> 
+				</td>
+ 
+			 </tr>
+ 
+		  </tbody>
+ 
+		</table>
+</div>
+ 
+	 <p id="P_CF_12871336502935"><a name="P_CF_12871336502935"><!-- --></a> 
+	 
+<div class="tablenoborder"><a name="d20e18"><!-- --></a><table cellpadding="4" summary="" id="d20e18" frame="border" border="1" cellspacing="0" rules="all"> 
+		  <thead align="left"> 
+			 <tr> 
+				<th class="cellrowborder" align="left" valign="top" width="100%" id="d9532e915"> 
+				  <p id="d20e29"><a name="d20e29"><!-- --></a>Optimization Notice 
+				  </p>
+ 
+				</th>
+ 
+			 </tr>
+</thead>
+ 
+		  <tbody> 
+			 <tr> 
+				<td class="bgcolor(#f5f5f5)" bgcolor="#f5f5f5" valign="top" width="100%" headers="d9532e915 "> 
+				  <p>Intel's compilers may or may not optimize to the same degree for non-Intel microprocessors for optimizations that are not unique to Intel microprocessors. These optimizations include SSE2, SSE3, and SSSE3 instruction sets and other optimizations. Intel does not guarantee the availability, functionality, or effectiveness of any optimization on microprocessors not manufactured by Intel. Microprocessor-dependent optimizations in this product are intended for use with Intel microprocessors. Certain optimizations not specific to Intel microarchitecture are reserved for Intel microprocessors. Please refer to the applicable product User and Reference Guides for more information regarding the specific instruction sets covered by this notice. 
+				  </p>
+ 
+				  <p> Notice revision #20110804 
+				  </p>
+  
+
+				  </td>
+ 
+			 </tr>
+ 
+		  </tbody>
+ 
+		</table>
+</div>
+ 
+	 </p>
+ 
+  </div>
+ 
+  
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong>&nbsp;<a href="GUID-8F70A575-63CF-4631-9A66-BBCD6A4CF293.htm">Detailed Structure of the IA-32 Architecture Directories</a></div>
+</div>
+<div><br clear="all">
+<div class="docfeedback">
+<div><a href="http://www.intel.com/software/products/softwaredocs_feedback" target="_blank">Submit feedback on this help topic 
+		  </a></div></div></div> 
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns:MSHelp="http://www.microsoft.com/MSHelp/" lang="en-us" xml:lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="DC.Type" content="topic">
+<meta name="DC.Title" content="Avoiding Memory Leaks in Intel MKL">
+<meta name="DC.subject" content="memory management">
+<meta name="keywords" content="memory management">
+<meta name="DC.Relation" scheme="URI" content="GUID-5E240159-8AE3-4507-91FE-43BA6DBAF6F2.htm">
+<meta name="DC.Relation" scheme="URI" content="http://software.intel.com/en-us/intel-software-technical-documentation">
+<meta name="DC.Relation" scheme="URI" content="http://www.intel.com/software/products/softwaredocs_feedback">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="GUID-04264D39-DF2B-49C7-9EE6-E54E17CCE023">
+<meta name="DC.Language" content="en-US">
+<link rel="stylesheet" type="text/css" href="intel_css_styles.css">
+<title>Avoiding Memory Leaks in Intel MKL</title>
+<xml>
+<MSHelp:Attr Name="DocSet" Value="Intel"></MSHelp:Attr>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"></MSHelp:Attr>
+<MSHelp:Attr Name="TopicType" Value="kbReference"></MSHelp:Attr>
+<MSHelp:Keyword Index="F" Term="mkl_free_buffers"></MSHelp:Keyword>
+<MSHelp:Keyword Index="F" Term="mkl_thread_free_buffers"></MSHelp:Keyword>
+<MSHelp:Keyword Index="F" Term="mkl_disable_fast_mm"></MSHelp:Keyword>
+<MSHelp:Keyword Index="F" Term="intel.cpp.mkl_free_buffers"></MSHelp:Keyword>
+<MSHelp:Keyword Index="F" Term="intel.cpp.mkl_thread_free_buffers"></MSHelp:Keyword>
+<MSHelp:Keyword Index="F" Term="intel.cpp.mkl_disable_fast_mm"></MSHelp:Keyword>
+<MSHelp:Keyword Index="F" Term="intel.for.mkl_free_buffers"></MSHelp:Keyword>
+<MSHelp:Keyword Index="F" Term="intel.for.mkl_thread_free_buffers"></MSHelp:Keyword>
+<MSHelp:Keyword Index="F" Term="intel.for.mkl_disable_fast_mm"></MSHelp:Keyword>
+</xml>
+</head>
+<body id="GUID-04264D39-DF2B-49C7-9EE6-E54E17CCE023">
+ <!-- ==============(Start:NavScript)================= -->
+ <script src="NavScript.js" language="JavaScript1.2" type="text/javascript"></script>
+ <script language="JavaScript1.2" type="text/javascript">WriteNavLink(0);</script>
+ <!-- ==============(End:NavScript)================= -->
+<p id="header_text" style="margin-bottom : 20pt"><em>Intel&reg; Math Kernel Library 11.1 Update 3 User's Guide</em></p>
+
+
+ 
+  <h1 class="topictitle1"> Avoiding Memory Leaks in Intel MKL</h1>
+ 
+   
+  <div id="GUID-1C1DFE3E-423B-424B-A882-C1254EE7D988"> 
+    <p id="GUID-02B1E031-A41A-4A32-8314-AD04E72480B4"> When running, Intel MKL allocates and deallocates internal buffers to facilitate better performance. However, in some cases this behavior may result in memory leaks. 
+    </p>
+ 
+    <p> To avoid memory leaks, you can do either of the following: 
+    </p>
+ 
+    <ul id="GUID-524A0454-48CA-4B11-BAFA-F6C20FC8563F"> 
+      <li> 
+        <p>Set the 
+          <samp class="codeph">MKL_DISABLE_FAST_MM</samp> environment variable to 1 or call the 
+          <samp class="codeph">mkl_disable_fast_mm()</samp> function. 
+        </p>
+ 
+        <p> Be aware that this change may negatively impact performance of some Intel MKL functions, especially for small problem sizes. 
+        </p>
+ 
+      </li>
+ 
+      <li> 
+        <p> Call the 
+          <samp class="codeph" id="GUID-D60B96AE-E2FE-4605-BEE8-A191650646FF">mkl_free_buffers()</samp> function or the 
+          <samp class="codeph">mkl_thread_free_buffers()</samp> function in the current thread. 
+        </p>
+ 
+      </li>
+ 
+    </ul>
+ 
+    <p>For the descriptions of the memory functions, see the Intel MKL Reference Manual, available in the Intel Software Documentation Library. 
+    </p>
+ 
+  </div>
+ 
+  
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong>&nbsp;<a href="GUID-5E240159-8AE3-4507-91FE-43BA6DBAF6F2.htm">Using Memory Functions</a></div>
+</div>
+<div class="See Also"><h2>See Also</h2>
+<div class="linklist">
+<div><a href="http://software.intel.com/en-us/intel-software-technical-documentation" target="_blank">Intel Software Documentation Library 
+        </a></div></div><br clear="all">
+<div class="docfeedback">
+<div><a href="http://www.intel.com/software/products/softwaredocs_feedback" target="_blank">Submit feedback on this help topic 
+		  </a></div></div></div> 
+
+</body>
+</html>

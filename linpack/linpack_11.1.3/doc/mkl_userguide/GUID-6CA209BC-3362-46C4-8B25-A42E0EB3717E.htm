@@ -1,0 +1,181 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns:MSHelp="http://www.microsoft.com/MSHelp/" lang="en-us" xml:lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="DC.Type" content="topic">
+<meta name="DC.Title" content="Linking on IA-32 Architecture Systems">
+<meta name="DC.Relation" scheme="URI" content="GUID-C676FE09-339D-4147-BB79-4038A27A6851.htm">
+<meta name="DC.Relation" scheme="URI" content="GUID-C3CFB9D7-EC03-4ECC-8F37-7DAAE2C6C93A.htm">
+<meta name="DC.Relation" scheme="URI" content="GUID-4284CA4C-EC4E-45C0-B0FE-389A6F555ECF.htm">
+<meta name="DC.Relation" scheme="URI" content="GUID-A5DECA98-F26E-4D4F-88B5-BE90681C38B9.htm">
+<meta name="DC.Relation" scheme="URI" content="GUID-7091CAB6-0506-443A-ABA0-CCE2245A1A1C.htm">
+<meta name="DC.Relation" scheme="URI" content="GUID-549011AB-1324-4694-B8DD-AFBE81397B8C.htm#GUID-549011AB-1324-4694-B8DD-AFBE81397B8C">
+<meta name="DC.Relation" scheme="URI" content="http://www.intel.com/software/products/softwaredocs_feedback">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="GUID-6CA209BC-3362-46C4-8B25-A42E0EB3717E">
+<meta name="DC.Language" content="en-US">
+<link rel="stylesheet" type="text/css" href="intel_css_styles.css">
+<title>Linking on IA-32 Architecture Systems</title>
+<xml>
+<MSHelp:Attr Name="DocSet" Value="Intel"></MSHelp:Attr>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"></MSHelp:Attr>
+<MSHelp:Attr Name="TopicType" Value="kbReference"></MSHelp:Attr>
+</xml>
+</head>
+<body id="GUID-6CA209BC-3362-46C4-8B25-A42E0EB3717E">
+ <!-- ==============(Start:NavScript)================= -->
+ <script src="NavScript.js" language="JavaScript1.2" type="text/javascript"></script>
+ <script language="JavaScript1.2" type="text/javascript">WriteNavLink(0);</script>
+ <!-- ==============(End:NavScript)================= -->
+<p id="header_text" style="margin-bottom : 20pt"><em>Intel&reg; Math Kernel Library 11.1 Update 3 User's Guide</em></p>
+
+
+ 
+  <h1 class="topictitle1">Linking on IA-32 Architecture Systems</h1>
+ 
+   
+  <div id="GUID-88C02431-F14B-4C0A-90AF-DCF48126B4C6"> 
+	 <p id="GUID-C6C78B0A-7E90-4DB7-816E-24EA45C8947E">The following examples illustrate linking that uses Intel&reg; compilers. 
+	 </p>
+ 
+	 <p id="GUID-D98AE18F-8949-4BF4-B789-7AA8F7CAFD4A">The examples use the 
+		<span class="filepath" id="GUID-DA2907C1-1698-454A-A513-A08C82A72390">.f</span> Fortran source file. C/C++ users should instead specify a 
+		<span class="filepath" id="GUID-4C3D954B-B188-4298-A5D5-DBEC27D69B14">.cpp</span> (C++) or 
+		<span class="filepath" id="GUID-DD126C39-833A-4F54-83A6-2BE9E4ECA3C8">.c</span> (C) file and replace 
+		<samp class="codeph" id="GUID-E1D60549-2540-4ACE-9A2A-E05A40CE8D0A">ifort</samp> with 
+		<samp class="codeph" id="GUID-2AFDC37F-2478-4B2F-A633-7414DF48441B">icc</samp>. 
+	 </p>
+ 
+	 <p id="GUID-0FF7CAEE-C01D-432A-AE51-890A1F237EB4"> 
+		In these examples,<samp class="codeph" id="GUID-DF80C278-F5A2-4775-846E-8CD0141BF6E3"><br>MKLPATH=$MKLROOT/lib/ia32</samp>, 
+		  <samp class="codeph" id="GUID-5F9E1C88-BBEB-4319-AFCD-27C3C809BF33"><br>MKLINCLUDE=$MKLROOT/include</samp>. 
+	 </p>
+ 
+	 <div class="Note"><h3 class="NoteTipHead">Note</h3> 
+		<p>If you successfully completed the 
+		  <a href="GUID-390867EA-9DD8-4CBE-93B6-CE11251C050D.htm">Scripts to Set Environment Variables      Setting Environment Variables</a> step of the Getting Started process, you can omit 
+		  <samp class="codeph" id="GUID-1DAE782A-A597-4A73-B2B4-69349952E982">-I$MKLINCLUDE</samp> in all the examples and omit 
+		  <samp class="codeph" id="GUID-646D95A0-9742-4543-8329-B03AE1267FBA">-L$MKLPATH</samp> in the examples for dynamic linking. 
+		</p>
+ 
+	 </div> 
+	 <ul id="GUID-B1E179CE-8CFD-4FF0-B09E-E4025FC73106"> 
+		<li> 
+		  <p id="GUID-E44E6A5B-73B1-47D5-AAF0-D6061FD44AD0">Static linking of 
+			 <span class="filepath" id="GUID-00431793-F324-4546-A221-D9CD66606BC3">myprog.f</span> and parallel Intel MKL: 
+		  </p>
+ 
+		  <p id="GUID-4A7815F1-BC83-4E8E-936A-D2EC3C3A3CE8"> 
+			 <samp class="codeph" id="GUID-2CB98EFA-263C-48D3-B279-67672A6076D8"> ifort myprog.f 
+				-L$MKLPATH -I$MKLINCLUDE<br> -Wl,--start-group $MKLPATH/libmkl_intel.a $MKLPATH/libmkl_intel_thread.a $MKLPATH/libmkl_core.a<br> -Wl,--end-group -liomp5 -lpthread -lm</samp> 
+		  </p>
+ 
+		</li>
+ 
+		<li> 
+		  <p id="GUID-A700D021-EC8E-4F49-B2A5-AE5870C5A8F0">Dynamic linking of 
+			 <span class="filepath" id="GUID-5712B552-BBDB-4C88-BF17-51D1F64D9509">myprog.f</span> and parallel Intel MKL: 
+		  </p>
+ 
+		  <p id="GUID-BB1A154B-3150-48F5-84A5-B69EACA44EA0"> 
+			 <samp class="codeph" id="GUID-32790714-D871-4611-BD01-A8C1F013DF1B"> ifort myprog.f 
+				-L$MKLPATH -I$MKLINCLUDE<br>-lmkl_intel -lmkl_intel_thread -lmkl_core -liomp5 -lpthread -lm<br></samp> 
+		  </p>
+ 
+		</li>
+ 
+		<li> 
+		  <p id="GUID-35043943-501F-4DC7-B05D-514FE816C2D4">Static linking of 
+			 <span class="filepath" id="GUID-E8B2C2D0-A478-4A19-B5FC-5E2C8E6E75F5">myprog.f</span> and sequential version of Intel MKL: 
+		  </p>
+ 
+		  <p id="GUID-4EA6F0A1-C1FD-4630-B0A0-F065CCB13FF8"> 
+			 <samp class="codeph" id="GUID-34FE1042-D36D-44C5-B337-BC82AC3AAB45"> ifort myprog.f 
+				-L$MKLPATH -I$MKLINCLUDE<br> -Wl,--start-group $MKLPATH/libmkl_intel.a $MKLPATH/libmkl_sequential.a $MKLPATH/libmkl_core.a<br>-Wl,--end-group -lpthread -lm<br></samp> 
+		  </p>
+ 
+		</li>
+ 
+		<li> 
+		  <p id="GUID-1A63B391-F9BF-4DF5-AB47-2CAD2ECD8D73">Dynamic linking of 
+			 <span class="filepath" id="GUID-B2294EEB-0FED-4561-ACAB-014CAE73D00B">myprog.f</span> and sequential version of Intel MKL: 
+		  </p>
+ 
+		  <p id="GUID-4328424A-DD17-453B-856F-24DEBCA3202F"> 
+			 <samp class="codeph" id="GUID-F2A52A5A-B906-4823-833B-D7A8D6C7EA10"> ifort myprog.f 
+				-L$MKLPATH -I$MKLINCLUDE<br>-lmkl_intel -lmkl_sequential -lmkl_core -lpthread -lm<br></samp> 
+		  </p>
+ 
+		</li>
+ 
+		<li> 
+		  <p id="GUID-9256F8BE-DBE3-4B7B-A055-6C0E72377B36">Dynamic linking of user code 
+			 <span class="filepath" id="GUID-F170F408-D830-4D0C-B077-F79F4300FCE3">myprog.f</span> and parallel or sequential Intel MKL 
+			 (Call the 
+			 <samp class="codeph" id="GUID-E94DEBCC-906D-4CA8-813D-31D1F2086C2E">mkl_set_threading_layer</samp> function or set value of the 
+			 <samp class="codeph" id="GUID-8A3D906B-FA15-4B0F-ABBD-3C5C1DBE4F7C">MKL_THREADING_LAYER</samp> environment variable to choose threaded or sequential mode): 
+		  </p>
+ 
+		  <p id="GUID-0429307A-416E-452E-9388-B5E425BFFB03"> 
+			 <samp class="codeph" id="GUID-89DCFEB9-E91F-4AAC-BDAB-D8AAB39B9098">ifort myprog.f -lmkl_rt<br></samp> 
+		  </p>
+ 
+		</li>
+ 
+		<li> 
+		  <p id="GUID-615F7427-79CB-4600-8458-35E881A9C013">Static linking of 
+			 <span class="filepath" id="GUID-A632CA32-F584-4DF1-829B-4A5F58042074">myprog.f</span>, Fortran&nbsp;95 LAPACK interface, and parallel Intel MKL: 
+		  </p>
+ 
+		  <p id="GUID-BAC46ED7-9C4E-41C0-A821-381D245010DB"> 
+			 <samp class="codeph" id="GUID-9074B6B8-817D-4A09-A493-05C6A694A573"> ifort myprog.f 
+				-L$MKLPATH -I$MKLINCLUDE -I$MKLINCLUDE/ia32<br>-lmkl_lapack95<br> -Wl,--start-group $MKLPATH/libmkl_intel.a $MKLPATH/libmkl_intel_thread.a $MKLPATH/libmkl_core.a<br>-Wl,--end-group<br> -liomp5 -lpthread -lm<br></samp> 
+		  </p>
+ 
+		</li>
+ 
+		<li> 
+		  <p id="GUID-372BAC89-886D-4D6B-8140-DE2CC381F294">Static linking of 
+			 <span class="filepath" id="GUID-1FE95E13-ECE4-4AA3-9B78-12075581713A">myprog.f</span>, Fortran&nbsp;95 BLAS interface, and parallel Intel MKL: 
+		  </p>
+ 
+		  <p id="GUID-EB2C7536-A3C9-4564-AEE2-F0737E9FCA0A"> 
+			 <samp class="codeph" id="GUID-DB8D63B9-40BA-43F3-9A25-54D4A61D441C"> ifort myprog.f 
+				-L$MKLPATH -I$MKLINCLUDE -I$MKLINCLUDE/ia32<br>-lmkl_blas95<br>-Wl,--start-group $MKLPATH/libmkl_intel.a $MKLPATH/libmkl_intel_thread.a $MKLPATH/libmkl_core.a<br>-Wl,--end-group -liomp5 -lpthread -lm<br></samp> 
+		  </p>
+ 
+		</li>
+ 
+	 </ul>
+ 
+  </div>
+ 
+  
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong>&nbsp;<a href="GUID-C676FE09-339D-4147-BB79-4038A27A6851.htm">Linking Examples</a></div>
+</div>
+<div class="See Also"><h2>See Also</h2>
+<div class="linklist">
+<div><a href="GUID-C3CFB9D7-EC03-4ECC-8F37-7DAAE2C6C93A.htm">Fortran&nbsp;95 Interfaces to LAPACK and BLAS 
+		  </a> 
+          
+		  </div>
+<div><a href="GUID-4284CA4C-EC4E-45C0-B0FE-389A6F555ECF.htm">Examples for linking a C application using cluster components 
+		  </a>  
+		  </div>
+<div><a href="GUID-A5DECA98-F26E-4D4F-88B5-BE90681C38B9.htm">Examples for linking a Fortran application using cluster components 
+		  </a>  
+		  </div>
+<div><a href="GUID-7091CAB6-0506-443A-ABA0-CCE2245A1A1C.htm">Using the Single Dynamic Library 
+		  </a>  
+		  </div>
+<div><a href="GUID-549011AB-1324-4694-B8DD-AFBE81397B8C.htm#GUID-549011AB-1324-4694-B8DD-AFBE81397B8C">Linking with System Libraries 
+		  </a> for specifics of linking with a GNU or PGI compiler 
+		  </div></div><br clear="all">
+<div class="docfeedback">
+<div><a href="http://www.intel.com/software/products/softwaredocs_feedback" target="_blank">Submit feedback on this help topic 
+		  </a></div></div></div> 
+
+</body>
+</html>

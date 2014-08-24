@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns:MSHelp="http://www.microsoft.com/MSHelp/" lang="en-us" xml:lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="DC.Type" content="topic">
+<meta name="DC.Title" content="Code Examples">
+<meta name="DC.Relation" scheme="URI" content="GUID-497CAEBE-9D78-4C3E-90FE-78437D73C038.htm">
+<meta name="DC.Relation" scheme="URI" content="http://www.intel.com/software/products/softwaredocs_feedback">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="GUID-4AA9082D-F781-4145-950F-091994B2A3A7">
+<meta name="DC.Language" content="en-US">
+<link rel="stylesheet" type="text/css" href="intel_css_styles.css">
+<title>Code Examples</title>
+<xml>
+<MSHelp:Attr Name="DocSet" Value="Intel"></MSHelp:Attr>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"></MSHelp:Attr>
+<MSHelp:Attr Name="TopicType" Value="kbReference"></MSHelp:Attr>
+</xml>
+</head>
+<body id="GUID-4AA9082D-F781-4145-950F-091994B2A3A7">
+ <!-- ==============(Start:NavScript)================= -->
+ <script src="NavScript.js" language="JavaScript1.2" type="text/javascript"></script>
+ <script language="JavaScript1.2" type="text/javascript">WriteNavLink(0);</script>
+ <!-- ==============(End:NavScript)================= -->
+<p id="header_text" style="margin-bottom : 20pt"><em>Intel&reg; Math Kernel Library 11.1 Update 3 User's Guide</em></p>
+
+
+ 
+  <h1 class="topictitle1">Code Examples</h1>
+ 
+   
+  <div> 
+	 <p>The following simple programs show how to obtain reproducible results from run to run of Intel MKL functions. See the 
+		<em>Intel MKL Reference Manual</em> for more examples. 
+	 </p>
+ 
+	 <div class="section" id="SECTION_08AE9C5E296A4DC79C30D895B859F8A5"><a name="SECTION_08AE9C5E296A4DC79C30D895B859F8A5"><!-- --></a><h2 class="sectiontitle">C Example of CNR</h2> 
+		 
+		<pre>#include &lt;mkl.h&gt;
+int main(void) {
+    int my_cbwr_branch;
+    /* Align all input/output data on <span>64-byte </span>boundaries */
+    /* <span>"for best performance of Intel MKL</span> */
+    void *darray;
+    int darray_size=1000;
+    /* Set alignment value in bytes */
+    int alignment=<span>64</span>;
+    /* Allocate aligned array */
+    darray = mkl_malloc (sizeof(double)*darray_size, alignment);
+    /* Find the available MKL_CBWR_BRANCH automatically */
+    my_cbwr_branch = mkl_cbwr_get_auto_branch();
+    /* User code without Intel MKL calls */
+    /* Piece of the code where CNR of Intel MKL is needed */
+    /* The performance of Intel MKL functions might be reduced for CNR mode */
+<span>    /* If the "IF" statement below is commented out, Intel MKL will run in a regular mode, */
+    /* and data alignment will allow you to get best performance */</span>
+    if (mkl_cbwr_set(my_cbwr_branch)) {
+        printf("Error in setting MKL_CBWR_BRANCH! Aborting…\n”);
+        return;
+    }
+    /* CNR calls to Intel MKL + any other code */
+    /* Free the allocated aligned array */
+    mkl_free(darray);
+}
+</pre> 
+	 </div>
+ 
+	 <div class="section" id="SECTION_A945FFE9B4C74AE3A1B78A11D519C321"><a name="SECTION_A945FFE9B4C74AE3A1B78A11D519C321"><!-- --></a><h2 class="sectiontitle">Fortran Example of CNR</h2> 
+		 
+		<pre>    PROGRAM MAIN
+    INCLUDE 'mkl.fi'
+    INTEGER*4 MY_CBWR_BRANCH
+! Align all input/output data on <span>64-byte </span> boundaries
+! <span>"for best performance of Intel MKL</span>
+! Declare Intel MKL memory allocation routine
+#ifdef _IA32
+    INTEGER MKL_MALLOC
+#else
+    INTEGER*8 MKL_MALLOC
+#endif
+    EXTERNAL MKL_MALLOC, MKL_FREE
+    DOUBLE PRECISION DARRAY
+    POINTER (P_DARRAY,DARRAY(1))
+    INTEGER DARRAY_SIZE
+    PARAMETER (DARRAY_SIZE=1000)
+! Set alignment value in bytes
+    INTEGER ALIGNMENT
+    PARAMETER (ALIGNMENT=<span>64</span>)
+! Allocate aligned array
+    P_DARRAY = MKL_MALLOC (%VAL(8*DARRAY_SIZE), %VAL(ALIGNMENT));
+! Find the available MKL_CBWR_BRANCH automatically
+    MY_CBWR_BRANCH = MKL_CBWR_GET_AUTO_BRANCH()
+! User code without Intel MKL calls
+! Piece of the code where CNR of Intel MKL is needed
+! The performance of Intel MKL functions may be reduced for CNR mode
+<span>! If the "IF" statement below is commented out, Intel MKL will run in a regular mode,
+! and data alignment will allow you to get best performance</span>
+    IF (MKL_CBWR_SET (MY_CBWR_BRANCH) .NE. MKL_CBWR_SUCCESS) THEN
+        PRINT *, 'Error in setting MKL_CBWR_BRANCH! Aborting…'
+        RETURN
+    ENDIF
+! CNR calls to Intel MKL + any other code
+! Free the allocated aligned array
+    CALL MKL_FREE(P_DARRAY)
+
+    END
+</pre> 
+	 </div>
+ 
+	 <div class="section" id="GUID-DCAF2846-40F0-49E9-A419-2B525488E34C"><h2 class="sectiontitle">Use of CNR with Unaligned Data in C</h2> 
+		 
+		<pre>#include &lt;mkl.h&gt;
+int main(void) {
+     int my_cbwr_branch;
+     /* If it is not possible to align all input/output data on 64-byte boundaries */
+     /* to achieve performance, use unaligned IO data with possible performance */ 
+     /* penalty */
+     /* Using unaligned IO data */
+     double *darray;
+     int darray_size=1000;
+     /* Allocate array, malloc aligns data on 8/16-byte boundary only */
+     darray = (double *)malloc (sizeof(double)*darray_size);
+     /* Find the available MKL_CBWR_BRANCH automatically */
+     my_cbwr_branch = mkl_cbwr_get_auto_branch();
+     /* User code without Intel MKL calls */
+     /* Piece of the code where CNR of Intel MKL is needed */
+     /* The performance of Intel MKL functions might be reduced for CNR mode */
+     /* If the "IF" statement below is commented out, Intel MKL will run in a regular mode, */ 
+     /* and you will NOT get best performance without data alignment */
+     if (mkl_cbwr_set(my_cbwr_branch)) {
+          printf("Error in setting MKL_CBWR_BRANCH! Aborting…\n");
+          return;
+}
+     /* CNR calls to Intel MKL + any other code */
+     /* Free the allocated array */
+     free(darray);
+</pre> 
+	 </div>
+ 
+	 <div class="section" id="GUID-F0C06DF0-4705-4678-B316-59A36F065500"><h2 class="sectiontitle">Use of CNR with Unaligned Data in Fortran</h2> 
+		 
+		<pre>     PROGRAM MAIN
+     INCLUDE 'mkl.fi'
+     INTEGER*4 MY_CBWR_BRANCH
+! If it is not possible to align all input/output data on 64-byte boundaries 
+! to achieve performance, use unaligned IO data with possible performance 
+! penalty 
+     DOUBLE PRECISION, DIMENSION(:), ALLOCATABLE :: DARRAY
+     INTEGER DARRAY_SIZE, STATUS
+     PARAMETER (DARRAY_SIZE=1000)
+! Allocate array with undefined alignment
+     ALLOCATE(DARRAY(DARRAY_SIZE));
+! Find the available MKL_CBWR_BRANCH automatically
+     MY_CBWR_BRANCH = MKL_CBWR_GET_AUTO_BRANCH()
+! User code without Intel MKL calls
+! Piece of the code where CNR of Intel MKL is needed
+! The performance of Intel MKL functions might be reduced for CNR mode
+! If the "IF" statement below is commented out, Intel MKL will run in a regular mode, 
+! and you will NOT get best performance without data alignment 
+     IF (MKL_CBWR_SET(MY_CBWR_BRANCH) .NE. MKL_CBWR_SUCCESS) THEN
+          PRINT *, 'Error in setting MKL_CBWR_BRANCH! Aborting…'
+          RETURN
+     ENDIF
+! CNR calls to Intel MKL + any other code
+! Free the allocated array
+     DEALLOCATE(DARRAY)
+     END
+</pre> 
+	 </div>
+ 
+  </div>
+ 
+  
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong>&nbsp;<a href="GUID-497CAEBE-9D78-4C3E-90FE-78437D73C038.htm">Obtaining Numerically Reproducible Results</a></div>
+</div>
+<div><br clear="all">
+<div class="docfeedback">
+<div><a href="http://www.intel.com/software/products/softwaredocs_feedback" target="_blank">Submit feedback on this help topic 
+		  </a></div></div></div> 
+
+</body>
+</html>

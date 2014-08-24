@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns:MSHelp="http://www.microsoft.com/MSHelp/" lang="en-us" xml:lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="DC.Type" content="topic">
+<meta name="DC.Title" content="Calling Intel MKL Functions from Multi-threaded Applications">
+<meta name="DC.Relation" scheme="URI" content="GUID-A09C5398-D263-42F8-95E2-772C3C1FE79C.htm">
+<meta name="DC.Relation" scheme="URI" content="GUID-C0722BEE-12B8-4034-8152-35FEE9DB150D.htm#GUID-C0722BEE-12B8-4034-8152-35FEE9DB150D">
+<meta name="DC.Relation" scheme="URI" content="GUID-ACFFDA19-8914-4F20-9815-5C18DC6BE1C2.htm#GUID-ACFFDA19-8914-4F20-9815-5C18DC6BE1C2">
+<meta name="DC.Relation" scheme="URI" content="GUID-D1E9F205-6AC9-4C9E-9C3C-5879758FBDDD.htm#GUID-D1E9F205-6AC9-4C9E-9C3C-5879758FBDDD">
+<meta name="DC.Relation" scheme="URI" content="GUID-B530388E-B96C-48A2-A498-DCBA4E6CFEDC.htm#GUID-B530388E-B96C-48A2-A498-DCBA4E6CFEDC">
+<meta name="DC.Relation" scheme="URI" content="GUID-C2295BC8-DD22-466B-94C9-5FAA79D4F56D.htm#GUID-C2295BC8-DD22-466B-94C9-5FAA79D4F56D">
+<meta name="DC.Relation" scheme="URI" content="http://software.intel.com/en-us/intel-software-technical-documentation/">
+<meta name="DC.Relation" scheme="URI" content="http://www.intel.com/software/products/softwaredocs_feedback">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="GUID-352A0C3D-B04B-470B-9E33-C339B908CACD">
+<meta name="DC.Language" content="en-US">
+<link rel="stylesheet" type="text/css" href="intel_css_styles.css">
+<title>Calling Intel MKL Functions from Multi-threaded Applications</title>
+<xml>
+<MSHelp:Attr Name="DocSet" Value="Intel"></MSHelp:Attr>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"></MSHelp:Attr>
+<MSHelp:Attr Name="TopicType" Value="kbReference"></MSHelp:Attr>
+</xml>
+</head>
+<body id="GUID-352A0C3D-B04B-470B-9E33-C339B908CACD">
+ <!-- ==============(Start:NavScript)================= -->
+ <script src="NavScript.js" language="JavaScript1.2" type="text/javascript"></script>
+ <script language="JavaScript1.2" type="text/javascript">WriteNavLink(0);</script>
+ <!-- ==============(End:NavScript)================= -->
+<p id="header_text" style="margin-bottom : 20pt"><em>Intel&reg; Math Kernel Library 11.1 Update 3 User's Guide</em></p>
+
+
+ 
+  <h1 class="topictitle1">Calling Intel MKL Functions from Multi-threaded Applications</h1>
+ 
+   
+   
+  <div id="GUID-1EAA0C0A-08C4-49EB-B555-A51ED671C085"> 
+    <p>This section summarizes typical usage models and available options for calling Intel MKL functions from multi-threaded applications. These recommendations apply to any multi-threading environments: OpenMP*, Intel&reg; Threading Building Blocks, 
+      POSIX* threads, 
+      and others. 
+    </p>
+ 
+    <div class="section" id="GUID-470E32C1-B0FF-4E35-851D-2436FFB17DEA"><h2 class="sectiontitle">Usage model: disable Intel MKL internal threading for the whole application</h2> 
+       
+      <p><strong>When used:</strong> Intel MKL internal threading interferes with application's own threading or may slow down the application. 
+      </p>
+ 
+      <p><strong>Example:</strong> the application is threaded at top level, or the application runs concurrently with other applications. 
+      </p>
+ 
+      <p><strong>Options:</strong> 
+      </p>
+ 
+      <ul id="GUID-CCFBD4C9-9454-476E-B589-E58D115E273C"> 
+        <li> 
+          <p>Link statically or dynamically with the sequential library 
+          </p>
+ 
+        </li>
+ 
+        <li> 
+          <p>Link with the Single Dynamic Library 
+            <span class="filepath">mkl_rt</span>.<span class="filepath">so</span> and select the sequential library using an environment variable or a function call: 
+          </p>
+ 
+          <ul id="GUID-9CA0D63C-6D55-4287-815B-8CD64F6002FA"> 
+            <li> 
+              <p>Set 
+                <span class="keyword">MKL_THREADING_LAYER=sequential</span> 
+              </p>
+ 
+            </li>
+ 
+            <li> 
+              <p> Call 
+      <span class="option">mkl_set_threading_layer(MKL_THREADING_SEQUENTIAL)</span><a href="GUID-352A0C3D-B04B-470B-9E33-C339B908CACD.htm#FOOTNOTE"><sup class="eqsymbol">‡</sup></a> 
+      </p>
+ 
+      </li>
+ 
+      </ul>
+ 
+      </li>
+ 
+      <li> 
+        <p>Link with a threading library, but disable Intel MKL threading using an environment variable or a function call: 
+        </p>
+ 
+        <ul id="GUID-3DFEE656-D7E1-4101-B4A7-D714DDF5243D"> 
+          <li> 
+            <p>set 
+              <span class="keyword"> MKL_NUM_THREADS=1</span> 
+            </p>
+ 
+          </li>
+ 
+          <li> 
+            <p> call 
+      <span class="option">mkl_set_num_threads(1)</span>. 
+      </p>
+ 
+      <p>In particular, use to temporarily disable Intel MKL threading at run time. 
+      </p>
+ 
+      </li>
+ 
+      </ul>
+ 
+      </li>
+ 
+      <li> 
+        <p>Link with the Single Dynamic Library 
+          <span class="filepath">mkl_rt</span>.<span class="filepath">so</span> and select a threading library using an environment variable or a function call below, but disable threading as in the case above: 
+        </p>
+ 
+        <ul id="GUID-B88D9A38-CC4C-4FE5-A04A-35C157A3E75E"> 
+          <li> 
+            <p>set 
+              <span class="keyword">MKL_THREADING_LAYER=intel</span> 
+            </p>
+ 
+          </li>
+ 
+          <li> 
+            <p>call 
+      <span class="option">mkl_set_threading_layer(MKL_THREADING_INTEL)</span> 
+      </p>
+ 
+      </li>
+ 
+      </ul>
+ 
+      </li>
+ 
+      </ul>
+ 
+    </div>
+ 
+    <div class="nolink" id="GUID-D62C5476-7972-4F6A-A5D8-82C6371A0F90"><h2 class="sectiontitle">Usage model: partition system resources among application threads</h2> 
+       
+      <p><strong>When used:</strong> application threads are specialized for a particular computation. 
+      </p>
+ 
+      <p><strong>Example:</strong> one thread solves equations on all cores but one, while another thread running on a single core updates a database. 
+      </p>
+ 
+      <p><strong>Linking Options:</strong> 
+      </p>
+ 
+      <a name="UL_57507CB83B3640C482DCDF9BDF9D9579"><!-- --></a><ul id="UL_57507CB83B3640C482DCDF9BDF9D9579"> 
+        <li> 
+          <p>Link statically or dynamically with a threading library 
+          </p>
+ 
+        </li>
+ 
+        <li> 
+          <p>Link with the Single Dynamic Library 
+            <span class="filepath">mkl_rt</span>.<span class="filepath">so</span> and select a threading library using an environment variable or a function call: 
+          </p>
+ 
+          <ul id="GUID-C00D5AEC-711F-4399-BF7F-AA66D0D6AE32"> 
+            <li> 
+              <p>set 
+                <span class="keyword">MKL_THREADING_LAYER=intel</span> 
+              </p>
+ 
+            </li>
+ 
+            <li> 
+              <p>call 
+      <span class="option">mkl_set_threading_layer(MKL_THREADING_INTEL)</span> 
+      </p>
+ 
+      </li>
+ 
+      </ul>
+ 
+      </li>
+ 
+      </ul>
+ 
+      <p><strong>Other Options:</strong> 
+      </p>
+ 
+      <ul id="GUID-C2914C10-63D2-48F0-A80D-95B8C0E2A6AF"> 
+        <li> 
+          <p>Set the 
+            <span class="keyword">MKL_NUM_THREADS</span> environment variable to a desired number of threads for Intel MKL. 
+          </p>
+ 
+        </li>
+ 
+        <li> 
+          <p>Set the 
+            <span class="keyword"> MKL_DOMAIN_NUM_THREADS</span> environment variable to a desired number of threads for Intel MKL for a particular function domain. 
+          </p>
+ 
+          <p>Use if the application threads work with different Intel MKL function domains. 
+          </p>
+ 
+        </li>
+ 
+        <li> 
+          <p> Call 
+      <span class="option">mkl_set_num_threads()</span> 
+      </p>
+ 
+      <p>Use to globally set a desired number of threads for Intel MKL at run time. 
+      </p>
+ 
+      </li>
+ 
+      <li> 
+        <p id="GUID-B13317D2-1DE0-4CC7-A735-CF503634BD8C">Call 
+      <span class="option">mkl_domain_set_num_threads()</span>. 
+      </p>
+ 
+      <p>Use if at some point application threads start working with different Intel MKL function domains. 
+      </p>
+ 
+      </li>
+ 
+      <li> 
+        <p> Call 
+      <span class="option">mkl_set_num_threads_local()</span>. 
+      </p>
+ 
+      <p>Use to sets the number of threads for Intel MKL called from a particular thread. 
+      </p>
+ 
+      </li>
+ 
+      </ul>
+ 
+      <div class="Note"><h3 class="NoteTipHead">Note</h3> 
+        <p>If your application uses OpenMP* threading, you may need to provide additional settings: 
+        </p>
+ 
+        <ul id="GUID-7258149D-FD57-4BFC-B9AD-5E5E764FCF24"> 
+          <li> Set the environment variable 
+            <span class="keyword">OMP_NESTED=true</span>, or alternatively call 
+            <span class="keyword">omp_set_nested(1)</span>, to enable OpenMP nested parallelism. 
+          </li>
+ 
+          <li> 
+            <p>Set the environment variable 
+              <span class="keyword">MKL_DYNAMIC=false</span>, or alternatively call 
+              <span class="keyword">mkl_set_dynamic(0)</span>, to prevent Intel MKL from dynamically reducing the number of threads in nested parallel regions. 
+            </p>
+ 
+          </li>
+ 
+        </ul>
+ 
+      </div> 
+    </div>
+ 
+    <p class="footnote" id="FOOTNOTE"><a name="FOOTNOTE"><!-- --></a><sup class="eqsymbol">‡</sup> For details of the mentioned functions, see the Support Functions section of the 
+      <em>Intel MKL Reference Manual</em>, available in the Intel Software Documentation Library. 
+    </p>
+ 
+    <p> 
+	 
+<div class="tablenoborder"><a name="d20e18"><!-- --></a><table cellpadding="4" summary="" id="d20e18" frame="border" border="1" cellspacing="0" rules="all"> 
+		  <thead align="left"> 
+			 <tr> 
+				<th class="cellrowborder" align="left" valign="top" width="100%" id="d13507e349"> 
+				  <p id="d20e29"><a name="d20e29"><!-- --></a>Optimization Notice 
+				  </p>
+ 
+				</th>
+ 
+			 </tr>
+</thead>
+ 
+		  <tbody> 
+			 <tr> 
+				<td class="bgcolor(#f5f5f5)" bgcolor="#f5f5f5" valign="top" width="100%" headers="d13507e349 "> 
+				  <p>Intel's compilers may or may not optimize to the same degree for non-Intel microprocessors for optimizations that are not unique to Intel microprocessors. These optimizations include SSE2, SSE3, and SSSE3 instruction sets and other optimizations. Intel does not guarantee the availability, functionality, or effectiveness of any optimization on microprocessors not manufactured by Intel. Microprocessor-dependent optimizations in this product are intended for use with Intel microprocessors. Certain optimizations not specific to Intel microarchitecture are reserved for Intel microprocessors. Please refer to the applicable product User and Reference Guides for more information regarding the specific instruction sets covered by this notice. 
+				  </p>
+ 
+				  <p> Notice revision #20110804 
+				  </p>
+  
+
+				  </td>
+ 
+			 </tr>
+ 
+		  </tbody>
+ 
+		</table>
+</div>
+ 
+	 </p>
+ 
+  </div>
+ 
+  
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong>&nbsp;<a href="GUID-A09C5398-D263-42F8-95E2-772C3C1FE79C.htm">Improving Performance with Threading</a></div>
+</div>
+<div class="See Also"><h2>See Also</h2>
+<div class="linklist">
+<div><a href="GUID-C0722BEE-12B8-4034-8152-35FEE9DB150D.htm#GUID-C0722BEE-12B8-4034-8152-35FEE9DB150D">Linking with Threading Libraries</a></div>
+<div><a href="GUID-ACFFDA19-8914-4F20-9815-5C18DC6BE1C2.htm#GUID-ACFFDA19-8914-4F20-9815-5C18DC6BE1C2">Dynamically Selecting the Interface and Threading Layer</a></div>
+<div><a href="GUID-D1E9F205-6AC9-4C9E-9C3C-5879758FBDDD.htm#GUID-D1E9F205-6AC9-4C9E-9C3C-5879758FBDDD">Intel MKL-specific Environment Variables for Threading Control</a></div>
+<div><a href="GUID-B530388E-B96C-48A2-A498-DCBA4E6CFEDC.htm#GUID-B530388E-B96C-48A2-A498-DCBA4E6CFEDC"><span class="keyword">MKL_DOMAIN_NUM_THREADS</span> 
+        </a></div>
+<div><a href="GUID-C2295BC8-DD22-466B-94C9-5FAA79D4F56D.htm#GUID-C2295BC8-DD22-466B-94C9-5FAA79D4F56D">Avoiding Conflicts in the Execution Environment</a></div>
+<div><a href="http://software.intel.com/en-us/intel-software-technical-documentation/" target="_blank">Intel Software Documentation Library 
+        </a>  
+        </div></div><br clear="all">
+<div class="docfeedback">
+<div><a href="http://www.intel.com/software/products/softwaredocs_feedback" target="_blank">Submit feedback on this help topic 
+		  </a></div></div></div> 
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns:MSHelp="http://www.microsoft.com/MSHelp/" lang="en-us" xml:lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="DC.Type" content="topic">
+<meta name="DC.Title" content="More Details of the Intel Optimized MP LINPACK Benchmark">
+<meta name="DC.Relation" scheme="URI" content="GUID-10DFCB17-3953-47C6-9971-8C455A925BFE.htm">
+<meta name="DC.Relation" scheme="URI" content="http://www.intel.com/software/products/softwaredocs_feedback">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="GUID-8205C6D4-B896-483F-9882-907BF800CD84">
+<meta name="DC.Language" content="en-US">
+<link rel="stylesheet" type="text/css" href="intel_css_styles.css">
+<title>More Details of the Intel Optimized MP LINPACK Benchmark</title>
+<xml>
+<MSHelp:Attr Name="DocSet" Value="Intel"></MSHelp:Attr>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"></MSHelp:Attr>
+<MSHelp:Attr Name="TopicType" Value="kbReference"></MSHelp:Attr>
+</xml>
+</head>
+<body id="GUID-8205C6D4-B896-483F-9882-907BF800CD84">
+ <!-- ==============(Start:NavScript)================= -->
+ <script src="NavScript.js" language="JavaScript1.2" type="text/javascript"></script>
+ <script language="JavaScript1.2" type="text/javascript">WriteNavLink(0);</script>
+ <!-- ==============(End:NavScript)================= -->
+<p id="header_text" style="margin-bottom : 20pt"><em>Intel&reg; Math Kernel Library 11.1 Update 3 User's Guide</em></p>
+
+
+ 
+  <h1 class="topictitle1">More Details of the Intel Optimized MP LINPACK Benchmark</h1>
+ 
+   
+  <div id="GUID-240BE772-FA10-4AD6-8FBD-ACED570702B6"> 
+    <p>The Intel Optimized MP LINPACK Benchmark does Gaussian elimination with row pivoting to compute an LU decomposition of the matrix. If 
+      <var>P</var> is a permutation matrix representing row pivots, then 
+      <var>PA = LU</var> where 
+      <var>L</var> is a lower unit triangular matrix and 
+      <var>U</var> is an upper triangular matrix. The algorithm is blocked to increase cache reuse of the data. The sequential algorithm closest to the Intel Optimized MP LINPACK Benchmark is 
+  <span class="option">DGETRF</span> from LAPACK or 
+  <span class="option">PDGETRF</span> from ScaLAPACK, referred to by the generic name 
+  <span class="option">*GETRF</span>. However, 
+  <span class="option">*GETRF</span> retains 
+  <var>L</var>, which is not necessary in the Intel Optimized MP LINPACK Benchmark. A system of equations 
+  <var>Ax = b</var> can be solved with 
+  <span class="option">*GETRF</span> by performing these steps: 
+  </p>
+ 
+  <ol id="GUID-2CA7AEB3-FC7D-4A80-AF0A-7603439E2F8E"> 
+    <li> 
+      <p>Compute 
+        <var>PA = LU</var> 
+      </p>
+ 
+    </li>
+ 
+    <li> 
+      <p id="STEP_2"><a name="STEP_2"><!-- --></a>Solve 
+        <var>Ly=Pb</var> for 
+        <var>y</var> 
+      </p>
+ 
+    </li>
+ 
+    <li> 
+      <p>Solve 
+        <var>Ux = y</var> for 
+        <var>x</var> 
+      </p>
+ 
+    </li>
+ 
+  </ol>
+ 
+  <p><var>L</var> to the left can be discarded if 
+    <var>b</var> is replaced with 
+    <var>y</var> above while going through the problem. This saves a forward solve at the end (which is not so critical), and it means that as long as you do an LU decomposition on the column-augmented system [<var>A</var>|<var>b</var>], when doing pivots you can skip pivoting to the left while using a right-looking algorithm. 
+  </p>
+ 
+  <div class="Note"><h3 class="NoteTipHead">Note</h3> 
+    <p>While it is acceptable in the Intel Optimized MP LINPACK Benchmark to skip pivoting to the left, the LAPACK and ScaLAPACK 
+    <span class="option">*GETRF</span> algorithms must add pivoting to the left if step 
+    <a href="GUID-8205C6D4-B896-483F-9882-907BF800CD84.htm#STEP_2">2</a> might be used later. 
+    </p>
+ 
+  </div> 
+  <p><span class="option">*GETRF</span> makes several BLAS calls. Assuming 
+  <var>N</var> is the problem size and 
+  <var>NB</var> is the column block size used in the blocking above, then as long as 
+  <var>N</var> is sufficiently greater than 
+  <var>NB</var>, most of the floating-point operations (FLOPs) are found in 
+  <span class="option">*GEMM</span>. Some FLOPs may also be present in 
+  <span class="option">*TRSM</span>. Although other BLAS calls may be necessary, these are the performance critical functions. 
+  <span class="option">*GETRF</span> does computation in one of three spots: 
+  <span class="option">*GEMM</span>, 
+  <span class="option">*TRSM</span>, and a local LU factorization. 
+  </p>
+ 
+  <p><span class="option">*GEMM</span> overwrites 
+  <var>C</var> with<br> 
+   * 
+  <var>op(A) * op(B)</var> + 
+  <span class="eqsymbol">β</span> 
+  <var>* C</var>.<br> 
+   and 
+  <span class="eqsymbol">β</span> are both scalars, and 
+  <var>A</var>, 
+  <var>B</var>, and 
+  <var>C</var> are matrices. 
+  <var>op(A)</var> denotes 
+  <var>A</var> or the transpose of 
+  <var>A</var> and similarly for 
+  <var>op(B)</var>. 
+  <var>op(A)</var> is an 
+  <var>m</var> x 
+  <var>k</var> matrix, 
+  <var>op(B)</var> is a 
+  <var>k</var> x 
+  <var>n</var> matrix, and 
+  <var>C</var> is an 
+  <var>m</var> x 
+  <var>n</var> matrix. 
+  </p>
+ 
+  <p>Assuming that 
+    <var>N</var> is the global problem size and that the matrix is distributed on a 2-dimensional (2D) block cyclic mapping on a 
+    <var>P</var> by 
+    <var>Q</var> processor grid with the block size 
+    <var>NB</var>, initial values of 
+    <var>m</var>, 
+    <var>n</var>, and 
+    <var>k</var> for the first few 
+  <span class="option">*GEMM</span> calls are 
+  <var>m 
+  </var><span class="eqsymbol">≈</span><var> N/P</var>, 
+  <var>n 
+  </var><span class="eqsymbol">≈</span><var> N/Q</var>, and 
+  <var>k</var> =<var> NB</var>. 
+  </p>
+ 
+  <p> The number of FLOPs executed in 
+  <span class="option">*GEMM</span> for each block iteration starts off at approximately 2<var>*N*N*NB/(P*Q)</var>. The size of each 
+  <span class="option">*GEMM</span> may decrease, depending on whether the node in question owns the previous block row or block column. 
+  </p>
+ 
+  <p><span class="option">*TRSM</span> solves a triangular system of equations of size 
+  <var>NB</var> by 
+  <var>NB</var>, with typically 
+  <var>N/Q</var> solution vectors to compute. It has roughly 
+  <var>NB*NB*(N/Q)</var> FLOPs. So, as long as 
+  <var>N</var> &gt;&gt; 
+  <var>P*NB</var>, there is more work in 
+  <span class="option">*GEMM</span> than in 
+  <span class="option">*TRSM</span>. 
+  </p>
+ 
+  <p>Additionally, each iteration does a local LU-factorization that starts at the size 
+    <var>N/P</var> by 
+    <var>NB</var>. Although the row pivoting along the entire column has to be done, the computation is the same as factoring an 
+    <var>NBxNB</var> matrix, which is approximately 2<var>*NB*NB*NB</var>/3 FLOPs. If 
+    <var>N</var> &gt;&gt; 
+    <var>P*NB</var>, there are fewer FLOPs in this computation than in 
+  <span class="option">*TRSM</span>. 
+  </p>
+ 
+  <p>HPL requires row pivoting, which, while it does not involve FLOPs, can still be time consuming. It is not acceptable to replace the random matrix generator of HPL with a matrix that requires less pivoting (for example, a diagonally dominant matrix). 
+  </p>
+ 
+  <p>It is also necessary to get the data around the 2D 
+    <var>PxQ</var> grid since each node needs this data to do the work for row pivoting. Each node in the 
+    <var>PxQ</var> grid can be represented as the pair (<var>i</var>, 
+    <var>j</var>) where 0<span class="eqsymbol">≤</span><var>i</var>&lt;<var>P</var>, and 0<span class="eqsymbol">≤</span><var>j</var>&lt;<var>Q</var>. 
+  </p>
+ 
+  <p>The algorithm involves a horizontal broadcast and a vertical broadcast across the grid. 
+  </p>
+ 
+  <p>The horizontal broadcast (which contains pivot information and the 
+    <var>A</var> matrix of the above 
+  <span class="option">*GEMM</span>) is usually ring broadcast along 
+  <var>Q</var> nodes. For example, node (2,3) has to get data to every other node in the block row given by (2, 
+  <var>j)</var>. The reason for using a ring broadcast, as opposed to a tree broadcast, is that horizontal motion in the grid can often be overlapped with other operations. The broadcast itself consumes time, but some of this effect can be hidden, depending on the input parameters. 
+  </p>
+ 
+  <p>The vertical broadcast (which contains the 
+    <var>B</var> matrix of the above 
+  <span class="option">*GEMM</span>) is usually a tree broadcast along 
+  <var>P</var> nodes because processor columns must be synchronized. In many HPL configurations, 
+  <var>P</var> 
+  <span class="eqsymbol">≤</span> 2<var>Q</var> is chosen. 
+  </p>
+ 
+  <p>For details of broadcasting in HPL, see 
+    www.netlib.org/benchmark/hpl/algorithm.html#bcast. 
+  </p>
+ 
+  <p>The other communication is the pivoting itself. 
+  </p>
+ 
+  <p>The offload portion of the code is typically some piece of the 
+  <span class="option">*GEMM</span> or 
+  <span class="option">*TRSM</span> because they have the highest ratio of FLOPs to data and data must move across the PCIe bus. 
+  </p>
+ 
+  <p>The fastest way to offload 
+  <span class="option">DGEMM</span> is to send some portion of 
+  <var>A</var> and 
+  <var>B</var> to the coprocessor and have the coprocessor return 
+  <var>C</var> (assuming that 
+  <span class="eqsymbol">β</span> was zero) in an Intel Xeon Phi coprocessor native 
+  <span class="option">DGEMM</span> call. 
+  </p>
+ 
+  <p>
+    <var>NB</var> must be larger than is required for Intel&reg; Xeon&reg; processors alone. Choosing 400 for 
+    <var>NB</var> offers no acceleration through offloading. However, choosing a value larger than 960 for 
+    <var>NB</var> has proven to offer considerable acceleration. 
+  </p>
+ 
+  <p>Large values of 
+    <var>NB</var> require extra memory on the host processor and coprocessor. If this memory is low, the problem size 
+    <var>N</var> does not satisfy the inequality 
+    <var>N 
+    </var>&gt;&gt; 
+    <var>NB</var>. In that event, it is better not to use the offload version of the Intel Optimized MP LINPACK Benchmark. 
+  </p>
+ 
+  <p id="P_CF_12906882145142"><a name="P_CF_12906882145142"><!-- --></a> 
+	 
+<div class="tablenoborder"><a name="d20e18"><!-- --></a><table cellpadding="4" summary="" id="d20e18" frame="border" border="1" cellspacing="0" rules="all"> 
+		  <thead align="left"> 
+			 <tr> 
+				<th class="cellrowborder" align="left" valign="top" width="100%" id="d39576e510"> 
+				  <p id="d20e29"><a name="d20e29"><!-- --></a>Optimization Notice 
+				  </p>
+ 
+				</th>
+ 
+			 </tr>
+</thead>
+ 
+		  <tbody> 
+			 <tr> 
+				<td class="bgcolor(#f5f5f5)" bgcolor="#f5f5f5" valign="top" width="100%" headers="d39576e510 "> 
+				  <p>Intel's compilers may or may not optimize to the same degree for non-Intel microprocessors for optimizations that are not unique to Intel microprocessors. These optimizations include SSE2, SSE3, and SSSE3 instruction sets and other optimizations. Intel does not guarantee the availability, functionality, or effectiveness of any optimization on microprocessors not manufactured by Intel. Microprocessor-dependent optimizations in this product are intended for use with Intel microprocessors. Certain optimizations not specific to Intel microarchitecture are reserved for Intel microprocessors. Please refer to the applicable product User and Reference Guides for more information regarding the specific instruction sets covered by this notice. 
+				  </p>
+ 
+				  <p> Notice revision #20110804 
+				  </p>
+  
+
+				  </td>
+ 
+			 </tr>
+ 
+		  </tbody>
+ 
+		</table>
+</div>
+ 
+	 </p>
+ 
+  </div>
+ 
+  
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong>&nbsp;<a href="GUID-10DFCB17-3953-47C6-9971-8C455A925BFE.htm">Intel&reg; Optimized MP LINPACK Benchmark for Clusters</a></div>
+</div>
+<div><br clear="all">
+<div class="docfeedback">
+<div><a href="http://www.intel.com/software/products/softwaredocs_feedback" target="_blank">Submit feedback on this help topic 
+		  </a></div></div></div> 
+
+</body>
+</html>

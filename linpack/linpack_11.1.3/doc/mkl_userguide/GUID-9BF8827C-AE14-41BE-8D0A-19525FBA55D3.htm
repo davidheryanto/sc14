@@ -1,0 +1,174 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns:MSHelp="http://www.microsoft.com/MSHelp/" lang="en-us" xml:lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="DC.Type" content="topic">
+<meta name="DC.Title" content="Running the Benchmark on One Node">
+<meta name="DC.Relation" scheme="URI" content="GUID-6F7041FA-C376-4F01-8D73-118B45BEDF08.htm">
+<meta name="DC.Relation" scheme="URI" content="GUID-9870FD98-79EE-4006-8129-C5A0C5285B31.htm#GUID-9870FD98-79EE-4006-8129-C5A0C5285B31">
+<meta name="DC.Relation" scheme="URI" content="GUID-F76BDC8B-0A22-49D6-B064-41103F7B1B33.htm#GUID-F76BDC8B-0A22-49D6-B064-41103F7B1B33">
+<meta name="DC.Relation" scheme="URI" content="GUID-9CE68847-49F2-4A98-B324-FE803D2F35CF.htm#GUID-9CE68847-49F2-4A98-B324-FE803D2F35CF">
+<meta name="DC.Relation" scheme="URI" content="http://www.intel.com/software/products/softwaredocs_feedback">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="GUID-9BF8827C-AE14-41BE-8D0A-19525FBA55D3">
+<meta name="DC.Language" content="en-US">
+<link rel="stylesheet" type="text/css" href="intel_css_styles.css">
+<title>Running the Benchmark on One Node</title>
+<xml>
+<MSHelp:Attr Name="DocSet" Value="Intel"></MSHelp:Attr>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"></MSHelp:Attr>
+<MSHelp:Attr Name="TopicType" Value="kbReference"></MSHelp:Attr>
+</xml>
+</head>
+<body id="GUID-9BF8827C-AE14-41BE-8D0A-19525FBA55D3">
+ <!-- ==============(Start:NavScript)================= -->
+ <script src="NavScript.js" language="JavaScript1.2" type="text/javascript"></script>
+ <script language="JavaScript1.2" type="text/javascript">WriteNavLink(0);</script>
+ <!-- ==============(End:NavScript)================= -->
+<p id="header_text" style="margin-bottom : 20pt"><em>Intel&reg; Math Kernel Library 11.1 Update 3 User's Guide</em></p>
+
+
+ 
+  <h1 class="topictitle1">Running the Benchmark on One Node</h1>
+ 
+   
+  <div id="GUID-7F5E96E6-9067-4129-B32F-D072D84A40C3"> 
+    <p>To run the Intel Optimized MP LINPACK Benchmark binary on a cluster node, follow the steps below. 
+    </p>
+ 
+    <div class="Note"><h3 class="NoteTipHead">Note</h3> 
+      <p>While these instructions assume the Intel&reg; 64 architecture, they are more widely applicable. The instructions directly apply to Previous Generation Intel&reg; Core&#8482; or higher Intel&reg; processors. For IA-32 architecture processors and for earlier Intel&reg; 64 architecture processors, omit the 
+        <span class="keyword">version</span> parameter of the 
+        <span class="keyword">make</span> command. For IA-32 architecture processors, also adjust directory names and the value of the 
+        <samp class="codeph">arch</samp> parameter. 
+      </p>
+ 
+    </div> 
+    <ol id="GUID-7B16B6D1-FCE5-443D-AE6C-3B7A3EBF757A"> 
+      <li> 
+        <p>Load the necessary environment variables for Intel MKL, Intel MPI, and the Intel&reg; compiler and build the binary: 
+        </p>
+ 
+        <p><samp class="codeph"><var>&lt;parent product directory&gt;</var>/bin/compilervars.sh intel64</samp> 
+        </p>
+ 
+        <p><samp class="codeph"><var>&lt;mpi directory&gt;</var>/bin64/mpivars.sh</samp> 
+        </p>
+ 
+        <p><samp class="codeph"><var>&lt;mkl directory&gt;</var>/bin/mklvars.sh intel64</samp> 
+        </p>
+ 
+        <p><samp class="codeph">make arch=intel64 version=offload</samp> 
+        </p>
+ 
+      </li>
+ 
+      <li> 
+        <p>Change directory to 
+          <span class="filepath">bin</span><span class="filepath">/</span><span class="filepath">intel64</span>: 
+        </p>
+ 
+        <p><samp class="codeph">cd 
+            <var>&lt;mkl directory&gt;</var>/benchmarks/mp_linpack/bin/intel64</samp> 
+        </p>
+ 
+        <p>This directory contains files: 
+        </p>
+ 
+        <ul id="GUID-F50109A8-3245-46C2-8318-0B7999DC671B"> 
+          <li> 
+            <p><span class="filepath">xhpl</span> - the Intel&reg; 64 architecture binary. 
+            </p>
+ 
+          </li>
+ 
+          <li> 
+            <p><span class="filepath">HPL.dat</span> - the HPL input data set. 
+            </p>
+ 
+          </li>
+ 
+        </ul>
+ 
+      </li>
+ 
+      <li> 
+        <p>Execute the binary for a small test run: 
+        </p>
+ 
+        <p><samp class="codeph">./xhpl</samp> 
+        </p>
+ 
+      </li>
+ 
+      <li> 
+        <p id="PROBLEM_SIZES"><a name="PROBLEM_SIZES"><!-- --></a>Modify the 
+          <span class="filepath">HPL.dat</span> file to match the memory on the host processor by increasing the value in line 6 before 
+          <samp class="codeph">Ns</samp>: 
+        </p>
+ 
+        <ul id="GUID-2CD3CE1D-7BAB-4A5D-97D6-FE0FEBE16F10"> 
+          <li> 
+            <p>For 16 GB: 
+              <samp class="codeph">12000 Ns</samp> 
+            </p>
+ 
+          </li>
+ 
+          <li> 
+            <p>For 32 GB: 
+              <samp class="codeph">56000 Ns</samp> 
+            </p>
+ 
+          </li>
+ 
+          <li> 
+            <p>For 64 GB: 
+              <samp class="codeph">83000 Ns</samp> 
+            </p>
+ 
+          </li>
+ 
+        </ul>
+ 
+        <p>In general, you can compute the memory required to store the matrix (which does not count numerous buffers) as 8 
+          <var>* N * N / (P * Q)</var> bytes, where 
+          <var>N</var> is the problem size, and 
+          <var>P</var> and 
+          <var>Q 
+          </var>are the process grids in 
+          <span class="filepath">HPL.dat</span>. HPL documentation generally recommends choosing a problem size that fills 80% of memory, but you can sometimes use more. 
+        </p>
+ 
+      </li>
+ 
+      <li>Execute the binary again and take note of the new result. 
+        <p><samp class="codeph">./xhpl</samp> 
+        </p>
+ 
+      </li>
+ 
+    </ol>
+ 
+    <p>For specifics of running hybrid offload binaries, see 
+      <a href="GUID-4FBC2A30-FDE3-4C98-BEB4-BED98207ADDE.htm">Running Hybrid Offload Binaries</a>. 
+    </p>
+ 
+  </div>
+ 
+  
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong>&nbsp;<a href="GUID-6F7041FA-C376-4F01-8D73-118B45BEDF08.htm">Running the Intel Optimized MP LINPACK Benchmark</a></div>
+</div>
+<div class="See Also"><h2>See Also</h2>
+<div class="linklist">
+<div><a href="GUID-9870FD98-79EE-4006-8129-C5A0C5285B31.htm#GUID-9870FD98-79EE-4006-8129-C5A0C5285B31">Notational Conventions</a></div>
+<div><a href="GUID-F76BDC8B-0A22-49D6-B064-41103F7B1B33.htm#GUID-F76BDC8B-0A22-49D6-B064-41103F7B1B33">Building the Intel Optimized MP LINPACK Benchmark</a></div>
+<div><a href="GUID-9CE68847-49F2-4A98-B324-FE803D2F35CF.htm#GUID-9CE68847-49F2-4A98-B324-FE803D2F35CF">Expanding the Benchmark to Two or More Nodes</a></div></div><br clear="all">
+<div class="docfeedback">
+<div><a href="http://www.intel.com/software/products/softwaredocs_feedback" target="_blank">Submit feedback on this help topic 
+		  </a></div></div></div> 
+
+</body>
+</html>
