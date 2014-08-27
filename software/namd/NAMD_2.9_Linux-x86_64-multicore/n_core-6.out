@@ -1,0 +1,161 @@
+Charm++: standalone mode (not using charmrun)
+Converse/Charm++ Commit ID: v6.4.0-beta1-0-g5776d21
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 1 unique compute nodes (48-way SMP).
+Charm++> cpu topology info is gathered in 0.001 seconds.
+Info: NAMD 2.9 for Linux-x86_64-multicore
+Info: 
+Info: Please visit http://www.ks.uiuc.edu/Research/namd/
+Info: for updates, documentation, and support information.
+Info: 
+Info: Please cite Phillips et al., J. Comp. Chem. 26:1781-1802 (2005)
+Info: in all publications reporting results obtained with NAMD.
+Info: 
+Info: Based on Charm++/Converse 60400 for multicore-linux64-iccstatic
+Info: Built Mon Apr 30 14:00:48 CDT 2012 by jim on naiad.ks.uiuc.edu
+Info: 1 NAMD  2.9  Linux-x86_64-multicore  6    cpunode0-ulam.localdomain  student11
+Info: Running on 6 processors, 1 nodes, 1 physical nodes.
+Info: CPU topology information available.
+Info: Charm++/Converse parallel runtime startup completed at 0.00929809 s
+Info: 406.922 MB of memory in use based on /proc/self/stat
+Info: Configuration file is apoa1/apoa1.namd
+Info: Changed directory to apoa1
+TCL: Suspending until startup complete.
+Info: SIMULATION PARAMETERS:
+Info: TIMESTEP               1
+Info: NUMBER OF STEPS        500
+Info: STEPS PER CYCLE        20
+Info: PERIODIC CELL BASIS 1  108.861 0 0
+Info: PERIODIC CELL BASIS 2  0 108.861 0
+Info: PERIODIC CELL BASIS 3  0 0 77.758
+Info: PERIODIC CELL CENTER   0 0 0
+Info: LOAD BALANCER  Centralized
+Info: LOAD BALANCING STRATEGY  New Load Balancers -- DEFAULT
+Info: LDB PERIOD             4000 steps
+Info: FIRST LDB TIMESTEP     100
+Info: LAST LDB TIMESTEP     -1
+Info: LDB BACKGROUND SCALING 1
+Info: HOM BACKGROUND SCALING 1
+Info: PME BACKGROUND SCALING 1
+Info: MIN ATOMS PER PATCH    40
+Info: INITIAL TEMPERATURE    300
+Info: CENTER OF MASS MOVING INITIALLY? NO
+Info: DIELECTRIC             1
+Info: EXCLUDE                SCALED ONE-FOUR
+Info: 1-4 ELECTROSTATICS SCALED BY 1
+Info: MODIFIED 1-4 VDW PARAMETERS WILL BE USED
+Info: NO DCD TRAJECTORY OUTPUT
+Info: NO EXTENDED SYSTEM TRAJECTORY OUTPUT
+Info: NO VELOCITY DCD OUTPUT
+Info: NO FORCE DCD OUTPUT
+Info: OUTPUT FILENAME        /usr/tmp/apoa1-out
+Info: BINARY OUTPUT FILES WILL BE USED
+Info: NO RESTART FILE
+Info: SWITCHING ACTIVE
+Info: SWITCHING ON           10
+Info: SWITCHING OFF          12
+Info: PAIRLIST DISTANCE      13.5
+Info: PAIRLIST SHRINK RATE   0.01
+Info: PAIRLIST GROW RATE     0.01
+Info: PAIRLIST TRIGGER       0.3
+Info: PAIRLISTS PER CYCLE    2
+Info: PAIRLISTS ENABLED
+Info: MARGIN                 0
+Info: HYDROGEN GROUP CUTOFF  2.5
+Info: PATCH DIMENSION        16
+Info: CROSSTERM ENERGY INCLUDED IN DIHEDRAL
+Info: TIMING OUTPUT STEPS    20
+Info: PARTICLE MESH EWALD (PME) ACTIVE
+Info: PME TOLERANCE               1e-06
+Info: PME EWALD COEFFICIENT       0.257952
+Info: PME INTERPOLATION ORDER     4
+Info: PME GRID DIMENSIONS         108 108 80
+Info: PME MAXIMUM GRID SPACING    1.5
+Info: Attempting to read FFTW data from FFTW_NAMD_2.9_Linux-x86_64-multicore.txt
+Info: Optimizing 6 FFT steps.  1... 2... 3... 4... 5... 6...   Done.
+Info: Writing FFTW data to FFTW_NAMD_2.9_Linux-x86_64-multicore.txt
+Info: FULL ELECTROSTATIC EVALUATION FREQUENCY      4
+Info: USING VERLET I (r-RESPA) MTS SCHEME.
+Info: C1 SPLITTING OF LONG RANGE ELECTROSTATICS
+Info: PLACING ATOMS IN PATCHES BY HYDROGEN GROUPS
+Info: RANDOM NUMBER SEED     74269
+Info: USE HYDROGEN BONDS?    NO
+Info: COORDINATE PDB         apoa1.pdb
+Info: STRUCTURE FILE         apoa1.psf
+Info: PARAMETER file: XPLOR format! (default) 
+Info: PARAMETERS             par_all22_prot_lipid.xplor
+Info: PARAMETERS             par_all22_popc.xplor
+Info: USING ARITHMETIC MEAN TO COMBINE L-J SIGMA PARAMETERS
+Info: SUMMARY OF PARAMETERS:
+Info: 177 BONDS
+Info: 435 ANGLES
+Info: 446 DIHEDRAL
+Info: 45 IMPROPER
+Info: 0 CROSSTERM
+Info: 83 VDW
+Info: 6 VDW_PAIRS
+Info: 0 NBTHOLE_PAIRS
+Info: TIME FOR READING PSF FILE: 0.926937
+Info: TIME FOR READING PDB FILE: 0.132067
+Info: 
+Info: ****************************
+Info: STRUCTURE SUMMARY:
+Info: 92224 ATOMS
+Info: 70660 BONDS
+Info: 74136 ANGLES
+Info: 74130 DIHEDRALS
+Info: 1402 IMPROPERS
+Info: 0 CROSSTERMS
+Info: 0 EXCLUSIONS
+Info: 1568 DIHEDRALS WITH MULTIPLE PERIODICITY (BASED ON PSF FILE)
+Info: 276669 DEGREES OF FREEDOM
+Info: 32992 HYDROGEN GROUPS
+Info: 4 ATOMS IN LARGEST HYDROGEN GROUP
+Info: 32992 MIGRATION GROUPS
+Info: 4 ATOMS IN LARGEST MIGRATION GROUP
+Info: TOTAL MASS = 553785 amu
+Info: TOTAL CHARGE = -14 e
+Info: MASS DENSITY = 0.997951 g/cm^3
+Info: ATOM DENSITY = 0.100081 atoms/A^3
+Info: *****************************
+Info: 
+Info: Entering startup at 1.09373 s, 537.309 MB of memory in use
+Info: Startup phase 0 took 0.000167847 s, 537.309 MB of memory in use
+Info: Startup phase 1 took 0.0554931 s, 558.27 MB of memory in use
+Info: Startup phase 2 took 0.000740051 s, 558.27 MB of memory in use
+Info: Startup phase 3 took 9.98974e-05 s, 558.27 MB of memory in use
+Info: PATCH GRID IS 6 (PERIODIC) BY 6 (PERIODIC) BY 4 (PERIODIC)
+Info: PATCH GRID IS 1-AWAY BY 1-AWAY BY 1-AWAY
+Info: REMOVING COM VELOCITY 0.00117959 0.0289175 0.0202933
+Info: LARGEST PATCH (56) HAS 718 ATOMS
+Info: Startup phase 4 took 0.0260279 s, 576.453 MB of memory in use
+Info: PME using 6 and 6 processors for FFT and reciprocal sum.
+Info: PME USING 1 GRID NODES AND 1 TRANS NODES
+Info: PME GRID LOCATIONS: 0 1 2 3 4 5
+Info: PME TRANS LOCATIONS: 0 1 2 3 4 5
+Info: Optimizing 4 FFT steps.  1... 2... 3... 4...   Done.
+Info: Startup phase 5 took 0.00198817 s, 576.453 MB of memory in use
+Info: Startup phase 6 took 0.0019598 s, 576.453 MB of memory in use
+LDB: Central LB being created...
+Info: Startup phase 7 took 0.00119209 s, 576.453 MB of memory in use
+Info: CREATING 2772 COMPUTE OBJECTS
+Info: NONBONDED TABLE R-SQUARED SPACING: 0.0625
+Info: NONBONDED TABLE SIZE: 769 POINTS
+Info: useSync: 1 useProxySync: 0
+Info: Startup phase 8 took 0.016685 s, 576.453 MB of memory in use
+Info: Startup phase 9 took 0.000168085 s, 576.453 MB of memory in use
+Info: Startup phase 10 took 0.00066781 s, 577.832 MB of memory in use
+Info: Finished startup at 1.19892 s, 577.832 MB of memory in use
+
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+
+ENERGY:       0     12352.4560     14603.1480      4549.0710        48.1064        -362073.7646     24229.5343         0.0000         0.0000     82752.2738        -223539.1752       301.0300   -306291.4490   -223524.8478       301.0300          -2568.6725     -3582.2555    921491.4634     -2568.6725     -3582.2555
+
+ENERGY:       1     18844.4109     15785.9133      4571.2456        53.5350        -361670.8140     24319.4022         0.0000         0.0000     75223.8495        -222872.4575       273.6437   -298096.3070   -223478.1940       273.6437          -3192.4049     -3497.3102    921491.4634     -3192.4049     -3497.3102
+
+ENERGY:       2     29488.6214     18758.6024      4637.0922        69.5538        -360338.7684     24512.0178         0.0000         0.0000     61082.0538        -221790.8270       222.1997   -282872.8808   -223476.2579       222.1997          -4269.6708     -3354.1998    921491.4634     -4269.6708     -3354.1998
+
+ENERGY:       3     29918.6891     22271.8870      4734.9573        94.3383        -358090.2900     24689.8970         0.0000         0.0000     54714.9832        -221665.5381       199.0381   -276380.5213   -223477.2862       199.0381          -4381.8243     -3200.6937    921491.4634     -4381.8243     -3200.6937
+
+ENERGY:       4     19827.4664     25006.8856      4848.8883       125.1325        -355303.8944     24849.5776         0.0000         0.0000     58070.8720        -222575.0719       211.2459   -280645.9440   -223447.0526       211.2459          -3364.1641     -3048.1295    921491.4634     -3364.1641     -3048.1295
+
