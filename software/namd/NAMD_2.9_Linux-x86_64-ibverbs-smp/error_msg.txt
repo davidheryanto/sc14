@@ -1,0 +1,103 @@
+host: ulam4
+host: ulam5
+
+==================================================================================================
+mpiexec options:
+----------------
+  Base path: /apps/intel/impi/4.1.3.048/intel64/bin/
+  Launcher: ssh
+  Debug level: 1
+  Enable X: -1
+
+  Global environment:
+  -------------------
+    I_MPI_PERHOST=allcores
+    LD_LIBRARY_PATH=.:/apps/intel/impi/4.1.3.048/intel64/lib:/apps/intel/composer_xe_2013_sp1.2.144/compiler/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/mpirt/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/ipp/../compiler/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/ipp/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/tbb/lib/intel64/gcc4.4:/apps/cuda/6.0/lib64:/apps/gcc/4.8.3/lib64:/apps/intel//impi/4.1.3.048/intel64/lib:/apps/intel//impi/4.1.3.048/mic/lib
+    MKLROOT=/apps/intel/composer_xe_2013_sp1.2.144/mkl
+    MANPATH=/apps/intel/impi/4.1.3.048/man:/apps/intel/composer_xe_2013_sp1.2.144/man/en_US:/apps/gcc/4.8.3/share/man:/usr/share/man
+    HOSTNAME=gpunode1-ulam.localdomain
+    INTEL_LICENSE_FILE=/apps/intel/licenses
+    IPPROOT=/apps/intel/composer_xe_2013_sp1.2.144/ipp
+    SHELL=/bin/bash
+    TERM=xterm
+    HISTSIZE=1000
+    SSH_CLIENT=192.168.100.106 53467 22
+    GDBSERVER_MIC=/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/target/mic/bin/gdbserver
+    LIBRARY_PATH=/apps/intel/composer_xe_2013_sp1.2.144/compiler/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/ipp/../compiler/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/ipp/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/tbb/lib/intel64/gcc4.4:/usr/lib64/nvidia:/apps/gcc/4.8.3/lib64
+    SSH_TTY=/dev/pts/0
+    MIC_LD_LIBRARY_PATH=/apps/intel/composer_xe_2013_sp1.2.144/compiler/lib/mic:/apps/intel/composer_xe_2013_sp1.2.144/mpirt/lib/mic:/apps/intel/composer_xe_2013_sp1.2.144/mkl/lib/mic:/apps/intel/composer_xe_2013_sp1.2.144/tbb/lib/mic
+    USER=student11
+    LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.tbz=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:
+    MIC_LIBRARY_PATH=/apps/intel/composer_xe_2013_sp1.2.144/tbb/lib/mic
+    CPATH=/apps/intel/composer_xe_2013_sp1.2.144/mkl/include:/apps/intel/composer_xe_2013_sp1.2.144/tbb/include
+    NLSPATH=/apps/intel/composer_xe_2013_sp1.2.144/compiler/lib/intel64/locale/%l_%t/%N:/apps/intel/composer_xe_2013_sp1.2.144/ipp/lib/intel64/locale/%l_%t/%N:/apps/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64/locale/%l_%t/%N:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64_mic/py26/share/locale/%l_%t/%N:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64/py26/share/locale/%l_%t/%N:/apps/intel/composer_xe_2013_sp1.2.144/debugger/intel64/locale/%l_%t/%N
+    PATH=/apps/intel/impi/4.1.3.048/intel64/bin:/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64:/apps/intel/composer_xe_2013_sp1.2.144/mpirt/bin/intel64:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64_mic/py26/bin:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64/py26/bin:/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64_mic:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gui/intel64:/apps/cuda/6.0/bin:/apps/gcc/4.8.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/student11/bin
+    MAIL=/var/spool/mail/student11
+    TBBROOT=/apps/intel/composer_xe_2013_sp1.2.144/tbb
+    PWD=/home/student11/scratch/sc14/software/namd/NAMD_2.9_Linux-x86_64-ibverbs-smp
+    _LMFILES_=/apps/modules/gcc/4.8.3:/apps/modules/cuda/6.0:/apps/modules/intel/composer-xe-2013/14.0.2:/apps/modules/intel/mpi/4.1.3
+    IDB_HOME=/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64
+    LANG=en_US.UTF-8
+    GDB_CROSS=/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64_mic/py26/bin/gdb-mic
+    MODULEPATH=/apps/modules
+    LOADEDMODULES=gcc/4.8.3:cuda/6.0:intel/composer-xe-2013/14.0.2:intel/mpi/4.1.3
+    HISTCONTROL=ignoredups
+    HOME=/home/student11
+    SHLVL=2
+    LOGNAME=student11
+    SSH_CONNECTION=192.168.100.106 53467 192.168.100.104 22
+    MODULESHOME=/usr/share/Modules
+    LESSOPEN=|/usr/bin/lesspipe.sh %s
+    INCLUDE=/apps/intel/composer_xe_2013_sp1.2.144/mkl/include
+    G_BROKEN_FILENAMES=1
+    I_MPI_ROOT=/apps/intel/impi/4.1.3.048
+    module=() {  eval `/usr/bin/modulecmd bash $*`
+}
+    _=/apps/intel/impi/4.1.3.048/intel64/bin/mpiexec.hydra
+
+  Hydra internal environment:
+  ---------------------------
+    MPICH_ENABLE_CKPOINT=1
+    GFORTRAN_UNBUFFERED_PRECONNECTED=y
+
+
+    Proxy information:
+    *********************
+      [1] proxy: ulam4 (24 cores)
+      Exec list: ./namd2 (24 processes); 
+
+      [2] proxy: ulam5 (24 cores)
+      Exec list: ./namd2 (8 processes); 
+
+
+==================================================================================================
+
+[mpiexec@gpunode1-ulam.localdomain] Timeout set to -1 (-1 means infinite)
+[mpiexec@gpunode1-ulam.localdomain] Got a control port string of ulam4:46710
+
+Proxy launch args: /apps/intel/impi/4.1.3.048/intel64/bin/pmi_proxy --control-port ulam4:46710 --debug --pmi-connect lazy-cache --pmi-aggregate -s 0 --rmk slurm --launcher ssh --demux poll --pgid 0 --enable-stdin 1 --retries 10 --control-code 1772316703 --proxy-id 
+
+[mpiexec@gpunode1-ulam.localdomain] PMI FD: (null); PMI PORT: (null); PMI ID/RANK: -1
+Arguments being passed to proxy 0:
+--version 1.4.1p1 --iface-ip-env-name MPICH_INTERFACE_HOSTNAME --hostname ulam4 --global-core-map 0,24,24 --filler-process-map 0,24,24 --global-process-count 32 --auto-cleanup 1 --pmi-rank -1 --pmi-kvsname kvs_4963_0 --pmi-process-mapping (vector,(0,2,24)) --topolib ipl --ckpointlib blcr --ckpoint-prefix /tmp --ckpoint-preserve 1 --ckpoint off --ckpoint-num -1 --global-inherited-env 42 'I_MPI_PERHOST=allcores' 'LD_LIBRARY_PATH=.:/apps/intel/impi/4.1.3.048/intel64/lib:/apps/intel/composer_xe_2013_sp1.2.144/compiler/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/mpirt/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/ipp/../compiler/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/ipp/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/tbb/lib/intel64/gcc4.4:/apps/cuda/6.0/lib64:/apps/gcc/4.8.3/lib64:/apps/intel//impi/4.1.3.048/intel64/lib:/apps/intel//impi/4.1.3.048/mic/lib' 'MKLROOT=/apps/intel/composer_xe_2013_sp1.2.144/mkl' 'MANPATH=/apps/intel/impi/4.1.3.048/man:/apps/intel/composer_xe_2013_sp1.2.144/man/en_US:/apps/gcc/4.8.3/share/man:/usr/share/man' 'HOSTNAME=gpunode1-ulam.localdomain' 'INTEL_LICENSE_FILE=/apps/intel/licenses' 'IPPROOT=/apps/intel/composer_xe_2013_sp1.2.144/ipp' 'SHELL=/bin/bash' 'TERM=xterm' 'HISTSIZE=1000' 'SSH_CLIENT=192.168.100.106 53467 22' 'GDBSERVER_MIC=/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/target/mic/bin/gdbserver' 'LIBRARY_PATH=/apps/intel/composer_xe_2013_sp1.2.144/compiler/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/ipp/../compiler/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/ipp/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/tbb/lib/intel64/gcc4.4:/usr/lib64/nvidia:/apps/gcc/4.8.3/lib64' 'SSH_TTY=/dev/pts/0' 'MIC_LD_LIBRARY_PATH=/apps/intel/composer_xe_2013_sp1.2.144/compiler/lib/mic:/apps/intel/composer_xe_2013_sp1.2.144/mpirt/lib/mic:/apps/intel/composer_xe_2013_sp1.2.144/mkl/lib/mic:/apps/intel/composer_xe_2013_sp1.2.144/tbb/lib/mic' 'USER=student11' 'LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.tbz=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:' 'MIC_LIBRARY_PATH=/apps/intel/composer_xe_2013_sp1.2.144/tbb/lib/mic' 'CPATH=/apps/intel/composer_xe_2013_sp1.2.144/mkl/include:/apps/intel/composer_xe_2013_sp1.2.144/tbb/include' 'NLSPATH=/apps/intel/composer_xe_2013_sp1.2.144/compiler/lib/intel64/locale/%l_%t/%N:/apps/intel/composer_xe_2013_sp1.2.144/ipp/lib/intel64/locale/%l_%t/%N:/apps/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64/locale/%l_%t/%N:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64_mic/py26/share/locale/%l_%t/%N:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64/py26/share/locale/%l_%t/%N:/apps/intel/composer_xe_2013_sp1.2.144/debugger/intel64/locale/%l_%t/%N' 'PATH=/apps/intel/impi/4.1.3.048/intel64/bin:/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64:/apps/intel/composer_xe_2013_sp1.2.144/mpirt/bin/intel64:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64_mic/py26/bin:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64/py26/bin:/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64_mic:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gui/intel64:/apps/cuda/6.0/bin:/apps/gcc/4.8.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/student11/bin' 'MAIL=/var/spool/mail/student11' 'TBBROOT=/apps/intel/composer_xe_2013_sp1.2.144/tbb' 'PWD=/home/student11/scratch/sc14/software/namd/NAMD_2.9_Linux-x86_64-ibverbs-smp' '_LMFILES_=/apps/modules/gcc/4.8.3:/apps/modules/cuda/6.0:/apps/modules/intel/composer-xe-2013/14.0.2:/apps/modules/intel/mpi/4.1.3' 'IDB_HOME=/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64' 'LANG=en_US.UTF-8' 'GDB_CROSS=/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64_mic/py26/bin/gdb-mic' 'MODULEPATH=/apps/modules' 'LOADEDMODULES=gcc/4.8.3:cuda/6.0:intel/composer-xe-2013/14.0.2:intel/mpi/4.1.3' 'HISTCONTROL=ignoredups' 'HOME=/home/student11' 'SHLVL=2' 'LOGNAME=student11' 'SSH_CONNECTION=192.168.100.106 53467 192.168.100.104 22' 'MODULESHOME=/usr/share/Modules' 'LESSOPEN=|/usr/bin/lesspipe.sh %s' 'INCLUDE=/apps/intel/composer_xe_2013_sp1.2.144/mkl/include' 'G_BROKEN_FILENAMES=1' 'I_MPI_ROOT=/apps/intel/impi/4.1.3.048' 'module=() {  eval `/usr/bin/modulecmd bash $*`
+}' '_=/apps/intel/impi/4.1.3.048/intel64/bin/mpiexec.hydra' --global-user-env 0 --global-system-env 2 'MPICH_ENABLE_CKPOINT=1' 'GFORTRAN_UNBUFFERED_PRECONNECTED=y' --proxy-core-count 24 --exec --exec-appnum 0 --exec-proc-count 24 --exec-local-env 0 --exec-wdir /home/student11/scratch/sc14/software/namd/NAMD_2.9_Linux-x86_64-ibverbs-smp --exec-args 2 ./namd2 ./apoa1/apoa1.namd 
+
+[mpiexec@gpunode1-ulam.localdomain] PMI FD: (null); PMI PORT: (null); PMI ID/RANK: -1
+Arguments being passed to proxy 1:
+--version 1.4.1p1 --iface-ip-env-name MPICH_INTERFACE_HOSTNAME --hostname ulam5 --global-core-map 24,24,0 --filler-process-map 24,24,0 --global-process-count 32 --auto-cleanup 1 --pmi-rank -1 --pmi-kvsname kvs_4963_0 --pmi-process-mapping (vector,(0,2,24)) --topolib ipl --ckpointlib blcr --ckpoint-prefix /tmp --ckpoint-preserve 1 --ckpoint off --ckpoint-num -1 --global-inherited-env 42 'I_MPI_PERHOST=allcores' 'LD_LIBRARY_PATH=.:/apps/intel/impi/4.1.3.048/intel64/lib:/apps/intel/composer_xe_2013_sp1.2.144/compiler/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/mpirt/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/ipp/../compiler/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/ipp/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/tbb/lib/intel64/gcc4.4:/apps/cuda/6.0/lib64:/apps/gcc/4.8.3/lib64:/apps/intel//impi/4.1.3.048/intel64/lib:/apps/intel//impi/4.1.3.048/mic/lib' 'MKLROOT=/apps/intel/composer_xe_2013_sp1.2.144/mkl' 'MANPATH=/apps/intel/impi/4.1.3.048/man:/apps/intel/composer_xe_2013_sp1.2.144/man/en_US:/apps/gcc/4.8.3/share/man:/usr/share/man' 'HOSTNAME=gpunode1-ulam.localdomain' 'INTEL_LICENSE_FILE=/apps/intel/licenses' 'IPPROOT=/apps/intel/composer_xe_2013_sp1.2.144/ipp' 'SHELL=/bin/bash' 'TERM=xterm' 'HISTSIZE=1000' 'SSH_CLIENT=192.168.100.106 53467 22' 'GDBSERVER_MIC=/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/target/mic/bin/gdbserver' 'LIBRARY_PATH=/apps/intel/composer_xe_2013_sp1.2.144/compiler/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/ipp/../compiler/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/ipp/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/tbb/lib/intel64/gcc4.4:/usr/lib64/nvidia:/apps/gcc/4.8.3/lib64' 'SSH_TTY=/dev/pts/0' 'MIC_LD_LIBRARY_PATH=/apps/intel/composer_xe_2013_sp1.2.144/compiler/lib/mic:/apps/intel/composer_xe_2013_sp1.2.144/mpirt/lib/mic:/apps/intel/composer_xe_2013_sp1.2.144/mkl/lib/mic:/apps/intel/composer_xe_2013_sp1.2.144/tbb/lib/mic' 'USER=student11' 'LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.tbz=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:' 'MIC_LIBRARY_PATH=/apps/intel/composer_xe_2013_sp1.2.144/tbb/lib/mic' 'CPATH=/apps/intel/composer_xe_2013_sp1.2.144/mkl/include:/apps/intel/composer_xe_2013_sp1.2.144/tbb/include' 'NLSPATH=/apps/intel/composer_xe_2013_sp1.2.144/compiler/lib/intel64/locale/%l_%t/%N:/apps/intel/composer_xe_2013_sp1.2.144/ipp/lib/intel64/locale/%l_%t/%N:/apps/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64/locale/%l_%t/%N:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64_mic/py26/share/locale/%l_%t/%N:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64/py26/share/locale/%l_%t/%N:/apps/intel/composer_xe_2013_sp1.2.144/debugger/intel64/locale/%l_%t/%N' 'PATH=/apps/intel/impi/4.1.3.048/intel64/bin:/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64:/apps/intel/composer_xe_2013_sp1.2.144/mpirt/bin/intel64:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64_mic/py26/bin:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64/py26/bin:/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64_mic:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gui/intel64:/apps/cuda/6.0/bin:/apps/gcc/4.8.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/student11/bin' 'MAIL=/var/spool/mail/student11' 'TBBROOT=/apps/intel/composer_xe_2013_sp1.2.144/tbb' 'PWD=/home/student11/scratch/sc14/software/namd/NAMD_2.9_Linux-x86_64-ibverbs-smp' '_LMFILES_=/apps/modules/gcc/4.8.3:/apps/modules/cuda/6.0:/apps/modules/intel/composer-xe-2013/14.0.2:/apps/modules/intel/mpi/4.1.3' 'IDB_HOME=/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64' 'LANG=en_US.UTF-8' 'GDB_CROSS=/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64_mic/py26/bin/gdb-mic' 'MODULEPATH=/apps/modules' 'LOADEDMODULES=gcc/4.8.3:cuda/6.0:intel/composer-xe-2013/14.0.2:intel/mpi/4.1.3' 'HISTCONTROL=ignoredups' 'HOME=/home/student11' 'SHLVL=2' 'LOGNAME=student11' 'SSH_CONNECTION=192.168.100.106 53467 192.168.100.104 22' 'MODULESHOME=/usr/share/Modules' 'LESSOPEN=|/usr/bin/lesspipe.sh %s' 'INCLUDE=/apps/intel/composer_xe_2013_sp1.2.144/mkl/include' 'G_BROKEN_FILENAMES=1' 'I_MPI_ROOT=/apps/intel/impi/4.1.3.048' 'module=() {  eval `/usr/bin/modulecmd bash $*`
+}' '_=/apps/intel/impi/4.1.3.048/intel64/bin/mpiexec.hydra' --global-user-env 0 --global-system-env 2 'MPICH_ENABLE_CKPOINT=1' 'GFORTRAN_UNBUFFERED_PRECONNECTED=y' --proxy-core-count 24 --exec --exec-appnum 0 --exec-proc-count 8 --exec-local-env 0 --exec-wdir /home/student11/scratch/sc14/software/namd/NAMD_2.9_Linux-x86_64-ibverbs-smp --exec-args 2 ./namd2 ./apoa1/apoa1.namd 
+
+[mpiexec@gpunode1-ulam.localdomain] Launch arguments: /apps/intel/impi/4.1.3.048/intel64/bin/pmi_proxy --control-port ulam4:46710 --debug --pmi-connect lazy-cache --pmi-aggregate -s 0 --rmk slurm --launcher ssh --demux poll --pgid 0 --enable-stdin 1 --retries 10 --control-code 1772316703 --proxy-id 0 
+[mpiexec@gpunode1-ulam.localdomain] Launch arguments: /usr/bin/ssh -x -q ulam5 /apps/intel/impi/4.1.3.048/intel64/bin/pmi_proxy --control-port ulam4:46710 --debug --pmi-connect lazy-cache --pmi-aggregate -s 0 --rmk slurm --launcher ssh --demux poll --pgid 0 --enable-stdin 1 --retries 10 --control-code 1772316703 --proxy-id 1 
+[mpiexec@gpunode1-ulam.localdomain] STDIN will be redirected to 1 fd(s): 9 
+[proxy:0:0@gpunode1-ulam.localdomain] Start PMI_proxy 0
+[proxy:0:0@gpunode1-ulam.localdomain] STDIN will be redirected to 1 fd(s): 15 
+
+=====================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+=====================================================================================
+[proxy:0:1@gpunode2-ulam.localdomain] Start PMI_proxy 1
+APPLICATION TERMINATED WITH THE EXIT STRING: Segmentation fault (signal 11)
