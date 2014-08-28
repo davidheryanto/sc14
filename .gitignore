@@ -30,3 +30,4 @@ fort.53
 # Executables
 *.exe
 *.app
+*.out
