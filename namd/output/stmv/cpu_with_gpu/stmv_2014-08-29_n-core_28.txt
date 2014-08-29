@@ -1,0 +1,353 @@
+Charm++> Running on MPI version: 2.2
+Charm++> level of thread support used: MPI_THREAD_SINGLE (desired: MPI_THREAD_SINGLE)
+Charm++> Running on non-SMP mode
+Converse/Charm++ Commit ID: v6.4.0-beta1-0-g5776d21
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 2 unique compute nodes (48-way SMP).
+Charm++> cpu topology info is gathered in 0.002 seconds.
+Info: NAMD 2.9 for Linux-x86_64-MPI-CUDA
+Info: 
+Info: Please visit http://www.ks.uiuc.edu/Research/namd/
+Info: for updates, documentation, and support information.
+Info: 
+Info: Please cite Phillips et al., J. Comp. Chem. 26:1781-1802 (2005)
+Info: in all publications reporting results obtained with NAMD.
+Info: 
+Info: Based on Charm++/Converse 60400 for mpi-linux-x86_64
+Info: Built Fri Aug 29 03:09:25 SGT 2014 by student11 on cpunode0-ulam.localdomain
+Info: 1 NAMD  2.9  Linux-x86_64-MPI-CUDA  28    gpunode1-ulam.localdomain  student11
+Info: Running on 28 processors, 28 nodes, 2 physical nodes.
+Info: CPU topology information available.
+Info: Charm++/Converse parallel runtime startup completed at 0.015497 s
+Pe 20 physical rank 10 will use CUDA device of pe 16
+Pe 21 physical rank 11 will use CUDA device of pe 16
+Pe 8 physical rank 4 binding to CUDA device 0 on gpunode1-ulam.localdomain: 'Tesla K40m'  Mem: 11519MB  Rev: 3.5
+Pe 12 physical rank 6 will use CUDA device of pe 8
+Pe 4 physical rank 2 will use CUDA device of pe 8
+Pe 1 physical rank 1 will use CUDA device of pe 8
+Pe 9 physical rank 5 will use CUDA device of pe 8
+Pe 25 physical rank 13 will use CUDA device of pe 16
+Pe 24 physical rank 12 will use CUDA device of pe 16
+Pe 16 physical rank 8 binding to CUDA device 1 on gpunode1-ulam.localdomain: 'Tesla K40m'  Mem: 11519MB  Rev: 3.5
+Pe 17 physical rank 9 will use CUDA device of pe 16
+Did not find +devices i,j,k,... argument, using all
+Pe 5 physical rank 3 will use CUDA device of pe 8
+Pe 0 physical rank 0 will use CUDA device of pe 8
+Pe 13 physical rank 7 will use CUDA device of pe 16
+Info: 16.2695 MB of memory in use based on /proc/self/stat
+Info: Configuration file is ../input/stmv/stmv.namd
+Info: Changed directory to ../input/stmv
+TCL: Suspending until startup complete.
+Info: SIMULATION PARAMETERS:
+Info: TIMESTEP               1
+Info: NUMBER OF STEPS        500
+Info: STEPS PER CYCLE        20
+Info: PERIODIC CELL BASIS 1  216.832 0 0
+Info: PERIODIC CELL BASIS 2  0 216.832 0
+Info: PERIODIC CELL BASIS 3  0 0 216.832
+Info: PERIODIC CELL CENTER   0 0 0
+Info: LOAD BALANCER  Centralized
+Info: LOAD BALANCING STRATEGY  New Load Balancers -- DEFAULT
+Info: LDB PERIOD             4000 steps
+Info: FIRST LDB TIMESTEP     100
+Info: LAST LDB TIMESTEP     -1
+Info: LDB BACKGROUND SCALING 1
+Info: HOM BACKGROUND SCALING 1
+Info: PME BACKGROUND SCALING 1
+Info: MIN ATOMS PER PATCH    40
+Info: INITIAL TEMPERATURE    298
+Info: CENTER OF MASS MOVING INITIALLY? NO
+Info: DIELECTRIC             1
+Info: EXCLUDE                SCALED ONE-FOUR
+Info: 1-4 ELECTROSTATICS SCALED BY 1
+Info: MODIFIED 1-4 VDW PARAMETERS WILL BE USED
+Info: NO DCD TRAJECTORY OUTPUT
+Info: NO EXTENDED SYSTEM TRAJECTORY OUTPUT
+Info: NO VELOCITY DCD OUTPUT
+Info: NO FORCE DCD OUTPUT
+Info: OUTPUT FILENAME        /usr/tmp/stmv-output
+Info: BINARY OUTPUT FILES WILL BE USED
+Info: NO RESTART FILE
+Info: SWITCHING ACTIVE
+Info: SWITCHING ON           10
+Info: SWITCHING OFF          12
+Info: PAIRLIST DISTANCE      13.5
+Info: PAIRLIST SHRINK RATE   0.01
+Info: PAIRLIST GROW RATE     0.01
+Info: PAIRLIST TRIGGER       0.3
+Info: PAIRLISTS PER CYCLE    2
+Info: PAIRLISTS ENABLED
+Info: MARGIN                 0.48
+Info: HYDROGEN GROUP CUTOFF  2.5
+Info: PATCH DIMENSION        16.48
+Info: ENERGY OUTPUT STEPS    20
+Info: CROSSTERM ENERGY INCLUDED IN DIHEDRAL
+Info: TIMING OUTPUT STEPS    20
+Info: LANGEVIN DYNAMICS ACTIVE
+Info: LANGEVIN TEMPERATURE   298
+Info: LANGEVIN DAMPING COEFFICIENT IS 5 INVERSE PS
+Info: LANGEVIN DYNAMICS NOT APPLIED TO HYDROGENS
+Info: LANGEVIN PISTON PRESSURE CONTROL ACTIVE
+Info:        TARGET PRESSURE IS 1.01325 BAR
+Info:     OSCILLATION PERIOD IS 100 FS
+Info:             DECAY TIME IS 50 FS
+Info:     PISTON TEMPERATURE IS 298 K
+Info:       PRESSURE CONTROL IS GROUP-BASED
+Info:    INITIAL STRAIN RATE IS 0 0 0
+Info:       CELL FLUCTUATION IS ISOTROPIC
+Info: PARTICLE MESH EWALD (PME) ACTIVE
+Info: PME TOLERANCE               1e-06
+Info: PME EWALD COEFFICIENT       0.257952
+Info: PME INTERPOLATION ORDER     4
+Info: PME GRID DIMENSIONS         216 216 216
+Info: PME MAXIMUM GRID SPACING    1.5
+Info: Attempting to read FFTW data from FFTW_NAMD_2.9_Linux-x86_64-MPI-CUDA.txt
+Info: Optimizing 6 FFT steps.  1... 2...Pe 2 physical rank 0 binding to CUDA device 0 on gpunode2-ulam.localdomain: 'Tesla K40m'  Mem: 11519MB  Rev: 3.5
+Pe 15 physical rank 7 will use CUDA device of pe 18
+Pe 18 physical rank 8 binding to CUDA device 1 on gpunode2-ulam.localdomain: 'Tesla K40m'  Mem: 11519MB  Rev: 3.5
+Pe 7 physical rank 3 will use CUDA device of pe 2
+Pe 26 physical rank 12 will use CUDA device of pe 18
+Pe 6 physical rank 2 will use CUDA device of pe 2
+Pe 27 physical rank 13 will use CUDA device of pe 18
+Pe 22 physical rank 10 will use CUDA device of pe 18
+Pe 19 physical rank 9 will use CUDA device of pe 18
+Pe 3 physical rank 1 will use CUDA device of pe 2
+Pe 23 physical rank 11 will use CUDA device of pe 18
+Pe 10 physical rank 4 will use CUDA device of pe 2
+Pe 11 physical rank 5 will use CUDA device of pe 2
+Pe 14 physical rank 6 will use CUDA device of pe 2
+ 3... 4... 5... 6...   Done.
+Info: Writing FFTW data to FFTW_NAMD_2.9_Linux-x86_64-MPI-CUDA.txt
+Info: FULL ELECTROSTATIC EVALUATION FREQUENCY      4
+Info: USING VERLET I (r-RESPA) MTS SCHEME.
+Info: C1 SPLITTING OF LONG RANGE ELECTROSTATICS
+Info: PLACING ATOMS IN PATCHES BY HYDROGEN GROUPS
+Info: RANDOM NUMBER SEED     1409255801
+Info: USE HYDROGEN BONDS?    NO
+Info: COORDINATE PDB         stmv.pdb
+Info: STRUCTURE FILE         stmv.psf
+Info: PARAMETER file: CHARMM format! 
+Info: PARAMETERS             par_all27_prot_na.inp
+Info: USING ARITHMETIC MEAN TO COMBINE L-J SIGMA PARAMETERS
+Info: SUMMARY OF PARAMETERS:
+Info: 250 BONDS
+Info: 622 ANGLES
+Info: 1049 DIHEDRAL
+Info: 73 IMPROPER
+Info: 0 CROSSTERM
+Info: 130 VDW
+Info: 0 VDW_PAIRS
+Info: 0 NBTHOLE_PAIRS
+Info: TIME FOR READING PSF FILE: 9.39213
+Info: TIME FOR READING PDB FILE: 1.38371
+Info: 
+Info: ****************************
+Info: STRUCTURE SUMMARY:
+Info: 1066628 ATOMS
+Info: 769956 BONDS
+Info: 605872 ANGLES
+Info: 450875 DIHEDRALS
+Info: 24578 IMPROPERS
+Info: 0 CROSSTERMS
+Info: 0 EXCLUSIONS
+Info: 3199884 DEGREES OF FREEDOM
+Info: 389067 HYDROGEN GROUPS
+Info: 4 ATOMS IN LARGEST HYDROGEN GROUP
+Info: 389067 MIGRATION GROUPS
+Info: 4 ATOMS IN LARGEST MIGRATION GROUP
+Info: TOTAL MASS = 6.69877e+06 amu
+Info: TOTAL CHARGE = 0.000168104 e
+Info: MASS DENSITY = 1.09115 g/cm^3
+Info: ATOM DENSITY = 0.104627 atoms/A^3
+Info: *****************************
+Info: 
+Info: Entering startup at 30.6006 s, 303.754 MB of memory in use
+Info: Startup phase 0 took 0.00929594 s, 303.781 MB of memory in use
+Info: Startup phase 1 took 1.18804 s, 490.906 MB of memory in use
+Info: Startup phase 2 took 0.00384212 s, 499.047 MB of memory in use
+Info: Startup phase 3 took 0.000236988 s, 499.047 MB of memory in use
+Info: PATCH GRID IS 13 (PERIODIC) BY 13 (PERIODIC) BY 13 (PERIODIC)
+Info: PATCH GRID IS 1-AWAY BY 1-AWAY BY 1-AWAY
+Info: REMOVING COM VELOCITY 0.00232294 -0.00621124 0.000782
+Info: LARGEST PATCH (1044) HAS 541 ATOMS
+Info: Startup phase 4 took 0.346016 s, 652.301 MB of memory in use
+Info: PME using 27 and 27 processors for FFT and reciprocal sum.
+Info: PME USING 27 GRID NODES AND 27 TRANS NODES
+Info: PME GRID LOCATIONS: 1 2 3 4 5 6 7 8 9 10 ...
+Info: PME TRANS LOCATIONS: 1 2 3 4 5 6 7 8 9 10 ...
+Info: Startup phase 5 took 0.0305791 s, 655.691 MB of memory in use
+Info: Startup phase 6 took 0.0493498 s, 657.605 MB of memory in use
+LDB: Central LB being created...
+Info: Startup phase 7 took 0.002846 s, 658.012 MB of memory in use
+Info: CREATING 44164 COMPUTE OBJECTS
+Info: NONBONDED TABLE R-SQUARED SPACING: 0.0625
+Info: NONBONDED TABLE SIZE: 769 POINTS
+Pe 8 hosts 77 local and 881 remote patches for pe 8
+Pe 16 hosts 79 local and 923 remote patches for pe 16
+Pe 2 hosts 78 local and 918 remote patches for pe 2
+Pe 18 hosts 79 local and 884 remote patches for pe 18
+Info: Startup phase 8 took 0.753709 s, 658.312 MB of memory in use
+Info: useSync: 1 useProxySync: 0
+Info: Startup phase 9 took 0.000289917 s, 658.316 MB of memory in use
+Info: Startup phase 10 took 0.000268221 s, 658.387 MB of memory in use
+Info: Finished startup at 32.9851 s, 658.387 MB of memory in use
+
+Pe 8 has 77 local and 881 remote patches and 1304 local and 13546 remote computes.
+Pe 18 has 79 local and 884 remote patches and 1466 local and 13303 remote computes.
+Pe 16 has 79 local and 923 remote patches and 1517 local and 13360 remote computes.
+Pe 2 has 78 local and 918 remote patches and 1400 local and 13423 remote computes.
+Warning: Energy evaluation is expensive, increase outputEnergies to improve performance.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+
+ENERGY:       0    354072.1600    280839.0161     81957.9556      4995.4407       -4503167.5034    384273.6403         0.0000         0.0000    947598.4315       -2449430.8592       298.0441  -3397029.2907  -2440791.6350       298.0441           1827.1556       188.3132  10194598.5131      1827.1556       188.3132
+
+LDB: ============= START OF LOAD BALANCING ============== 35.1829
+LDB: ============== END OF LOAD BALANCING =============== 35.1838
+Info: useSync: 1 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 35.1851
+Warning: Energy evaluation is expensive, increase outputEnergies to improve performance.
+TIMING: 20  CPU: 3.22041, 0.106671/step  Wall: 3.22041, 0.106671/step, 0.0142228 hours remaining, 674.949219 MB of memory in use.
+ENERGY:      20    354451.0869    280570.8700     81793.8311      5009.9736       -4505276.3611    384723.8639         0.0000         0.0000    949010.9079       -2449715.8276       298.4883  -3398726.7355  -2441018.4052       298.0853           1774.4730       157.6756  10194486.6356       -22.5734       -24.7068
+
+Warning: Energy evaluation is expensive, increase outputEnergies to improve performance.
+TIMING: 40  CPU: 5.33953, 0.105956/step  Wall: 5.33953, 0.105956/step, 0.0135388 hours remaining, 677.707031 MB of memory in use.
+ENERGY:      40    354855.0030    280474.4670     81909.5819      5002.3594       -4502783.8469    382973.5132         0.0000         0.0000    948208.9432       -2449359.9790       298.2361  -3397568.9223  -2440648.6190       298.1847           1635.5380        53.1209  10198019.5897        23.9116        21.6307
+
+Warning: Energy evaluation is expensive, increase outputEnergies to improve performance.
+TIMING: 60  CPU: 7.50925, 0.108486/step  Wall: 7.50925, 0.108486/step, 0.0132594 hours remaining, 678.871094 MB of memory in use.
+ENERGY:      60    355200.4869    281280.6280     81884.7570      4994.2762       -4503732.0601    383366.4416         0.0000         0.0000    948135.1312       -2448870.3391       298.2129  -3397005.4703  -2440240.5721       298.3164           1668.1875        93.1789  10197453.3515         7.8265         7.6993
+
+Warning: Energy evaluation is expensive, increase outputEnergies to improve performance.
+TIMING: 80  CPU: 9.68949, 0.109012/step  Wall: 9.68949, 0.109012/step, 0.012718 hours remaining, 679.257812 MB of memory in use.
+ENERGY:      80    355556.7655    280749.3989     81837.3167      5023.6547       -4504264.9183    384274.0047         0.0000         0.0000    947928.1319       -2448895.6459       298.1478  -3396823.7777  -2440189.5293       298.3743           1637.1805        82.6652  10198737.9351        13.4174        17.6842
+
+LDB: ============= START OF LOAD BALANCING ============== 43.8282
+LDB: Largest compute 39335 load 0.018899 is 0.5% of average load 3.943205
+LDB: Average compute 0.002046 is 0.1% of average load 3.943205
+LDB: Partitioning computes with target load 0.394321
+LDB: Increased migratable compute count from 13182 to 13182
+LDB: Largest unpartitionable compute is 0.018899
+LDB: ============== END OF LOAD BALANCING =============== 43.8339
+Info: useSync: 1 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 43.8402
+Warning: Energy evaluation is expensive, increase outputEnergies to improve performance.
+Info: Initial time: 28 CPUs 0.107735 s/step 1.24693 days/ns 680.168 MB memory
+Warning: Energy evaluation is expensive, increase outputEnergies to improve performance.
+TIMING: 100  CPU: 11.875, 0.109277/step  Wall: 11.875, 0.109277/step, 0.0121419 hours remaining, 680.167969 MB of memory in use.
+ENERGY:     100    355338.2107    280739.6079     82102.2613      5036.7526       -4503805.4045    383706.5115         0.0000         0.0000    948086.9581       -2448795.1025       298.1977  -3396882.0605  -2440096.6946       298.3475           1631.6412        97.8541  10201268.2997        -2.4530        -2.3889
+
+LDB: ============= START OF LOAD BALANCING ============== 46.0014
+LDB: ============== END OF LOAD BALANCING =============== 46.0016
+Info: useSync: 1 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 46.0028
+Warning: Energy evaluation is expensive, increase outputEnergies to improve performance.
+TIMING: 120  CPU: 14.0372, 0.108108/step  Wall: 14.0372, 0.108108/step, 0.0114114 hours remaining, 680.472656 MB of memory in use.
+ENERGY:     120    355255.3765    279990.4045     82090.7130      5049.9580       -4504827.8000    384366.5758         0.0000         0.0000    948554.7817       -2449519.9905       298.3449  -3398074.7722  -2440798.7283       298.2827           1616.8206        82.1880  10198931.4382         2.5621        -1.3751
+
+Warning: Energy evaluation is expensive, increase outputEnergies to improve performance.
+TIMING: 140  CPU: 16.2091, 0.108597/step  Wall: 16.2091, 0.108597/step, 0.0108597 hours remaining, 680.628906 MB of memory in use.
+ENERGY:     140    355545.6822    279465.5234     81882.8964      4966.9992       -4505658.1290    384760.8505         0.0000         0.0000    949866.9888       -2449169.1885       298.7576  -3399036.1774  -2440426.0825       298.4822           1687.0765       139.9373  10195188.3560         7.7120         4.1169
+
+Warning: Energy evaluation is expensive, increase outputEnergies to improve performance.
+TIMING: 160  CPU: 18.3836, 0.108725/step  Wall: 18.3836, 0.108725/step, 0.0102684 hours remaining, 680.738281 MB of memory in use.
+ENERGY:     160    354917.8547    279544.1481     82034.2336      4988.6653       -4503824.4270    383933.0426         0.0000         0.0000    949248.4884       -2449157.9942       298.5631  -3398406.4826  -2440455.0405       298.4541           1640.2654        99.4096  10196539.5787         5.3720         5.9113
+
+Warning: Energy evaluation is expensive, increase outputEnergies to improve performance.
+TIMING: 180  CPU: 20.5496, 0.1083/step  Wall: 20.5496, 0.1083/step, 0.00962668 hours remaining, 680.843750 MB of memory in use.
+ENERGY:     180    355498.4342    280075.4035     81974.2197      5014.8420       -4506174.5543    385240.5841         0.0000         0.0000    948614.1058       -2449756.9651       298.3635  -3398371.0708  -2441030.1281       298.2795           1619.7900       124.6815  10191524.0584         0.0626         1.4221
+
+LDB: ============= START OF LOAD BALANCING ============== 54.6791
+LDB: Largest compute 39335 load 0.018723 is 0.5% of average load 3.968243
+LDB: Average compute 0.002047 is 0.1% of average load 3.968243
+LDB: TIME 54.6842 LOAD: AVG 3.96824 MAX 7.1099  PROXIES: TOTAL 2907 MAXPE 109 MAXPATCH 5 None MEM: 681.035 MB
+LDB: TIME 54.6912 LOAD: AVG 3.96824 MAX 5.64697  PROXIES: TOTAL 2915 MAXPE 116 MAXPATCH 5 TorusLB MEM: 681.051 MB
+LDB: ============== END OF LOAD BALANCING =============== 54.7043
+Info: useSync: 1 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 54.715
+Warning: Energy evaluation is expensive, increase outputEnergies to improve performance.
+Info: Initial time: 28 CPUs 0.108374 s/step 1.25433 days/ns 681.539 MB memory
+TIMING: 200  CPU: 22.7501, 0.110024/step  Wall: 22.7501, 0.110024/step, 0.00916867 hours remaining, 681.539062 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+
+ENERGY:     200    355866.9491    280082.3813     81941.2081      5030.1591       -4504772.8279    383976.2244         0.0000         0.0000    948266.7587       -2449609.1472       298.2543  -3397875.9059  -2440799.7477       298.2134           1557.8429       111.6049  10194790.8625         0.4516        -0.7840
+
+TIMING: 220  CPU: 24.8839, 0.106689/step  Wall: 24.8839, 0.106689/step, 0.00829801 hours remaining, 683.132812 MB of memory in use.
+ENERGY:     220    356137.2550    279808.5709     81878.3316      5040.4349       -4505149.2672    383807.5332         0.0000         0.0000    948656.6052       -2449820.5365       298.3769  -3398477.1417  -2441103.9275       298.2659           1539.9835        92.6328  10196277.3026        14.3932        13.0784
+
+TIMING: 240  CPU: 27.0193, 0.106769/step  Wall: 27.0193, 0.106769/step, 0.00771111 hours remaining, 684.007812 MB of memory in use.
+ENERGY:     240    356653.5467    280197.6941     82125.5520      5062.8882       -4505381.7274    383971.0865         0.0000         0.0000    947516.6841       -2449854.2759       298.0184  -3397370.9600  -2441152.7300       298.1349           1501.7118        62.5866  10197871.2575         4.2327         6.7489
+
+TIMING: 260  CPU: 29.1484, 0.106456/step  Wall: 29.1484, 0.106456/step, 0.00709708 hours remaining, 684.597656 MB of memory in use.
+ENERGY:     260    357057.1793    280062.7314     82035.4923      5064.1406       -4506316.2744    383949.8742         0.0000         0.0000    947852.9371       -2450293.9195       298.1241  -3398146.8566  -2441615.9852       298.2399           1451.5656        64.0368  10196942.9252        -0.8219         1.2046
+
+TIMING: 280  CPU: 31.2742, 0.106289/step  Wall: 31.2742, 0.106289/step, 0.00649542 hours remaining, 684.859375 MB of memory in use.
+ENERGY:     280    356703.4383    280599.4119     81992.0442      5105.0219       -4506315.5941    384005.7510         0.0000         0.0000    947474.9358       -2450434.9910       298.0052  -3397909.9268  -2441765.5064       298.3143           1437.0793        74.8550  10197190.9083         7.4877         5.5593
+
+LDB: ============= START OF LOAD BALANCING ============== 65.3799
+LDB: Largest compute 38635 load 0.024521 is 0.5% of average load 5.064731
+LDB: Average compute 0.002688 is 0.1% of average load 5.064731
+LDB: TIME 65.3851 LOAD: AVG 5.06473 MAX 7.02239  PROXIES: TOTAL 2907 MAXPE 109 MAXPATCH 5 None MEM: 685.168 MB
+LDB: TIME 65.3868 LOAD: AVG 5.06473 MAX 7.02239  PROXIES: TOTAL 2915 MAXPE 116 MAXPATCH 5 RefineTorusLB MEM: 685.168 MB
+LDB: TIME 65.4289 LOAD: AVG 5.06473 MAX 7.02239  PROXIES: TOTAL 2953 MAXPE 119 MAXPATCH 5 RefineTorusLB MEM: 685.168 MB
+LDB: ============== END OF LOAD BALANCING =============== 65.4319
+Info: useSync: 1 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 65.4394
+Warning: Energy evaluation is expensive, increase outputEnergies to improve performance.
+Info: Initial time: 28 CPUs 0.106642 s/step 1.23428 days/ns 685.305 MB memory
+TIMING: 300  CPU: 33.4742, 0.110001/step  Wall: 33.4742, 0.110001/step, 0.00611115 hours remaining, 685.304688 MB of memory in use.
+ENERGY:     300    356761.3348    280274.2881     82124.7236      5129.3233       -4505561.3689    383568.3513         0.0000         0.0000    947355.6447       -2450347.7032       297.9677  -3397703.3479  -2441638.6021       297.9756           1474.8599        91.1117  10198452.8232        -0.5895        -2.6156
+
+TIMING: 320  CPU: 35.6019, 0.106387/step  Wall: 35.6019, 0.106387/step, 0.00531935 hours remaining, 685.542969 MB of memory in use.
+ENERGY:     320    356933.4735    280058.6613     81838.8915      5137.8944       -4505890.6301    383624.6505         0.0000         0.0000    947857.3157       -2450439.7431       298.1255  -3398297.0588  -2441711.7751       298.1419           1485.0534        80.0854  10198427.0582        -9.3206        -9.0710
+
+TIMING: 340  CPU: 37.7416, 0.106982/step  Wall: 37.7416, 0.106982/step, 0.00475476 hours remaining, 685.742188 MB of memory in use.
+ENERGY:     340    357197.5235    280424.0035     81976.3854      5084.8946       -4508382.5010    384421.1874         0.0000         0.0000    948706.9767       -2450571.5298       298.3927  -3399278.5065  -2441860.3017       298.1356           1463.5642        87.8404  10196393.6129        -2.4453        -1.9372
+
+TIMING: 360  CPU: 39.8679, 0.106316/step  Wall: 39.8679, 0.106316/step, 0.00413452 hours remaining, 685.855469 MB of memory in use.
+ENERGY:     360    358011.9169    280453.7499     81953.4545      5064.8373       -4507383.0992    384016.1156         0.0000         0.0000    947104.1031       -2450778.9218       297.8886  -3397883.0249  -2442086.1182       298.0998           1397.0950        96.2688  10197224.0473         6.6419         7.9767
+
+TIMING: 380  CPU: 41.996, 0.106408/step  Wall: 41.996, 0.106408/step, 0.00354693 hours remaining, 685.980469 MB of memory in use.
+ENERGY:     380    357617.6958    280536.5651     81997.8347      5073.1332       -4508540.0015    384694.3125         0.0000         0.0000    947645.8035       -2450974.6567       298.0590  -3398620.4602  -2442275.1971       298.0829           1386.9032       129.4539  10195196.6404       -20.6707       -24.6862
+
+LDB: ============= START OF LOAD BALANCING ============== 76.0937
+LDB: Largest compute 38635 load 0.024674 is 0.5% of average load 5.066274
+LDB: Average compute 0.002688 is 0.1% of average load 5.066274
+LDB: TIME 76.0989 LOAD: AVG 5.06627 MAX 7.03975  PROXIES: TOTAL 2907 MAXPE 109 MAXPATCH 5 None MEM: 686.285 MB
+LDB: TIME 76.1006 LOAD: AVG 5.06627 MAX 7.03975  PROXIES: TOTAL 2953 MAXPE 119 MAXPATCH 5 RefineTorusLB MEM: 686.285 MB
+LDB: TIME 76.1028 LOAD: AVG 5.06627 MAX 7.03975  PROXIES: TOTAL 2953 MAXPE 119 MAXPATCH 5 RefineTorusLB MEM: 686.285 MB
+LDB: ============== END OF LOAD BALANCING =============== 76.1048
+Info: useSync: 1 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 76.1113
+Warning: Energy evaluation is expensive, increase outputEnergies to improve performance.
+Info: Benchmark time: 28 CPUs 0.106544 s/step 1.23315 days/ns 686.305 MB memory
+TIMING: 400  CPU: 44.1464, 0.107516/step  Wall: 44.1464, 0.107516/step, 0.00298657 hours remaining, 686.304688 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+
+ENERGY:     400    358354.4380    280616.4123     81859.1561      5022.8639       -4507814.4223    383950.0092         0.0000         0.0000    946814.6826       -2451196.8602       297.7976  -3398011.5427  -2442539.9426       298.0286           1360.3311        80.1880  10196377.9955        37.6851        33.9215
+
+TIMING: 420  CPU: 46.2777, 0.106564/step  Wall: 46.2776, 0.106564/step, 0.0023681 hours remaining, 686.335938 MB of memory in use.
+ENERGY:     420    357948.1724    280490.4921     82038.5570      5014.9436       -4507023.0568    382874.4247         0.0000         0.0000    947384.3546       -2451272.1123       297.9767  -3398656.4669  -2442614.5125       297.9785           1351.4741        71.1816  10198309.8193         1.9964         4.7654
+
+TIMING: 440  CPU: 48.4114, 0.106688/step  Wall: 48.4114, 0.106688/step, 0.00177814 hours remaining, 686.425781 MB of memory in use.
+ENERGY:     440    358429.7739    280261.5539     82025.2730      5024.5552       -4510947.0319    385940.4093         0.0000         0.0000    948053.2069       -2451212.2597       298.1871  -3399265.4666  -2442529.4074       298.2178           1337.4880       131.8150  10193490.9347        -1.3311         2.9603
+
+TIMING: 460  CPU: 50.5432, 0.106589/step  Wall: 50.5432, 0.106589/step, 0.00118432 hours remaining, 686.472656 MB of memory in use.
+ENERGY:     460    358197.7162    279940.0171     81852.8330      5027.6553       -4509347.8376    384453.2367         0.0000         0.0000    948167.3549       -2451709.0245       298.2230  -3399876.3793  -2443051.6473       298.1265           1247.3320        93.0111  10195804.4991        -3.3222        -4.9919
+
+TIMING: 480  CPU: 52.6813, 0.106905/step  Wall: 52.6813, 0.106905/step, 0.000593919 hours remaining, 686.546875 MB of memory in use.
+ENERGY:     480    358323.1188    279828.7156     81901.1526      5028.8234       -4511549.3064    385943.0006         0.0000         0.0000    948448.5910       -2452075.9045       298.3115  -3400524.4955  -2443321.0992       298.3189           1267.0755        88.5833  10194230.6335        10.9653         6.6952
+
+Warning: Energy evaluation is expensive, increase outputEnergies to improve performance.
+Info: Benchmark time: 28 CPUs 0.106524 s/step 1.23292 days/ns 686.613 MB memory
+TIMING: 500  CPU: 54.7989, 0.105882/step  Wall: 54.7989, 0.105882/step, 0 hours remaining, 686.613281 MB of memory in use.
+ENERGY:     500    357691.3646    279410.3083     81955.1981      5077.2822       -4509080.8427    383886.9465         0.0000         0.0000    948917.5874       -2452142.1557       298.4590  -3401059.7431  -2443410.3898       298.1655           1254.2047        52.7852  10198439.9225         4.1026         3.9893
+
+WRITING EXTENDED SYSTEM TO OUTPUT FILE AT STEP 500
+WRITING COORDINATES TO OUTPUT FILE AT STEP 500
+The last position output (seq=-2) takes 0.022 seconds, 716.594 MB of memory in use
+WRITING VELOCITIES TO OUTPUT FILE AT STEP 500
+The last velocity output (seq=-2) takes 0.019 seconds, 716.598 MB of memory in use
+====================================================
+
+WallClock: 87.159637  CPUTime: 87.159637  Memory: 716.597656 MB
+End of program
