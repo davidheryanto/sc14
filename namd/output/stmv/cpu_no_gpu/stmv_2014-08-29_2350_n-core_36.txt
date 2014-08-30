@@ -1,0 +1,541 @@
+Charm++> Running on MPI version: 2.2
+Charm++> level of thread support used: MPI_THREAD_SINGLE (desired: MPI_THREAD_SINGLE)
+Charm++> Running on non-SMP mode
+Converse/Charm++ Commit ID: v6.4.0-beta1-0-g5776d21
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 2 unique compute nodes (48-way SMP).
+Charm++> cpu topology info is gathered in 0.003 seconds.
+Info: NAMD 2.9 for Linux-x86_64-MPI
+Info: 
+Info: Please visit http://www.ks.uiuc.edu/Research/namd/
+Info: for updates, documentation, and support information.
+Info: 
+Info: Please cite Phillips et al., J. Comp. Chem. 26:1781-1802 (2005)
+Info: in all publications reporting results obtained with NAMD.
+Info: 
+Info: Based on Charm++/Converse 60400 for mpi-linux-x86_64
+Info: Built Thu Aug 28 14:25:29 SGT 2014 by student11 on cpunode0-ulam.localdomain
+Info: 1 NAMD  2.9  Linux-x86_64-MPI  36    gpunode1-ulam.localdomain  student11
+Info: Running on 36 processors, 36 nodes, 2 physical nodes.
+Info: CPU topology information available.
+Info: Charm++/Converse parallel runtime startup completed at 0.0161691 s
+Info: 335.719 MB of memory in use based on /proc/self/stat
+Info: Configuration file is ../input/stmv/stmv_5000_steps.namd
+Info: Changed directory to ../input/stmv
+TCL: Suspending until startup complete.
+Info: SIMULATION PARAMETERS:
+Info: TIMESTEP               1
+Info: NUMBER OF STEPS        5000
+Info: STEPS PER CYCLE        20
+Info: PERIODIC CELL BASIS 1  216.832 0 0
+Info: PERIODIC CELL BASIS 2  0 216.832 0
+Info: PERIODIC CELL BASIS 3  0 0 216.832
+Info: PERIODIC CELL CENTER   0 0 0
+Info: LOAD BALANCER  Centralized
+Info: LOAD BALANCING STRATEGY  New Load Balancers -- DEFAULT
+Info: LDB PERIOD             4000 steps
+Info: FIRST LDB TIMESTEP     100
+Info: LAST LDB TIMESTEP     -1
+Info: LDB BACKGROUND SCALING 1
+Info: HOM BACKGROUND SCALING 1
+Info: PME BACKGROUND SCALING 1
+Info: MIN ATOMS PER PATCH    40
+Info: INITIAL TEMPERATURE    298
+Info: CENTER OF MASS MOVING INITIALLY? NO
+Info: DIELECTRIC             1
+Info: EXCLUDE                SCALED ONE-FOUR
+Info: 1-4 ELECTROSTATICS SCALED BY 1
+Info: MODIFIED 1-4 VDW PARAMETERS WILL BE USED
+Info: NO DCD TRAJECTORY OUTPUT
+Info: NO EXTENDED SYSTEM TRAJECTORY OUTPUT
+Info: NO VELOCITY DCD OUTPUT
+Info: NO FORCE DCD OUTPUT
+Info: OUTPUT FILENAME        /usr/tmp/stmv-output
+Info: BINARY OUTPUT FILES WILL BE USED
+Info: NO RESTART FILE
+Info: SWITCHING ACTIVE
+Info: SWITCHING ON           10
+Info: SWITCHING OFF          12
+Info: PAIRLIST DISTANCE      13.5
+Info: PAIRLIST SHRINK RATE   0.01
+Info: PAIRLIST GROW RATE     0.01
+Info: PAIRLIST TRIGGER       0.3
+Info: PAIRLISTS PER CYCLE    2
+Info: PAIRLISTS ENABLED
+Info: MARGIN                 0.48
+Info: HYDROGEN GROUP CUTOFF  2.5
+Info: PATCH DIMENSION        16.48
+Info: ENERGY OUTPUT STEPS    200
+Info: CROSSTERM ENERGY INCLUDED IN DIHEDRAL
+Info: TIMING OUTPUT STEPS    20
+Info: LANGEVIN DYNAMICS ACTIVE
+Info: LANGEVIN TEMPERATURE   298
+Info: LANGEVIN DAMPING COEFFICIENT IS 5 INVERSE PS
+Info: LANGEVIN DYNAMICS NOT APPLIED TO HYDROGENS
+Info: LANGEVIN PISTON PRESSURE CONTROL ACTIVE
+Info:        TARGET PRESSURE IS 1.01325 BAR
+Info:     OSCILLATION PERIOD IS 100 FS
+Info:             DECAY TIME IS 50 FS
+Info:     PISTON TEMPERATURE IS 298 K
+Info:       PRESSURE CONTROL IS GROUP-BASED
+Info:    INITIAL STRAIN RATE IS 0 0 0
+Info:       CELL FLUCTUATION IS ISOTROPIC
+Info: PARTICLE MESH EWALD (PME) ACTIVE
+Info: PME TOLERANCE               1e-06
+Info: PME EWALD COEFFICIENT       0.257952
+Info: PME INTERPOLATION ORDER     4
+Info: PME GRID DIMENSIONS         216 216 216
+Info: PME MAXIMUM GRID SPACING    1.5
+Info: Attempting to read FFTW data from FFTW_NAMD_2.9_Linux-x86_64-MPI.txt
+Info: Optimizing 6 FFT steps.  1... 2... 3... 4... 5... 6...   Done.
+Info: Writing FFTW data to FFTW_NAMD_2.9_Linux-x86_64-MPI.txt
+Info: FULL ELECTROSTATIC EVALUATION FREQUENCY      4
+Info: USING VERLET I (r-RESPA) MTS SCHEME.
+Info: C1 SPLITTING OF LONG RANGE ELECTROSTATICS
+Info: PLACING ATOMS IN PATCHES BY HYDROGEN GROUPS
+Info: RANDOM NUMBER SEED     1409329947
+Info: USE HYDROGEN BONDS?    NO
+Info: COORDINATE PDB         stmv.pdb
+Info: STRUCTURE FILE         stmv.psf
+Info: PARAMETER file: CHARMM format! 
+Info: PARAMETERS             par_all27_prot_na.inp
+Info: USING ARITHMETIC MEAN TO COMBINE L-J SIGMA PARAMETERS
+Info: SUMMARY OF PARAMETERS:
+Info: 250 BONDS
+Info: 622 ANGLES
+Info: 1049 DIHEDRAL
+Info: 73 IMPROPER
+Info: 0 CROSSTERM
+Info: 130 VDW
+Info: 0 VDW_PAIRS
+Info: 0 NBTHOLE_PAIRS
+Info: TIME FOR READING PSF FILE: 9.54145
+Info: TIME FOR READING PDB FILE: 1.38983
+Info: 
+Info: ****************************
+Info: STRUCTURE SUMMARY:
+Info: 1066628 ATOMS
+Info: 769956 BONDS
+Info: 605872 ANGLES
+Info: 450875 DIHEDRALS
+Info: 24578 IMPROPERS
+Info: 0 CROSSTERMS
+Info: 0 EXCLUSIONS
+Info: 3199884 DEGREES OF FREEDOM
+Info: 389067 HYDROGEN GROUPS
+Info: 4 ATOMS IN LARGEST HYDROGEN GROUP
+Info: 389067 MIGRATION GROUPS
+Info: 4 ATOMS IN LARGEST MIGRATION GROUP
+Info: TOTAL MASS = 6.69877e+06 amu
+Info: TOTAL CHARGE = 0.000168104 e
+Info: MASS DENSITY = 1.09115 g/cm^3
+Info: ATOM DENSITY = 0.104627 atoms/A^3
+Info: *****************************
+Info: 
+Info: Entering startup at 11.0058 s, 713.945 MB of memory in use
+Info: Startup phase 0 took 0.00910497 s, 713.945 MB of memory in use
+Info: Startup phase 1 took 1.4789 s, 901.012 MB of memory in use
+Info: Startup phase 2 took 0.00447893 s, 909.223 MB of memory in use
+Info: Startup phase 3 took 0.000248194 s, 909.223 MB of memory in use
+Info: PATCH GRID IS 13 (PERIODIC) BY 13 (PERIODIC) BY 13 (PERIODIC)
+Info: PATCH GRID IS 1-AWAY BY 1-AWAY BY 1-AWAY
+Info: REMOVING COM VELOCITY 0.00504934 -0.000901608 0.00213007
+Info: LARGEST PATCH (1044) HAS 541 ATOMS
+Info: Startup phase 4 took 0.343042 s, 1071.02 MB of memory in use
+Info: PME using 36 and 36 processors for FFT and reciprocal sum.
+Info: PME USING 36 GRID NODES AND 36 TRANS NODES
+Info: PME GRID LOCATIONS: 0 1 2 3 4 5 6 7 8 9 ...
+Info: PME TRANS LOCATIONS: 0 1 2 3 4 5 6 7 8 9 ...
+Info: Optimizing 4 FFT steps.  1... 2... 3... 4...   Done.
+Info: Startup phase 5 took 0.035439 s, 1078.5 MB of memory in use
+Info: Startup phase 6 took 0.0510681 s, 1078.5 MB of memory in use
+LDB: Central LB being created...
+Info: Startup phase 7 took 0.00277305 s, 1078.5 MB of memory in use
+Info: CREATING 41959 COMPUTE OBJECTS
+Info: NONBONDED TABLE R-SQUARED SPACING: 0.0625
+Info: NONBONDED TABLE SIZE: 769 POINTS
+Info: Startup phase 8 took 0.00938797 s, 1078.5 MB of memory in use
+Info: useSync: 1 useProxySync: 0
+Info: Startup phase 9 took 0.000424862 s, 1078.5 MB of memory in use
+Info: Startup phase 10 took 0.000347137 s, 1078.5 MB of memory in use
+Info: Finished startup at 12.941 s, 1078.5 MB of memory in use
+
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+
+ENERGY:       0    354072.1600    280839.0161     81957.9556      4995.4407       -4503168.0836    384266.4616         0.0000         0.0000    948005.2071       -2449031.8425       298.1720  -3397037.0496  -2440392.6174       298.1720           1828.6833       188.6348  10194598.5131      1828.6833       188.6348
+
+LDB: ============= START OF LOAD BALANCING ============== 19.5386
+LDB: ============== END OF LOAD BALANCING =============== 19.54
+Info: useSync: 1 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 19.5414
+TIMING: 20  CPU: 7.24004, 0.323972/step  Wall: 7.24004, 0.323972/step, 0.448161 hours remaining, 1078.753906 MB of memory in use.
+TIMING: 40  CPU: 13.685, 0.322247/step  Wall: 13.685, 0.322247/step, 0.443984 hours remaining, 1078.753906 MB of memory in use.
+TIMING: 60  CPU: 20.1465, 0.323079/step  Wall: 20.1465, 0.323079/step, 0.443336 hours remaining, 1078.753906 MB of memory in use.
+TIMING: 80  CPU: 26.594, 0.322371/step  Wall: 26.594, 0.322371/step, 0.440574 hours remaining, 1078.753906 MB of memory in use.
+LDB: ============= START OF LOAD BALANCING ============== 45.3493
+LDB: Largest compute 1679 load 0.126338 is 0.5% of average load 24.854673
+LDB: Average compute 0.019531 is 0.1% of average load 24.854673
+LDB: Partitioning computes with target load 2.485467
+LDB: Increased migratable compute count from 41743 to 41743
+LDB: Largest unpartitionable compute is 0.018867
+LDB: ============== END OF LOAD BALANCING =============== 45.3595
+Info: useSync: 1 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 45.3702
+Info: Initial time: 36 CPUs 0.322835 s/step 3.73651 days/ns 1079.01 MB memory
+TIMING: 100  CPU: 33.068, 0.323703/step  Wall: 33.068, 0.323703/step, 0.440595 hours remaining, 1079.007812 MB of memory in use.
+LDB: ============= START OF LOAD BALANCING ============== 51.8223
+LDB: ============== END OF LOAD BALANCING =============== 51.8224
+Info: useSync: 1 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 51.8238
+TIMING: 120  CPU: 39.5202, 0.322607/step  Wall: 39.5202, 0.322607/step, 0.437311 hours remaining, 1079.007812 MB of memory in use.
+TIMING: 140  CPU: 45.9752, 0.32275/step  Wall: 45.9752, 0.32275/step, 0.435713 hours remaining, 1079.007812 MB of memory in use.
+TIMING: 160  CPU: 52.4685, 0.324668/step  Wall: 52.4685, 0.324668/step, 0.436499 hours remaining, 1079.007812 MB of memory in use.
+TIMING: 180  CPU: 58.9556, 0.324353/step  Wall: 58.9556, 0.324353/step, 0.434272 hours remaining, 1079.007812 MB of memory in use.
+LDB: ============= START OF LOAD BALANCING ============== 77.7555
+LDB: Largest compute 1510 load 0.127225 is 0.5% of average load 24.785378
+LDB: Average compute 0.019471 is 0.1% of average load 24.785378
+LDB: TIME 77.7649 LOAD: AVG 24.7854 MAX 25.8918  PROXIES: TOTAL 3185 MAXPE 92 MAXPATCH 3 None MEM: 1079.01 MB
+LDB: TIME 77.7944 LOAD: AVG 24.7854 MAX 25.1217  PROXIES: TOTAL 3185 MAXPE 92 MAXPATCH 3 TorusLB MEM: 1079.01 MB
+LDB: ============== END OF LOAD BALANCING =============== 77.8181
+Info: useSync: 1 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 77.8339
+Info: Initial time: 36 CPUs 0.324686 s/step 3.75794 days/ns 1079.01 MB memory
+TIMING: 200  CPU: 65.6168, 0.33306/step  Wall: 65.6168, 0.33306/step, 0.44408 hours remaining, 1079.007812 MB of memory in use.
+ENERGY:     200    355933.1430    280243.8141     81896.5296      5074.2573       -4504094.3930    383304.6353         0.0000         0.0000    948024.0732       -2449617.9404       298.1779  -3397642.0136  -2440953.6316       298.3580           1507.3865        57.5834  10195175.3607         3.6548         3.2633
+
+TIMING: 220  CPU: 71.9772, 0.318022/step  Wall: 71.9772, 0.318022/step, 0.422262 hours remaining, 1079.007812 MB of memory in use.
+TIMING: 240  CPU: 78.3372, 0.318001/step  Wall: 78.3372, 0.318001/step, 0.420468 hours remaining, 1079.007812 MB of memory in use.
+TIMING: 260  CPU: 84.6982, 0.318047/step  Wall: 84.6982, 0.318047/step, 0.418762 hours remaining, 1079.007812 MB of memory in use.
+TIMING: 280  CPU: 91.0495, 0.317564/step  Wall: 91.0495, 0.317564/step, 0.416362 hours remaining, 1079.007812 MB of memory in use.
+LDB: ============= START OF LOAD BALANCING ============== 109.719
+LDB: Largest compute 805 load 0.158684 is 0.5% of average load 31.133724
+LDB: Average compute 0.024416 is 0.1% of average load 31.133724
+LDB: TIME 109.729 LOAD: AVG 31.1337 MAX 31.879  PROXIES: TOTAL 3185 MAXPE 92 MAXPATCH 3 None MEM: 1079.52 MB
+LDB: TIME 109.735 LOAD: AVG 31.1337 MAX 31.879  PROXIES: TOTAL 3185 MAXPE 92 MAXPATCH 3 RefineTorusLB MEM: 1079.52 MB
+LDB: TIME 109.74 LOAD: AVG 31.1337 MAX 31.4641  PROXIES: TOTAL 3185 MAXPE 92 MAXPATCH 3 RefineTorusLB MEM: 1079.52 MB
+LDB: ============== END OF LOAD BALANCING =============== 109.744
+Info: useSync: 1 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 109.754
+Info: Initial time: 36 CPUs 0.31779 s/step 3.67812 days/ns 1079.52 MB memory
+TIMING: 300  CPU: 97.4305, 0.319052/step  Wall: 97.4305, 0.319052/step, 0.41654 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 320  CPU: 103.715, 0.314231/step  Wall: 103.715, 0.314231/step, 0.408501 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 340  CPU: 110.001, 0.3143/step  Wall: 110.001, 0.3143/step, 0.406844 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 360  CPU: 116.29, 0.314457/step  Wall: 116.29, 0.314457/step, 0.405301 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 380  CPU: 122.585, 0.314747/step  Wall: 122.585, 0.314747/step, 0.403925 hours remaining, 1079.515625 MB of memory in use.
+LDB: ============= START OF LOAD BALANCING ============== 141.231
+LDB: Largest compute 805 load 0.162293 is 0.5% of average load 31.009929
+LDB: Average compute 0.024293 is 0.1% of average load 31.009929
+LDB: TIME 141.24 LOAD: AVG 31.0099 MAX 31.3328  PROXIES: TOTAL 3185 MAXPE 92 MAXPATCH 3 None MEM: 1079.52 MB
+LDB: TIME 141.247 LOAD: AVG 31.0099 MAX 31.3328  PROXIES: TOTAL 3185 MAXPE 92 MAXPATCH 3 RefineTorusLB MEM: 1079.52 MB
+LDB: TIME 141.247 LOAD: AVG 31.0099 MAX 31.3328  PROXIES: TOTAL 3185 MAXPE 92 MAXPATCH 3 RefineTorusLB MEM: 1079.52 MB
+LDB: ============== END OF LOAD BALANCING =============== 141.251
+Info: useSync: 1 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 141.261
+Info: Benchmark time: 36 CPUs 0.315652 s/step 3.65338 days/ns 1079.52 MB memory
+TIMING: 400  CPU: 129.026, 0.322031/step  Wall: 129.026, 0.322031/step, 0.411484 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:     400    357296.6221    280148.0928     82139.0875      5126.0291       -4507021.9579    383833.5531         0.0000         0.0000    948058.1409       -2450420.4326       298.1887  -3398478.5735  -2441641.4510       298.3164           1367.7837       107.4224  10197201.7890        -1.7797        -2.0539
+
+TIMING: 420  CPU: 135.313, 0.314376/step  Wall: 135.313, 0.314376/step, 0.399957 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 440  CPU: 141.609, 0.31476/step  Wall: 141.609, 0.31476/step, 0.398696 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 460  CPU: 147.885, 0.313819/step  Wall: 147.885, 0.313819/step, 0.395761 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 480  CPU: 154.196, 0.315541/step  Wall: 154.196, 0.31554/step, 0.396179 hours remaining, 1079.515625 MB of memory in use.
+Info: Benchmark time: 36 CPUs 0.314678 s/step 3.6421 days/ns 1079.52 MB memory
+TIMING: 500  CPU: 160.494, 0.314899/step  Wall: 160.494, 0.314899/step, 0.393623 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 520  CPU: 166.786, 0.31463/step  Wall: 166.786, 0.31463/step, 0.391539 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 540  CPU: 173.084, 0.314864/step  Wall: 173.084, 0.314864/step, 0.390082 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 560  CPU: 179.375, 0.314548/step  Wall: 179.375, 0.314548/step, 0.387943 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 580  CPU: 185.667, 0.314637/step  Wall: 185.667, 0.314637/step, 0.386304 hours remaining, 1079.515625 MB of memory in use.
+Info: Benchmark time: 36 CPUs 0.315681 s/step 3.65371 days/ns 1079.52 MB memory
+TIMING: 600  CPU: 192.062, 0.31973/step  Wall: 192.062, 0.31973/step, 0.390782 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:     600    359765.6998    280529.3441     82079.4539      5114.2011       -4509429.5826    384147.5480         0.0000         0.0000    947463.5757       -2450329.7600       298.0017  -3397793.3357  -2441689.1443       298.1794           1107.8496        77.9765  10198520.4999         5.9956         5.9244
+
+TIMING: 620  CPU: 198.375, 0.315657/step  Wall: 198.375, 0.315657/step, 0.38405 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 640  CPU: 204.669, 0.3147/step  Wall: 204.669, 0.3147/step, 0.381137 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 660  CPU: 210.957, 0.314402/step  Wall: 210.957, 0.314402/step, 0.379029 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 680  CPU: 217.249, 0.314612/step  Wall: 217.249, 0.314612/step, 0.377534 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 700  CPU: 223.535, 0.314304/step  Wall: 223.535, 0.314304/step, 0.375419 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 720  CPU: 229.83, 0.314748/step  Wall: 229.83, 0.314748/step, 0.3742 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 740  CPU: 236.125, 0.314719/step  Wall: 236.125, 0.314719/step, 0.372418 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 760  CPU: 242.412, 0.314356/step  Wall: 242.412, 0.314356/step, 0.370242 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 780  CPU: 248.729, 0.315874/step  Wall: 248.729, 0.315874/step, 0.370274 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 800  CPU: 255.134, 0.320255/step  Wall: 255.134, 0.320255/step, 0.37363 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:     800    361054.4923    280501.9764     82173.2191      5056.7591       -4513507.7023    385764.1306         0.0000         0.0000    948373.3732       -2450583.7517       298.2878  -3398957.1248  -2441958.9038       298.1994            962.7449       130.1153  10191364.0687        -0.9388        -1.2358
+
+TIMING: 820  CPU: 261.456, 0.316072/step  Wall: 261.456, 0.316072/step, 0.366995 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 840  CPU: 267.78, 0.316228/step  Wall: 267.78, 0.316228/step, 0.365419 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 860  CPU: 274.119, 0.316917/step  Wall: 274.119, 0.316917/step, 0.364454 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 880  CPU: 280.425, 0.315333/step  Wall: 280.425, 0.315333/step, 0.360882 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 900  CPU: 286.727, 0.315099/step  Wall: 286.727, 0.315099/step, 0.358862 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 920  CPU: 293.025, 0.314855/step  Wall: 293.025, 0.314855/step, 0.356835 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 940  CPU: 299.32, 0.314792/step  Wall: 299.32, 0.314792/step, 0.355015 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 960  CPU: 305.623, 0.315113/step  Wall: 305.623, 0.315113/step, 0.353626 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 980  CPU: 311.931, 0.315443/step  Wall: 311.931, 0.315443/step, 0.352244 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1000  CPU: 318.32, 0.31941/step  Wall: 318.32, 0.31941/step, 0.3549 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:    1000    362857.6392    280117.7270     82020.3626      5058.9757       -4516529.9011    386417.3370         0.0000         0.0000    947300.5387       -2452757.3208       297.9504  -3400057.8595  -2444122.6235       298.2123            775.5387       111.1261  10191005.9366         1.4121         1.9171
+
+TIMING: 1020  CPU: 324.632, 0.315603/step  Wall: 324.632, 0.315603/step, 0.348917 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1040  CPU: 330.928, 0.314831/step  Wall: 330.928, 0.314831/step, 0.346314 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1060  CPU: 337.224, 0.314778/step  Wall: 337.224, 0.314778/step, 0.344507 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1080  CPU: 343.524, 0.314984/step  Wall: 343.524, 0.314984/step, 0.342983 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1100  CPU: 349.835, 0.315574/step  Wall: 349.835, 0.315574/step, 0.341872 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1120  CPU: 356.138, 0.315132/step  Wall: 356.138, 0.315132/step, 0.339642 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1140  CPU: 362.477, 0.316955/step  Wall: 362.477, 0.316955/step, 0.339846 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1160  CPU: 368.799, 0.316107/step  Wall: 368.799, 0.316106/step, 0.33718 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1180  CPU: 375.121, 0.316093/step  Wall: 375.121, 0.316093/step, 0.335409 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1200  CPU: 381.522, 0.320055/step  Wall: 381.522, 0.320055/step, 0.337836 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:    1200    363486.0449    281414.2787     82145.3464      5056.6438       -4517708.4353    385062.7609         0.0000         0.0000    947254.8804       -2453288.4802       297.9360  -3400543.3607  -2444641.1175       297.9645            613.8588        33.0322  10195450.4836         4.6409         4.8756
+
+TIMING: 1220  CPU: 387.83, 0.315392/step  Wall: 387.83, 0.315392/step, 0.331162 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1240  CPU: 394.14, 0.315511/step  Wall: 394.14, 0.315511/step, 0.329534 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1260  CPU: 400.468, 0.316418/step  Wall: 400.468, 0.316418/step, 0.328723 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1280  CPU: 406.79, 0.316095/step  Wall: 406.79, 0.316095/step, 0.326631 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1300  CPU: 413.098, 0.315392/step  Wall: 413.098, 0.315392/step, 0.324153 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1320  CPU: 419.403, 0.315224/step  Wall: 419.403, 0.315224/step, 0.322229 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1340  CPU: 425.71, 0.315382/step  Wall: 425.71, 0.315382/step, 0.320638 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1360  CPU: 432.029, 0.315935/step  Wall: 432.029, 0.315935/step, 0.319446 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1380  CPU: 438.334, 0.315237/step  Wall: 438.334, 0.315237/step, 0.316989 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1400  CPU: 444.731, 0.319873/step  Wall: 444.731, 0.319873/step, 0.319873 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:    1400    363578.5673    279783.0843     82026.8802      4982.5195       -4517314.7530    383952.0452         0.0000         0.0000    948407.7193       -2454583.9373       298.2986  -3402991.6566  -2445974.2011       298.0013            431.0393       -16.2862  10193530.8856         0.2698         0.9917
+
+TIMING: 1420  CPU: 451.05, 0.315931/step  Wall: 451.05, 0.315931/step, 0.314176 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1440  CPU: 457.366, 0.315797/step  Wall: 457.366, 0.315797/step, 0.312288 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1460  CPU: 463.667, 0.315068/step  Wall: 463.667, 0.315068/step, 0.309817 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1480  CPU: 469.989, 0.316107/step  Wall: 469.989, 0.316107/step, 0.309083 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1500  CPU: 476.299, 0.315501/step  Wall: 476.299, 0.315501/step, 0.306737 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1520  CPU: 482.608, 0.315458/step  Wall: 482.608, 0.315458/step, 0.304942 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1540  CPU: 488.942, 0.31667/step  Wall: 488.942, 0.31667/step, 0.304355 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1560  CPU: 495.251, 0.315476/step  Wall: 495.251, 0.315476/step, 0.301454 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1580  CPU: 501.562, 0.31555/step  Wall: 501.562, 0.31555/step, 0.299773 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1600  CPU: 507.958, 0.31978/step  Wall: 507.958, 0.31978/step, 0.302015 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:    1600    364982.4573    279256.0740     82089.6291      5042.6301       -4518677.2489    385273.5724         0.0000         0.0000    946921.5496       -2455111.3364       297.8312  -3402032.8860  -2446488.3079       297.7271            420.2930        31.5278  10191771.5017         1.4594         1.5599
+
+TIMING: 1620  CPU: 514.283, 0.316259/step  Wall: 514.283, 0.316259/step, 0.296932 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1640  CPU: 520.615, 0.316595/step  Wall: 520.615, 0.316595/step, 0.295489 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1660  CPU: 526.943, 0.316418/step  Wall: 526.943, 0.316418/step, 0.293565 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1680  CPU: 533.261, 0.315869/step  Wall: 533.261, 0.315869/step, 0.291302 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1700  CPU: 539.595, 0.316691/step  Wall: 539.595, 0.316691/step, 0.2903 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1720  CPU: 545.909, 0.315699/step  Wall: 545.909, 0.315699/step, 0.287637 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1740  CPU: 552.235, 0.316348/step  Wall: 552.235, 0.316348/step, 0.286471 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1760  CPU: 558.531, 0.314756/step  Wall: 558.531, 0.314756/step, 0.28328 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1780  CPU: 564.831, 0.315036/step  Wall: 564.831, 0.315036/step, 0.281782 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1800  CPU: 571.255, 0.321209/step  Wall: 571.255, 0.321209/step, 0.285519 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:    1800    365596.9219    280353.8455     81949.9896      5091.6402       -4519818.4930    384181.1937         0.0000         0.0000    946928.2822       -2455716.6201       297.8333  -3402644.9022  -2447126.2202       297.7730            276.2421         6.1269  10193254.3049         0.5561         0.9061
+
+TIMING: 1820  CPU: 577.561, 0.315282/step  Wall: 577.561, 0.315282/step, 0.278499 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1840  CPU: 583.865, 0.315192/step  Wall: 583.865, 0.315192/step, 0.276669 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1860  CPU: 590.161, 0.314794/step  Wall: 590.161, 0.314794/step, 0.274571 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1880  CPU: 596.456, 0.314766/step  Wall: 596.456, 0.314766/step, 0.272797 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1900  CPU: 602.757, 0.315053/step  Wall: 602.757, 0.315053/step, 0.271295 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1920  CPU: 609.074, 0.31584/step  Wall: 609.074, 0.31584/step, 0.270218 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1940  CPU: 615.39, 0.315785/step  Wall: 615.39, 0.315785/step, 0.268417 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1960  CPU: 621.695, 0.315246/step  Wall: 621.695, 0.315246/step, 0.266208 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 1980  CPU: 627.993, 0.314911/step  Wall: 627.993, 0.314911/step, 0.264175 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2000  CPU: 634.404, 0.320545/step  Wall: 634.404, 0.320546/step, 0.267121 hours remaining, 1079.515625 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+
+ENERGY:    2000    365576.3607    279861.2845     81975.1056      5038.2187       -4518611.7111    383379.4454         0.0000         0.0000    946580.2583       -2456201.0379       297.7238  -3402781.2962  -2447596.2786       297.6795            202.0332       -40.0588  10196980.3959         0.7137         1.0420
+
+TIMING: 2020  CPU: 640.766, 0.318087/step  Wall: 640.766, 0.318087/step, 0.263305 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2040  CPU: 647.077, 0.315561/step  Wall: 647.077, 0.315561/step, 0.259462 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2060  CPU: 653.388, 0.315566/step  Wall: 653.388, 0.315566/step, 0.257713 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2080  CPU: 659.711, 0.31613/step  Wall: 659.711, 0.31613/step, 0.256417 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2100  CPU: 666.051, 0.317036/step  Wall: 666.051, 0.317036/step, 0.25539 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2120  CPU: 672.369, 0.315869/step  Wall: 672.369, 0.315869/step, 0.252695 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2140  CPU: 678.68, 0.315578/step  Wall: 678.68, 0.315578/step, 0.250709 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2160  CPU: 684.998, 0.3159/step  Wall: 684.998, 0.3159/step, 0.24921 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2180  CPU: 691.315, 0.315856/step  Wall: 691.315, 0.315856/step, 0.24742 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2200  CPU: 697.726, 0.320541/step  Wall: 697.726, 0.320541/step, 0.249309 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:    2200    366270.4446    280338.4239     81982.0149      5094.4093       -4521059.1022    384324.1579         0.0000         0.0000    944921.5677       -2458128.0839       297.2021  -3403049.6516  -2449600.0546       297.5604            164.7131       -20.1512  10194205.7902         5.1268         5.1255
+
+TIMING: 2220  CPU: 704.054, 0.316388/step  Wall: 704.054, 0.316388/step, 0.244322 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2240  CPU: 710.358, 0.315194/step  Wall: 710.358, 0.315194/step, 0.241649 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2260  CPU: 716.663, 0.315244/step  Wall: 716.663, 0.315244/step, 0.239936 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2280  CPU: 722.987, 0.316231/step  Wall: 722.987, 0.316231/step, 0.23893 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2300  CPU: 729.321, 0.316676/step  Wall: 729.321, 0.316676/step, 0.237507 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2320  CPU: 735.629, 0.315379/step  Wall: 735.629, 0.315379/step, 0.234782 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2340  CPU: 741.937, 0.31541/step  Wall: 741.937, 0.31541/step, 0.233053 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2360  CPU: 748.245, 0.315435/step  Wall: 748.245, 0.315435/step, 0.231319 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2380  CPU: 754.548, 0.315119/step  Wall: 754.548, 0.315119/step, 0.229337 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2400  CPU: 760.941, 0.31964/step  Wall: 760.941, 0.31964/step, 0.230851 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:    2400    366471.3203    280440.1453     81856.8919      5050.2708       -4522340.3894    385364.1408         0.0000         0.0000    945768.3255       -2457389.2946       297.4685  -3403157.6202  -2448792.6366       297.4097            111.6375         4.7922  10196152.2908         1.5567         2.1854
+
+TIMING: 2420  CPU: 767.238, 0.314857/step  Wall: 767.238, 0.314857/step, 0.225647 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2440  CPU: 773.559, 0.316041/step  Wall: 773.559, 0.316041/step, 0.22474 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2460  CPU: 779.884, 0.316278/step  Wall: 779.884, 0.316278/step, 0.223152 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2480  CPU: 786.192, 0.315383/step  Wall: 786.192, 0.315383/step, 0.220768 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2500  CPU: 792.521, 0.316456/step  Wall: 792.521, 0.316456/step, 0.219761 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2520  CPU: 798.839, 0.315928/step  Wall: 798.839, 0.315928/step, 0.217639 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2540  CPU: 805.162, 0.316133/step  Wall: 805.162, 0.316133/step, 0.216024 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2560  CPU: 811.471, 0.315434/step  Wall: 811.471, 0.315434/step, 0.213794 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2580  CPU: 817.791, 0.316003/step  Wall: 817.791, 0.316003/step, 0.212424 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2600  CPU: 824.188, 0.31987/step  Wall: 824.188, 0.31987/step, 0.213247 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:    2600    366593.4189    279805.9510     81867.4870      5024.1307       -4525186.9312    387430.2744         0.0000         0.0000    947186.9490       -2457278.7203       297.9146  -3404465.6693  -2448655.9848       297.5669            169.6026        45.4723  10189949.6176         0.6478         1.0724
+
+TIMING: 2620  CPU: 830.507, 0.315946/step  Wall: 830.507, 0.315946/step, 0.208876 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2640  CPU: 836.821, 0.315714/step  Wall: 836.821, 0.315714/step, 0.206968 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2660  CPU: 843.133, 0.3156/step  Wall: 843.133, 0.3156/step, 0.20514 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2680  CPU: 849.465, 0.316585/step  Wall: 849.465, 0.316585/step, 0.204022 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2700  CPU: 855.785, 0.316011/step  Wall: 855.785, 0.316011/step, 0.201896 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2720  CPU: 862.093, 0.315361/step  Wall: 862.093, 0.315361/step, 0.199729 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2740  CPU: 868.403, 0.315516/step  Wall: 868.403, 0.315516/step, 0.198074 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2760  CPU: 874.713, 0.3155/step  Wall: 874.713, 0.3155/step, 0.196311 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2780  CPU: 881.025, 0.315614/step  Wall: 881.025, 0.315614/step, 0.194629 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2800  CPU: 887.429, 0.320204/step  Wall: 887.429, 0.320204/step, 0.19568 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:    2800    366888.7056    279797.6573     82088.5500      5104.8570       -4523191.4278    385617.0156         0.0000         0.0000    945744.8849       -2457949.7575       297.4611  -3403694.6424  -2449404.4368       297.4681             96.0163        56.9736  10192426.0074         1.0489         1.5038
+
+TIMING: 2820  CPU: 893.746, 0.315857/step  Wall: 893.746, 0.315857/step, 0.191269 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2840  CPU: 900.065, 0.315953/step  Wall: 900.065, 0.315953/step, 0.189572 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2860  CPU: 906.379, 0.315684/step  Wall: 906.379, 0.315684/step, 0.187657 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2880  CPU: 912.701, 0.316103/step  Wall: 912.701, 0.316103/step, 0.186149 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2900  CPU: 919.02, 0.31596/step  Wall: 919.02, 0.31596/step, 0.18431 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2920  CPU: 925.335, 0.31574/step  Wall: 925.335, 0.31574/step, 0.182428 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2940  CPU: 931.652, 0.315858/step  Wall: 931.652, 0.315858/step, 0.180741 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2960  CPU: 937.971, 0.315935/step  Wall: 937.971, 0.315935/step, 0.17903 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 2980  CPU: 944.287, 0.315792/step  Wall: 944.287, 0.315792/step, 0.177195 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3000  CPU: 950.698, 0.320562/step  Wall: 950.698, 0.320562/step, 0.17809 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:    3000    367090.7571    278574.8365     81902.7808      5039.1984       -4520712.6722    384259.8547         0.0000         0.0000    945135.3597       -2458709.8850       297.2694  -3403845.2447  -2449988.6523       297.3924             16.3996       -28.4109  10199310.1756         1.8425         1.5421
+
+TIMING: 3020  CPU: 957.022, 0.316203/step  Wall: 957.022, 0.316203/step, 0.173912 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3040  CPU: 963.355, 0.316638/step  Wall: 963.355, 0.316638/step, 0.172392 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3060  CPU: 969.693, 0.316909/step  Wall: 969.693, 0.316909/step, 0.170779 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3080  CPU: 976.018, 0.316224/step  Wall: 976.018, 0.316224/step, 0.168653 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3100  CPU: 982.341, 0.316147/step  Wall: 982.341, 0.316147/step, 0.166855 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3120  CPU: 988.644, 0.315164/step  Wall: 988.644, 0.315164/step, 0.164586 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3140  CPU: 994.953, 0.315442/step  Wall: 994.953, 0.315442/step, 0.162978 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3160  CPU: 1001.27, 0.315839/step  Wall: 1001.27, 0.315839/step, 0.161429 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3180  CPU: 1007.58, 0.315735/step  Wall: 1007.58, 0.315735/step, 0.159621 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3200  CPU: 1014, 0.320621/step  Wall: 1014, 0.320621/step, 0.160311 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:    3200    366920.3324    279478.9773     82132.1282      5112.5694       -4522709.2626    385849.4223         0.0000         0.0000    945115.8863       -2458099.9468       297.2632  -3403215.8331  -2449482.4874       297.3887            111.2694        32.2971  10198484.0340        -0.4665         0.0256
+
+TIMING: 3220  CPU: 1020.31, 0.315571/step  Wall: 1020.31, 0.315571/step, 0.156032 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3240  CPU: 1026.62, 0.315718/step  Wall: 1026.62, 0.315718/step, 0.154351 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3260  CPU: 1032.95, 0.316165/step  Wall: 1032.95, 0.316165/step, 0.152813 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3280  CPU: 1039.27, 0.316431/step  Wall: 1039.27, 0.316431/step, 0.151184 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3300  CPU: 1045.6, 0.316276/step  Wall: 1045.6, 0.316276/step, 0.149353 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3320  CPU: 1051.93, 0.316302/step  Wall: 1051.93, 0.316302/step, 0.147608 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3340  CPU: 1058.24, 0.315881/step  Wall: 1058.24, 0.315881/step, 0.145656 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3360  CPU: 1064.56, 0.315599/step  Wall: 1064.56, 0.315599/step, 0.143773 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3380  CPU: 1070.87, 0.315775/step  Wall: 1070.87, 0.315775/step, 0.142099 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3400  CPU: 1077.28, 0.320592/step  Wall: 1077.28, 0.320592/step, 0.142485 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:    3400    367016.3515    279749.0709     82042.7292      5015.7921       -4524240.6045    386379.9625         0.0000         0.0000    945285.0905       -2458751.6078       297.3165  -3404036.6983  -2450166.2766       297.4922            109.8947        34.6926  10192162.6641         5.6807         5.5171
+
+TIMING: 3420  CPU: 1083.6, 0.315721/step  Wall: 1083.6, 0.315721/step, 0.138567 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3440  CPU: 1089.93, 0.316541/step  Wall: 1089.93, 0.316541/step, 0.137168 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3460  CPU: 1096.26, 0.316462/step  Wall: 1096.26, 0.316462/step, 0.135375 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3480  CPU: 1102.59, 0.316869/step  Wall: 1102.59, 0.316869/step, 0.133789 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3500  CPU: 1108.91, 0.315586/step  Wall: 1108.91, 0.315586/step, 0.131494 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3520  CPU: 1115.23, 0.316303/step  Wall: 1115.23, 0.316303/step, 0.130036 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3540  CPU: 1121.55, 0.315852/step  Wall: 1121.55, 0.315852/step, 0.128095 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3560  CPU: 1127.86, 0.315334/step  Wall: 1127.86, 0.315334/step, 0.126134 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3580  CPU: 1134.17, 0.315521/step  Wall: 1134.17, 0.315521/step, 0.124455 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3600  CPU: 1140.58, 0.320893/step  Wall: 1140.58, 0.320893/step, 0.124792 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:    3600    366710.5401    279559.2214     82044.5037      5033.4832       -4522159.2830    384408.6937         0.0000         0.0000    945076.0994       -2459326.7415       297.2507  -3404402.8409  -2450779.9899       297.2082             72.4140        -9.8918  10193982.2598         0.1331         0.2003
+
+TIMING: 3620  CPU: 1146.9, 0.315928/step  Wall: 1146.9, 0.315928/step, 0.121106 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3640  CPU: 1153.22, 0.316009/step  Wall: 1153.22, 0.316009/step, 0.119381 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3660  CPU: 1159.55, 0.316164/step  Wall: 1159.55, 0.316164/step, 0.117683 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3680  CPU: 1165.86, 0.315821/step  Wall: 1165.86, 0.315821/step, 0.115801 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3700  CPU: 1172.17, 0.315279/step  Wall: 1172.17, 0.315279/step, 0.113851 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3720  CPU: 1178.47, 0.315292/step  Wall: 1178.47, 0.315292/step, 0.112104 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3740  CPU: 1184.79, 0.315659/step  Wall: 1184.79, 0.315659/step, 0.110481 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3760  CPU: 1191.1, 0.315438/step  Wall: 1191.1, 0.315438/step, 0.108651 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3780  CPU: 1197.4, 0.315114/step  Wall: 1197.4, 0.315114/step, 0.106789 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3800  CPU: 1203.8, 0.319872/step  Wall: 1203.8, 0.319872/step, 0.106624 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:    3800    366975.3182    279268.2057     81867.4522      5129.5239       -4522891.2212    385249.1305         0.0000         0.0000    944760.8693       -2459640.7215       297.1516  -3404401.5907  -2451044.8772       297.1992            112.0911        63.5406  10189455.2012         1.4642         1.5573
+
+TIMING: 3820  CPU: 1210.12, 0.316256/step  Wall: 1210.12, 0.316256/step, 0.103662 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3840  CPU: 1216.45, 0.316291/step  Wall: 1216.45, 0.316291/step, 0.101916 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3860  CPU: 1222.76, 0.315786/step  Wall: 1222.76, 0.315786/step, 0.099999 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3880  CPU: 1229.07, 0.315553/step  Wall: 1229.07, 0.315553/step, 0.0981722 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3900  CPU: 1235.4, 0.316543/step  Wall: 1235.4, 0.316543/step, 0.0967216 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3920  CPU: 1241.73, 0.316263/step  Wall: 1241.73, 0.316263/step, 0.0948789 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3940  CPU: 1248.04, 0.315356/step  Wall: 1248.04, 0.315356/step, 0.0928547 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3960  CPU: 1254.37, 0.316687/step  Wall: 1254.37, 0.316687/step, 0.0914874 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 3980  CPU: 1260.68, 0.315593/step  Wall: 1260.68, 0.315593/step, 0.0894181 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4000  CPU: 1267.1, 0.320653/step  Wall: 1267.1, 0.320653/step, 0.0890703 hours remaining, 1079.515625 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+
+ENERGY:    4000    366720.5707    279148.4723     82261.2491      5147.1193       -4521809.4477    383974.4553         0.0000         0.0000    945718.2417       -2458839.3393       297.4527  -3404557.5810  -2450203.2025       297.2803             10.1030         4.2506  10189772.6069         1.3792         1.3471
+
+TIMING: 4020  CPU: 1273.42, 0.316182/step  Wall: 1273.42, 0.316182/step, 0.0860717 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4040  CPU: 1279.73, 0.315723/step  Wall: 1279.73, 0.315723/step, 0.0841929 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4060  CPU: 1286.03, 0.314979/step  Wall: 1286.03, 0.314979/step, 0.0822446 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4080  CPU: 1292.34, 0.315374/step  Wall: 1292.34, 0.315374/step, 0.0805955 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4100  CPU: 1298.64, 0.314817/step  Wall: 1298.64, 0.314818/step, 0.0787044 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4120  CPU: 1304.95, 0.315515/step  Wall: 1304.95, 0.315515/step, 0.077126 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4140  CPU: 1311.24, 0.314741/step  Wall: 1311.24, 0.314741/step, 0.0751881 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4160  CPU: 1317.54, 0.315007/step  Wall: 1317.54, 0.315007/step, 0.0735017 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4180  CPU: 1323.85, 0.315173/step  Wall: 1323.85, 0.315173/step, 0.0717893 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4200  CPU: 1330.27, 0.321131/step  Wall: 1330.27, 0.321131/step, 0.0713624 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:    4200    367212.7632    279469.8848     81768.1377      5052.4595       -4523485.2543    385577.7454         0.0000         0.0000    944194.4818       -2460209.7819       296.9734  -3404404.2637  -2451622.4502       297.2343             33.3544        -1.1446  10192717.4205        -0.5661        -0.2471
+
+TIMING: 4220  CPU: 1336.58, 0.315713/step  Wall: 1336.58, 0.315713/step, 0.0684044 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4240  CPU: 1342.88, 0.314772/step  Wall: 1342.88, 0.314772/step, 0.066452 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4260  CPU: 1349.18, 0.315131/step  Wall: 1349.18, 0.315131/step, 0.0647769 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4280  CPU: 1355.48, 0.315191/step  Wall: 1355.48, 0.315191/step, 0.0630382 hours remaining, 1079.515625 MB of memory in use.
+LDB: ============= START OF LOAD BALANCING ============== 1374.13
+LDB: ============== END OF LOAD BALANCING =============== 1374.13
+Info: useSync: 1 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 1374.13
+TIMING: 4300  CPU: 1361.81, 0.316412/step  Wall: 1361.81, 0.316412/step, 0.0615245 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4320  CPU: 1368.13, 0.315792/step  Wall: 1368.13, 0.315792/step, 0.0596496 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4340  CPU: 1374.43, 0.315127/step  Wall: 1374.43, 0.315127/step, 0.0577733 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4360  CPU: 1380.74, 0.31523/step  Wall: 1380.74, 0.31523/step, 0.0560409 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4380  CPU: 1387.05, 0.315865/step  Wall: 1387.05, 0.315865/step, 0.054399 hours remaining, 1079.515625 MB of memory in use.
+LDB: ============= START OF LOAD BALANCING ============== 1405.7
+LDB: Largest compute 805 load 0.167143 is 0.5% of average load 31.029477
+LDB: Average compute 0.024306 is 0.1% of average load 31.029477
+LDB: TIME 1405.71 LOAD: AVG 31.0295 MAX 31.4675  PROXIES: TOTAL 3185 MAXPE 92 MAXPATCH 3 None MEM: 1079.52 MB
+LDB: TIME 1405.71 LOAD: AVG 31.0295 MAX 31.4675  PROXIES: TOTAL 3185 MAXPE 92 MAXPATCH 3 RefineTorusLB MEM: 1079.52 MB
+LDB: TIME 1405.71 LOAD: AVG 31.0295 MAX 31.3664  PROXIES: TOTAL 3185 MAXPE 92 MAXPATCH 3 RefineTorusLB MEM: 1079.52 MB
+LDB: ============== END OF LOAD BALANCING =============== 1405.72
+Info: useSync: 1 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 1405.73
+TIMING: 4400  CPU: 1393.5, 0.322251/step  Wall: 1393.5, 0.322251/step, 0.0537084 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:    4400    367366.1633    280091.4249     82091.3866      5120.8768       -4522654.8705    384391.7486         0.0000         0.0000    943872.6005       -2459720.6698       296.8722  -3403593.2703  -2451152.7349       297.2125            -19.3082       -30.7577  10191609.2755        -2.1366        -2.3543
+
+TIMING: 4420  CPU: 1399.79, 0.314667/step  Wall: 1399.79, 0.314667/step, 0.0506964 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4440  CPU: 1406.07, 0.314143/step  Wall: 1406.07, 0.314143/step, 0.0488667 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4460  CPU: 1412.37, 0.314789/step  Wall: 1412.37, 0.314789/step, 0.0472183 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4480  CPU: 1418.67, 0.314788/step  Wall: 1418.67, 0.314788/step, 0.0454694 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4500  CPU: 1424.97, 0.314998/step  Wall: 1424.97, 0.314998/step, 0.0437497 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4520  CPU: 1431.26, 0.31481/step  Wall: 1431.26, 0.31481/step, 0.0419747 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4540  CPU: 1437.56, 0.314653/step  Wall: 1437.56, 0.314653/step, 0.0402057 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4560  CPU: 1443.85, 0.314726/step  Wall: 1443.85, 0.314726/step, 0.0384665 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4580  CPU: 1450.18, 0.316461/step  Wall: 1450.18, 0.316461/step, 0.0369204 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4600  CPU: 1456.59, 0.320331/step  Wall: 1456.59, 0.320331/step, 0.0355924 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:    4600    366612.5397    278642.0049     81956.4523      5035.4734       -4524734.1550    386444.4619         0.0000         0.0000    945220.1008       -2460823.1221       297.2960  -3406043.2229  -2452180.9549       297.1998             87.3861        56.8530  10189307.9241        -0.3158        -0.7124
+
+TIMING: 4620  CPU: 1462.89, 0.315219/step  Wall: 1462.89, 0.315219/step, 0.0332731 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4640  CPU: 1469.2, 0.315335/step  Wall: 1469.2, 0.315335/step, 0.0315335 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4660  CPU: 1475.5, 0.315273/step  Wall: 1475.5, 0.315273/step, 0.0297758 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4680  CPU: 1481.82, 0.316089/step  Wall: 1481.82, 0.316089/step, 0.0280968 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4700  CPU: 1488.14, 0.315722/step  Wall: 1488.14, 0.315722/step, 0.0263102 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4720  CPU: 1494.45, 0.315777/step  Wall: 1494.45, 0.315777/step, 0.0245605 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4740  CPU: 1500.78, 0.316212/step  Wall: 1500.78, 0.316212/step, 0.0228375 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4760  CPU: 1507.1, 0.315964/step  Wall: 1507.1, 0.315964/step, 0.0210643 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4780  CPU: 1513.42, 0.316005/step  Wall: 1513.42, 0.316005/step, 0.0193114 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4800  CPU: 1519.83, 0.320729/step  Wall: 1519.83, 0.320729/step, 0.0178183 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:    4800    367586.4568    279427.8283     81858.3518      5067.1344       -4523677.9059    385176.0797         0.0000         0.0000    944639.4614       -2459922.5935       297.1134  -3404562.0549  -2451354.2099       296.9855              6.1725        17.7831  10191788.7251         4.1704         4.4688
+
+TIMING: 4820  CPU: 1526.15, 0.315735/step  Wall: 1526.15, 0.315735/step, 0.0157868 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4840  CPU: 1532.46, 0.315645/step  Wall: 1532.46, 0.315645/step, 0.0140287 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4860  CPU: 1538.77, 0.315538/step  Wall: 1538.77, 0.315538/step, 0.0122709 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4880  CPU: 1545.08, 0.315454/step  Wall: 1545.08, 0.315454/step, 0.0105151 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4900  CPU: 1551.39, 0.315327/step  Wall: 1551.39, 0.315327/step, 0.00875909 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4920  CPU: 1557.7, 0.315823/step  Wall: 1557.7, 0.315823/step, 0.00701829 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4940  CPU: 1564.02, 0.315668/step  Wall: 1564.02, 0.315668/step, 0.00526114 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4960  CPU: 1570.35, 0.31648/step  Wall: 1570.35, 0.31648/step, 0.00351645 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 4980  CPU: 1576.66, 0.315845/step  Wall: 1576.66, 0.315845/step, 0.00175469 hours remaining, 1079.515625 MB of memory in use.
+TIMING: 5000  CPU: 1583.02, 0.31796/step  Wall: 1583.02, 0.31796/step, 0 hours remaining, 1079.515625 MB of memory in use.
+ENERGY:    5000    367266.7865    278845.2751     81893.6740      5026.6740       -4524174.7969    384952.9966         0.0000         0.0000    945639.9630       -2460549.4278       297.4281  -3406189.3908  -2451941.1675       297.1423            -39.7195       -33.2899  10193017.2628         2.3255         2.3486
+
+WRITING EXTENDED SYSTEM TO OUTPUT FILE AT STEP 5000
+WRITING COORDINATES TO OUTPUT FILE AT STEP 5000
+The last position output (seq=-2) takes 0.020 seconds, 1124.984 MB of memory in use
+WRITING VELOCITIES TO OUTPUT FILE AT STEP 5000
+The last velocity output (seq=-2) takes 0.020 seconds, 1124.984 MB of memory in use
+====================================================
+
+WallClock: 1596.082886  CPUTime: 1596.082886  Memory: 1124.984375 MB
+End of program
