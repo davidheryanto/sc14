@@ -310,6 +310,5 @@ The last position output (seq=-2) takes 0.038 seconds, 4688.086 MB of memory in 
 WRITING VELOCITIES TO OUTPUT FILE AT STEP 500
 The last velocity output (seq=-2) takes 0.037 seconds, 4688.086 MB of memory in use
 ====================================================
-
 WallClock: 1111.054565  CPUTime: 1111.054565  Memory: 4688.085938 MB
 Program finished.
